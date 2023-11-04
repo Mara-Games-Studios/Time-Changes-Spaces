@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inGameScenes:
   - InGameScene: 0
-    Name: 
+    Name: Assets/Scenes/MainMenu.unity
   - InGameScene: 1
-    Name: 
+    Name: Assets/Scenes/SampleScene.unity
