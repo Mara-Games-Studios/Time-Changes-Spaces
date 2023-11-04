@@ -26,6 +26,7 @@ namespace TimeSpeed
         [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
+        public TimeState CurrentTimeState => currentTimeState;
 
         public event Action OnTimeStateChanged;
 

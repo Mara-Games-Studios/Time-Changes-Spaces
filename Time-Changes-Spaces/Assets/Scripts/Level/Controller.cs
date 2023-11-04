@@ -26,23 +26,36 @@ namespace Level
         [SerializeField]
         private string nextScene;
 
-        private void Awake()
+        private void OnEnable()
         {
-            tileMapController.OnDictionaryFilled += () =>
-                movement.SetPosition(tileMapController.StartPointPosition);
-            brain.OnTryMove += (isAllowed) =>
-            {
-                if (isAllowed)
-                {
-                    TickTime();
-                }
-            };
+            tileMapController.OnDictionaryFilled += TileMapController_OnDictionaryFilled;
+            brain.OnTryMove += Brain_OnTryMove;
             timeSpeedController.OnTimeStateChanged += TickTime;
+        }
+
+        private void TileMapController_OnDictionaryFilled()
+        {
+            movement.SetPosition(tileMapController.StartPointPosition);
+        }
+
+        private void Brain_OnTryMove(bool isAllowed)
+        {
+            if (isAllowed)
+            {
+                TickTime();
+            }
         }
 
         private void TickTime()
         {
             // TODO: implement
+        }
+
+        private void OnDisable()
+        {
+            tileMapController.OnDictionaryFilled -= TileMapController_OnDictionaryFilled;
+            brain.OnTryMove -= Brain_OnTryMove;
+            timeSpeedController.OnTimeStateChanged -= TickTime;
         }
     }
 }
