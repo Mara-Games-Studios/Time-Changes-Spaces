@@ -1,5 +1,4 @@
-﻿using Common;
-using Player;
+﻿using Player;
 using UnityEngine;
 
 namespace Level
@@ -22,9 +21,11 @@ namespace Level
         [SerializeField]
         private uint stepsToLose;
 
-        [Scene]
         [SerializeField]
-        private string nextScene;
+        private Settings.Controller settingsController;
+
+        [SerializeField]
+        private EducationalPanel.Controller educationalPanelController;
 
         private void OnEnable()
         {
@@ -34,6 +35,16 @@ namespace Level
             {
                 TickTime();
             };
+        }
+
+        public void OpenSettings()
+        {
+            settingsController.Open();
+        }
+
+        public void OpenEducationalPanel()
+        {
+            educationalPanelController.Open();
         }
 
         private void TileMapController_OnDictionaryFilled()
