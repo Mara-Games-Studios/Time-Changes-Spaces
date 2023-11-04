@@ -28,10 +28,13 @@ namespace TimeSpeed
         private TimeState currentTimeState = TimeState.Normal;
         public TimeState CurrentTimeState => currentTimeState;
 
-        public event Action OnTimeStateChanged;
+        public event Action<TimeState> OnTimeStateChanged;
 
+        private void Start() => SetTimeState(TimeState.Normal);
+        
         public void SetTimeState(TimeState timeState)
         {
+            currentTimeState = timeState;
             if (playerBrain.IsPlacedOnCorrectState(timeState))
             {
                 // TODO: Lose game
@@ -42,7 +45,8 @@ namespace TimeSpeed
                 {
                     tile.Value.SetState(timeState);
                 }
-                OnTimeStateChanged?.Invoke();
+
+                OnTimeStateChanged?.Invoke(CurrentTimeState);
             }
         }
     }
