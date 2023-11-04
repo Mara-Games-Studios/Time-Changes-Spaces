@@ -1,4 +1,5 @@
 ﻿using TimeSpeed;
+using TMPro;
 using UnityEngine;
 
 namespace Tiles

@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 7055209999229472386}
   - component: {fileID: 1851417005181332474}
   - component: {fileID: 2428731366619252306}
-  - component: {fileID: 7749091344475494853}
+  - component: {fileID: 1112347696747962469}
   m_Layer: 0
-  m_Name: Rock
+  m_Name: Trap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -173,7 +173,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 1851417005181332474}
   m_maskType: 0
---- !u!114 &7749091344475494853
+--- !u!114 &1112347696747962469
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -182,9 +182,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3852994048328031394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 457c11046157e3c428e5d7b6cd08d4c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 0d1fed7dd0a44a3ba2d7b43a188dcdaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateText: {fileID: 2428731366619252306}
 --- !u!1 &4304683379107238636
 GameObject:
   m_ObjectHideFlags: 0
@@ -259,7 +260,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+  m_Color: {r: 0.5283019, g: 0.20868826, b: 0.15151297, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
