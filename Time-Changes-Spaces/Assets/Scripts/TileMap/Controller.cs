@@ -17,8 +17,10 @@ namespace TileMap
 
         [SerializeField]
         private Vector2Int rightDown;
+
         private Dictionary<Vector2Int, IChangeableTile> tiles = new();
         public Dictionary<Vector2Int, IChangeableTile> Tiles => tiles;
+
         private StartPoint startPoint;
         private Vector2Int startPointPosition;
         public StartPoint StartPoint => startPoint;

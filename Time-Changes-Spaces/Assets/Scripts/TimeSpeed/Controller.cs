@@ -1,5 +1,6 @@
 ﻿using Common;
 using Player;
+using System;
 using System.Collections.Generic;
 using Tiles;
 using UnityEngine;
@@ -25,6 +26,8 @@ namespace TimeSpeed
         [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
+
+        public event Action OnTimeStateChanged;
 
         public void SetTimeState(TimeState timeState)
         {

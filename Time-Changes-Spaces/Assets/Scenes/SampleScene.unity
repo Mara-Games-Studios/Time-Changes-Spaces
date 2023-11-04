@@ -2161,6 +2161,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1842359700}
   - component: {fileID: 1842359701}
+  - component: {fileID: 1842359702}
+  - component: {fileID: 1842359703}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -2197,6 +2199,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {fileID: 468852890}
   tileMapController: {fileID: 105659283}
+  brain: {fileID: 830739052}
+  timeSpeedController: {fileID: 1842359702}
+  stepsToLose: 50
+--- !u!114 &1842359702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842359699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b33b49b7201ad4aa52714047b5f4f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMapController: {fileID: 105659283}
+  playerBrain: {fileID: 830739052}
+  currentTimeState: 1
+--- !u!114 &1842359703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1842359699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe0e1f67ac26d8499e967d577490560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1842359702}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

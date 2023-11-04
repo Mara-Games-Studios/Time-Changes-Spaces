@@ -1,4 +1,5 @@
 ﻿using Common;
+using System;
 using Tiles;
 using TimeSpeed;
 using UnityEngine;
@@ -13,6 +14,8 @@ namespace Player
 
         [SerializeField]
         private Movement movement;
+
+        public event Action OnTryMove;
 
         public void TryMove(Direction direction)
         {

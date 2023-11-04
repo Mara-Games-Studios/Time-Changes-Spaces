@@ -12,10 +12,26 @@ namespace Level
         [SerializeField]
         private TileMap.Controller tileMapController;
 
+        [SerializeField]
+        private Brain brain;
+
+        [SerializeField]
+        private TimeSpeed.Controller timeSpeedController;
+
+        [SerializeField]
+        private uint stepsToLose;
+
         private void Awake()
         {
             tileMapController.OnDictionaryFilled += () =>
                 movement.SetPosition(tileMapController.StartPointPosition);
+            brain.OnTryMove += TickTime;
+            timeSpeedController.OnTimeStateChanged += TickTime;
+        }
+
+        private void TickTime()
+        {
+            // TODO: implement
         }
     }
 }
