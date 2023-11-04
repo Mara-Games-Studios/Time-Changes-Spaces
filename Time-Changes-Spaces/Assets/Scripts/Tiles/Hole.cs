@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Hole")]
     public class Hole : MonoBehaviour, IChangeableTile
     {
         private bool wasActivatedFastMode;

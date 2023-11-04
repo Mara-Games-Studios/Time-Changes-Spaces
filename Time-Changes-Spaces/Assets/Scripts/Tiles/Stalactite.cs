@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Stalactite")]
     public class Stalactite : MonoBehaviour, IChangeableTile
     {
         private bool wasActivatedSlowMode;

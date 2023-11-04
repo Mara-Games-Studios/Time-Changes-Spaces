@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Lake")]
     public class Lake : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;

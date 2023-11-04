@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Trap")]
     public class Trap : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;

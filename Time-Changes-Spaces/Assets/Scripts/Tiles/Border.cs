@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Border")]
     public class Border : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState => PassableState.NotPassable;

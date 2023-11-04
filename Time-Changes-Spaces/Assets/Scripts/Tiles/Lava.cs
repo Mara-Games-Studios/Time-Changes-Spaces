@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Lava")]
     public class Lava : MonoBehaviour, IChangeableTile
     {
         private bool wasActivatedSlowMode;

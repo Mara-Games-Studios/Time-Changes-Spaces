@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
+    [AddComponentMenu("Scripts/Tiles/Tiles.Sarcophagus")]
     public class Sarcophagus : MonoBehaviour, IChangeableTile
     {
         private bool wasActivatedFastMode;

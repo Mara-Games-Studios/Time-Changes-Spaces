@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Tiles.Road")]
+    [AddComponentMenu("Scripts/Tiles/Tiles.Road")]
     internal class Road : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState => PassableState.Passable;

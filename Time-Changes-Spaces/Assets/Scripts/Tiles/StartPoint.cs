@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Tiles.StartPoint")]
+    [AddComponentMenu("Scripts/Tiles/Tiles.StartPoint")]
     internal class StartPoint : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState => PassableState.Passable;
