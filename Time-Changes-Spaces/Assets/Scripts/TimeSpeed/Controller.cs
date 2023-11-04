@@ -35,12 +35,14 @@ namespace TimeSpeed
             {
                 // TODO: Lose game
             }
-
-            foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
+            else
             {
-                tile.Value.SetState(timeState);
+                foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
+                {
+                    tile.Value.SetState(timeState);
+                }
+                OnTimeStateChanged?.Invoke();
             }
-            OnTimeStateChanged?.Invoke();
         }
     }
 }

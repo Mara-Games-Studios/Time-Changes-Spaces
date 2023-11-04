@@ -15,11 +15,10 @@ namespace Player
         [SerializeField]
         private Movement movement;
 
-        public event Action OnTryMove;
+        public event Action<bool> OnTryMove;
 
         public void TryMove(Direction direction)
         {
-            OnTryMove?.Invoke();
             if (
                 tileMapController.Tiles.TryGetValue(
                     movement.Position + direction.ToVector2Int(),
@@ -30,11 +29,17 @@ namespace Player
                 if (changeableTile.PassableState == PassableState.Passable)
                 {
                     movement.Move(direction);
+                    OnTryMove?.Invoke(true);
+                }
+                else
+                {
+                    OnTryMove?.Invoke(false);
                 }
             }
             else
             {
                 // TODO:
+                OnTryMove?.Invoke(false);
             }
         }
 

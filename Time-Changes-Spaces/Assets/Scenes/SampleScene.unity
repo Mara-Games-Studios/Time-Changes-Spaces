@@ -647,6 +647,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 91839552990472406, guid: ad58329f12badf54a85199757806a545, type: 3}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 830739052}
+    - target: {fileID: 91839552990472406, guid: ad58329f12badf54a85199757806a545, type: 3}
       propertyPath: buttonUp
       value: 
       objectReference: {fileID: 1430928850}

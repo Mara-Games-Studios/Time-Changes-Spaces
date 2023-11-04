@@ -30,7 +30,13 @@ namespace Level
         {
             tileMapController.OnDictionaryFilled += () =>
                 movement.SetPosition(tileMapController.StartPointPosition);
-            brain.OnTryMove += TickTime;
+            brain.OnTryMove += (isAllowed) =>
+            {
+                if (isAllowed)
+                {
+                    TickTime();
+                }
+            };
             timeSpeedController.OnTimeStateChanged += TickTime;
         }
 
