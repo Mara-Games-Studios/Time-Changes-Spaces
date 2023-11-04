@@ -15,7 +15,8 @@ namespace Tiles
 
         public void SetState(TimeState state)
         {
-            PassableState = state == TimeState.Slow ? PassableState.Passable : PassableState.NotPassable;
+            PassableState =
+                state == TimeState.Slow ? PassableState.Passable : PassableState.NotPassable;
         }
     }
 }

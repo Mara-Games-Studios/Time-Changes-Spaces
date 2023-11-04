@@ -8,11 +8,14 @@ namespace Tiles
     {
         private bool wasActivatedSlowMode;
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;
-        
+
         public PassableState GetFutureState(TimeState state)
         {
             if (wasActivatedSlowMode || state == TimeState.Slow)
+            {
                 return PassableState.Passable;
+            }
+
             return PassableState.NotPassable;
         }
 

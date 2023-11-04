@@ -12,8 +12,10 @@ namespace Tiles
         public PassableState GetFutureState(TimeState state)
         {
             if (wasActivatedFastMode || state == TimeState.Fast)
+            {
                 return PassableState.Passable;
-            
+            }
+
             return PassableState.NotPassable;
         }
 

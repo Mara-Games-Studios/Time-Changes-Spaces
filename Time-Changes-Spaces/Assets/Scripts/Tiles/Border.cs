@@ -7,14 +7,12 @@ namespace Tiles
     public class Border : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState => PassableState.NotPassable;
-        
+
         public PassableState GetFutureState(TimeState state)
         {
             return PassableState.NotPassable;
         }
 
-        public void SetState(TimeState state)
-        {
-        }
+        public void SetState(TimeState state) { }
     }
 }
