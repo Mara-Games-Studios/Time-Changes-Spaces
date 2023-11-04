@@ -19,6 +19,7 @@ namespace Player
 
         public void TryMove(Direction direction)
         {
+            OnTryMove?.Invoke();
             if (
                 tileMapController.Tiles.TryGetValue(
                     movement.Position + direction.ToVector2Int(),
@@ -30,6 +31,10 @@ namespace Player
                 {
                     movement.Move(direction);
                 }
+            }
+            else
+            {
+                // TODO:
             }
         }
 

@@ -20,14 +20,14 @@ namespace Player
         private Button buttonDown;
 
         [SerializeField]
-        private Brain movement;
+        private Brain brain;
 
         private void Awake()
         {
-            buttonUp.onClick.AddListener(() => movement.TryMove(Direction.Up));
-            buttonRight.onClick.AddListener(() => movement.TryMove(Direction.Right));
-            buttonLeft.onClick.AddListener(() => movement.TryMove(Direction.Left));
-            buttonDown.onClick.AddListener(() => movement.TryMove(Direction.Down));
+            buttonUp.onClick.AddListener(() => brain.TryMove(Direction.Up));
+            buttonRight.onClick.AddListener(() => brain.TryMove(Direction.Right));
+            buttonLeft.onClick.AddListener(() => brain.TryMove(Direction.Left));
+            buttonDown.onClick.AddListener(() => brain.TryMove(Direction.Down));
         }
     }
 }

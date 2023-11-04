@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Common;
+using Player;
 using UnityEngine;
 
 namespace Level
@@ -20,6 +21,10 @@ namespace Level
 
         [SerializeField]
         private uint stepsToLose;
+
+        [Scene]
+        [SerializeField]
+        private string nextScene;
 
         private void Awake()
         {

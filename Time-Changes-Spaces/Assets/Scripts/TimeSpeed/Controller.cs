@@ -40,6 +40,7 @@ namespace TimeSpeed
             {
                 tile.Value.SetState(timeState);
             }
+            OnTimeStateChanged?.Invoke();
         }
     }
 }

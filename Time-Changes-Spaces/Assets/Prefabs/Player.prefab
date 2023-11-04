@@ -94,6 +94,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4897768879747809790}
   - component: {fileID: 2407916304682195547}
+  - component: {fileID: 91839552990472406}
+  - component: {fileID: 672121081874017670}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -130,4 +132,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   position: {x: 0, y: 0}
-  stepLength: 0
+  damp: {x: 0.5, y: 0.5, z: 0}
+  stepLength: 1
+--- !u!114 &91839552990472406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7862783145258870782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f557a22c7411c74ea96cc3c27cea69d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonUp: {fileID: 0}
+  buttonRight: {fileID: 0}
+  buttonLeft: {fileID: 0}
+  buttonDown: {fileID: 0}
+  movement: {fileID: 672121081874017670}
+--- !u!114 &672121081874017670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7862783145258870782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bfb687319889394e9189ea37deb9bc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tileMapController: {fileID: 0}
+  movement: {fileID: 2407916304682195547}

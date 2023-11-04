@@ -646,6 +646,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 91839552990472406, guid: ad58329f12badf54a85199757806a545, type: 3}
+      propertyPath: buttonUp
+      value: 
+      objectReference: {fileID: 1430928850}
+    - target: {fileID: 91839552990472406, guid: ad58329f12badf54a85199757806a545, type: 3}
+      propertyPath: buttonDown
+      value: 
+      objectReference: {fileID: 343271425}
+    - target: {fileID: 91839552990472406, guid: ad58329f12badf54a85199757806a545, type: 3}
+      propertyPath: buttonLeft
+      value: 
+      objectReference: {fileID: 1182895923}
+    - target: {fileID: 91839552990472406, guid: ad58329f12badf54a85199757806a545, type: 3}
+      propertyPath: buttonRight
+      value: 
+      objectReference: {fileID: 795753917}
+    - target: {fileID: 672121081874017670, guid: ad58329f12badf54a85199757806a545, type: 3}
+      propertyPath: tileMapController
+      value: 
+      objectReference: {fileID: 105659283}
     - target: {fileID: 2407916304682195547, guid: ad58329f12badf54a85199757806a545, type: 3}
       propertyPath: damp.x
       value: 0.5
@@ -705,20 +725,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7862783145258870782, guid: ad58329f12badf54a85199757806a545, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 830739051}
-    - targetCorrespondingSourceObject: {fileID: 7862783145258870782, guid: ad58329f12badf54a85199757806a545, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 830739052}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad58329f12badf54a85199757806a545, type: 3}
 --- !u!114 &468852890 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2407916304682195547, guid: ad58329f12badf54a85199757806a545, type: 3}
   m_PrefabInstance: {fileID: 468852889}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830739049}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c7a628fb57287042a16717832d4b996, type: 3}
@@ -1116,42 +1130,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 795753915}
   m_CullTransparentMesh: 1
---- !u!1 &830739049 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7862783145258870782, guid: ad58329f12badf54a85199757806a545, type: 3}
+--- !u!114 &830739052 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 672121081874017670, guid: ad58329f12badf54a85199757806a545, type: 3}
   m_PrefabInstance: {fileID: 468852889}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &830739051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830739049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f557a22c7411c74ea96cc3c27cea69d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonUp: {fileID: 1430928850}
-  buttonRight: {fileID: 795753917}
-  buttonLeft: {fileID: 1182895923}
-  buttonDown: {fileID: 343271425}
-  movement: {fileID: 830739052}
---- !u!114 &830739052
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 830739049}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bfb687319889394e9189ea37deb9bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tileMapController: {fileID: 105659283}
-  movement: {fileID: 468852890}
 --- !u!1 &1165525078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2202,6 +2191,7 @@ MonoBehaviour:
   brain: {fileID: 830739052}
   timeSpeedController: {fileID: 1842359702}
   stepsToLose: 50
+  nextScene: Assets/Scenes/SampleScene.unity
 --- !u!114 &1842359702
 MonoBehaviour:
   m_ObjectHideFlags: 0
