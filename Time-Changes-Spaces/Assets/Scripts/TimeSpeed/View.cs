@@ -12,15 +12,19 @@ namespace TimeSpeed
         [SerializeField]
         private TMP_Text label;
 
-        private void Update()
+        private void OnEnable()
         {
-            label.text = controller.CurrentTimeState switch
-            {
-                TimeState.Fast => "Fast",
-                TimeState.Normal => "Normal",
-                TimeState.Slow => "Slow",
-                _ => "Undefined"
-            };
+            controller.OnTimeStateChanged += ChangeState;
+        }
+        
+        private void OnDisable()
+        {
+            controller.OnTimeStateChanged -= ChangeState;
+        }
+
+        private void ChangeState(TimeState timeState)
+        {
+            label.text = timeState.ToString();
         }
     }
 }

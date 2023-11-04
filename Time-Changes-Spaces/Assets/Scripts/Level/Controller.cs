@@ -30,7 +30,10 @@ namespace Level
         {
             tileMapController.OnDictionaryFilled += TileMapController_OnDictionaryFilled;
             brain.OnTryMove += Brain_OnTryMove;
-            timeSpeedController.OnTimeStateChanged += TickTime;
+            timeSpeedController.OnTimeStateChanged += timeState =>
+            {
+                TickTime();
+            };
         }
 
         private void TileMapController_OnDictionaryFilled()
@@ -55,7 +58,10 @@ namespace Level
         {
             tileMapController.OnDictionaryFilled -= TileMapController_OnDictionaryFilled;
             brain.OnTryMove -= Brain_OnTryMove;
-            timeSpeedController.OnTimeStateChanged -= TickTime;
+            timeSpeedController.OnTimeStateChanged -= timeState =>
+            {
+                TickTime();
+            };
         }
     }
 }
