@@ -3,14 +3,13 @@ using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Tiles.Rock")]
-    internal class Rock : MonoBehaviour, IChangeableTile
+    public class Finish : MonoBehaviour, IChangeableTile
     {
-        public PassableState PassableState => PassableState.NotPassable;
+        public PassableState PassableState => PassableState.Passable;
         
         public PassableState GetFutureState(TimeState state)
         {
-            return PassableState.NotPassable;
+            return PassableState.Passable;
         }
 
         public void SetState(TimeState state)

@@ -3,8 +3,7 @@ using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Tiles.Rock")]
-    internal class Rock : MonoBehaviour, IChangeableTile
+    public class Border : MonoBehaviour, IChangeableTile
     {
         public PassableState PassableState => PassableState.NotPassable;
         
