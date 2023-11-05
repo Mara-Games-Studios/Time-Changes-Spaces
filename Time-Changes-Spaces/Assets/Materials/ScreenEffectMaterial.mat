@@ -47,7 +47,7 @@ Material:
     m_Floats:
     - _EffectPower: 5
     - _alfa: 0.99792564
-    - _intencity: 0.0016595125
+    - _intencity: 0.012000024
     - _size: 0.9
     - _voronovPower: 7
     - _voronovScale: 22
