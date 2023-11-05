@@ -9,6 +9,7 @@ namespace Global
 
         //public static bool Music = true;
         //public static bool Sounds = true;
+
         private Settings.MainInput mainInput;
         private void Start()
         {
@@ -22,6 +23,26 @@ namespace Global
             }
             DontDestroyOnLoad(gameObject);
             InitializeManager();
+        }
+
+        public void SetSoundPlayerPref(float value)
+        {
+            PlayerPrefs.SetFloat("soundVolume", value);
+        }
+
+        public float GetSoundPlayerPref()
+        {
+            return PlayerPrefs.GetFloat("soundVolume");
+        }
+
+        public void SetMusicPlayerPref(float value)
+        {
+            PlayerPrefs.SetFloat("musicVolume", value);
+        }
+
+        public float GetMusicPlayerPref()
+        {
+            return PlayerPrefs.GetFloat("musicVolume");
         }
 
         private void InitializeManager()

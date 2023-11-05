@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace PostProcess
+namespace Level
 {
-    [AddComponentMenu("PostProcess.TimeChangeVolume")]
+    [AddComponentMenu("Scripts/Level/Effects/Level.TimeChangeVolume")]
     public class TimeChangeVolume : MonoBehaviour
     {
         [SerializeField]
