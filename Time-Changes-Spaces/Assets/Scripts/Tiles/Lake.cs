@@ -1,10 +1,12 @@
-﻿using TimeSpeed;
+﻿using Common;
+using Player;
+using TimeSpeed;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.Lake")]
-    public class Lake : MonoBehaviour, IChangeableTile
+    internal class Lake : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
         private GameObject waterFast;
@@ -12,16 +14,13 @@ namespace Tiles
         [SerializeField]
         private GameObject waterStandard;
 
-        public PassableState PassableState { get; private set; } = PassableState.NotPassable;
+        [SerializeField]
+        [InspectorReadOnly]
+        private PassableState passableState = PassableState.NotPassable;
 
         private void Start()
         {
             SetState(TimeState.Normal);
-        }
-
-        public PassableState GetFutureState(TimeState state)
-        {
-            return state == TimeState.Slow ? PassableState.Passable : PassableState.NotPassable;
         }
 
         public void SetState(TimeState state)
@@ -31,14 +30,21 @@ namespace Tiles
                 case TimeState.Fast:
                     waterFast.SetActive(false);
                     waterStandard.SetActive(true);
-                    PassableState = PassableState.Passable;
+                    passableState = PassableState.Passable;
                     break;
                 default:
                     waterFast.SetActive(true);
                     waterStandard.SetActive(false);
-                    PassableState = PassableState.NotPassable;
+                    passableState = PassableState.NotPassable;
                     break;
             }
+        }
+
+        public void ApplyStanding(Brain playerBrain) { }
+
+        public PassableState GetPassableState(Brain playerBrain)
+        {
+            return passableState;
         }
     }
 }

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Stalactite
+  m_Name: Key
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 8138716566547507205, guid: 0ece8860f6ff7b949bcc603e99fefe92, type: 3}
+  m_Sprite: {fileID: 935077690449985897, guid: 0ece8860f6ff7b949bcc603e99fefe92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -31,6 +31,6 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  m_InstancedGameObject: {fileID: 3852994048328031394, guid: c08801a98fa0e084ba8d0c83d78d7873, type: 3}
+  m_InstancedGameObject: {fileID: 3852994048328031394, guid: b96636c8355512948a6ad3f8ec156210, type: 3}
   m_Flags: 1
   m_ColliderType: 1

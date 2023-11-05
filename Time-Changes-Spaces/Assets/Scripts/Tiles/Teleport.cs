@@ -4,15 +4,10 @@ using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Scripts/Tiles/Tiles.Finish")]
-    internal class Finish : MonoBehaviour, IChangeableTile
+    [AddComponentMenu("Scripts/Tiles/Tiles.Teleport")]
+    internal class Teleport : MonoBehaviour, IChangeableTile
     {
         public void ApplyStanding(Brain playerBrain) { }
-
-        public PassableState GetFutureState(TimeState state)
-        {
-            return PassableState.Passable;
-        }
 
         public PassableState GetPassableState(Brain playerBrain)
         {
