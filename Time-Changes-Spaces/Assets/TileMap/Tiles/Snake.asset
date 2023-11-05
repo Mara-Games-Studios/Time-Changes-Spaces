@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Snake
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 7560240637562155887, guid: 0ece8860f6ff7b949bcc603e99fefe92, type: 3}
+  m_Sprite: {fileID: -7766637424382265647, guid: d03f63ccd780cfe43a792caa51b4cd06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

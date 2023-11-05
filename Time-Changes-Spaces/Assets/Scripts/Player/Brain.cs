@@ -14,6 +14,7 @@ namespace Player
 
         [SerializeField]
         private Movement movement;
+        public Movement Movement => movement;
 
         [SerializeField]
         private Controller timeSpeedController;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: Rope
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -4706415463413810417, guid: 0ece8860f6ff7b949bcc603e99fefe92, type: 3}
+  m_Sprite: {fileID: 2928746749609648240, guid: 0b3c7a4ec03945f409c10a6b967c85c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

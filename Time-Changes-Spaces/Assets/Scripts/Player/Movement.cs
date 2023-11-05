@@ -25,7 +25,7 @@ namespace Player
 
         public void Move(Direction direction)
         {
-            transform.position += (Vector3)((Vector2)direction.ToVector2Int() * stepLength);
+            SetPosition(direction.ToVector2Int() + direction.ToVector2Int());
             position += direction.ToVector2Int();
         }
     }
