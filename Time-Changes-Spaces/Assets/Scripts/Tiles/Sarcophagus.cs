@@ -7,12 +7,16 @@ namespace Tiles
     [AddComponentMenu("Scripts/Tiles/Tiles.Sarcophagus")]
     public class Sarcophagus : MonoBehaviour, IChangeableTile
     {
-        [SerializeField] private TextMeshPro stateText;
+        [SerializeField]
+        private TextMeshPro stateText;
         private bool wasActivatedFastMode;
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
-        private void Start() => SetState(TimeState.Normal);
-        
+        private void Start()
+        {
+            SetState(TimeState.Normal);
+        }
+
         public PassableState GetFutureState(TimeState state)
         {
             if (wasActivatedFastMode || state == TimeState.Fast)
@@ -35,9 +39,10 @@ namespace Tiles
                 PassableState = PassableState.NotPassable;
             }
 
-            stateText.text = PassableState == PassableState.Passable
-                ? "Sarcophagus is passable"
-                : "Sarcophagus is not passable";
+            stateText.text =
+                PassableState == PassableState.Passable
+                    ? "Sarcophagus is passable"
+                    : "Sarcophagus is not passable";
         }
     }
 }

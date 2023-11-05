@@ -1,6 +1,4 @@
-
 using Common;
-using System;
 using TimeSpeed;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -50,12 +48,12 @@ namespace PostProcess
             timeController.OnTimeStateChanged -= ChangeDistortion;
         }
 
-        void Update()
+        private void Update()
         {
             TriggerVolumeEffect();
         }
 
-        void ChangeDistortion(TimeState timeState)
+        private void ChangeDistortion(TimeState timeState)
         {
             switch (timeState)
             {
@@ -76,7 +74,7 @@ namespace PostProcess
             }
         }
 
-        void TriggerVolumeEffect()
+        private void TriggerVolumeEffect()
         {
             if (fadeIn)
             {
@@ -88,24 +86,29 @@ namespace PostProcess
                 VolumeWeightPlus();
             }
         }
-        void VolumeWeightMinus()
+
+        private void VolumeWeightMinus()
         {
             if (volume != null && volume.weight > 0.05f)
             {
                 volume.weight -= Time.deltaTime * countSpeed;
                 if (volume.weight <= 0.1f)
+                {
                     return;
+                }
             }
         }
-        void VolumeWeightPlus()
+
+        private void VolumeWeightPlus()
         {
             if (volume != null && volume.weight < 0.95f)
             {
                 volume.weight += Time.deltaTime * countSpeed;
                 if (volume.weight >= 0.9f)
+                {
                     fadeIn = !fadeIn;
+                }
             }
         }
     }
-
 }

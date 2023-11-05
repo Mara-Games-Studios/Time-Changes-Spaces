@@ -1,5 +1,4 @@
-﻿using System;
-using TimeSpeed;
+﻿using TimeSpeed;
 using TMPro;
 using UnityEngine;
 
@@ -8,11 +7,15 @@ namespace Tiles
     [AddComponentMenu("Scripts/Tiles/Tiles.Hole")]
     public class Hole : MonoBehaviour, IChangeableTile
     {
-        [SerializeField] private TextMeshPro stateText;
+        [SerializeField]
+        private TextMeshPro stateText;
         private bool wasActivatedFastMode;
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
-        private void Start() => SetState(TimeState.Normal);
+        private void Start()
+        {
+            SetState(TimeState.Normal);
+        }
 
         public PassableState GetFutureState(TimeState state)
         {
@@ -36,7 +39,10 @@ namespace Tiles
                 PassableState = PassableState.Passable;
             }
 
-            stateText.text = PassableState == PassableState.Passable ? "Hole can be passed" : "Hole cannot be passed";
+            stateText.text =
+                PassableState == PassableState.Passable
+                    ? "Hole can be passed"
+                    : "Hole cannot be passed";
         }
     }
 }

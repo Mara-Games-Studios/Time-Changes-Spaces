@@ -16,7 +16,7 @@ namespace TimeSpeed
         {
             controller.OnTimeStateChanged += ChangeState;
         }
-        
+
         private void OnDisable()
         {
             controller.OnTimeStateChanged -= ChangeState;

@@ -3,7 +3,6 @@ using System;
 using Tiles;
 using TimeSpeed;
 using UnityEngine;
-using UnityEngine.Rendering.UI;
 
 namespace Player
 {
@@ -16,9 +15,8 @@ namespace Player
         [SerializeField]
         private Movement movement;
 
-        [SerializeField] 
+        [SerializeField]
         private Controller timeSpeedController;
-        
 
         public event Action<bool> OnTryMove;
         public event Action OnDieOnWrongCell;
@@ -32,7 +30,6 @@ namespace Player
         {
             timeSpeedController.OnTimeStateChanged -= IsOnCorrectCell;
         }
-
 
         public void TryMove(Direction direction)
         {
@@ -63,7 +60,7 @@ namespace Player
         public bool IsPlacedOnCorrectState(TimeState futureTimeState)
         {
             // TODO:A
-            
+
             return false;
         }
 

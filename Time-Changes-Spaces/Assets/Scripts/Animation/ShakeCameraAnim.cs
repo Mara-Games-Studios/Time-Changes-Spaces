@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShakeCameraAnim : MonoBehaviour
@@ -9,12 +7,13 @@ public class ShakeCameraAnim : MonoBehaviour
 
     [SerializeField]
     private Animator anim;
+
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         anim = GetComponent<Animator>();
-        
     }
+
     private void OnEnable()
     {
         playerBrain.OnTryMove += AllowShake;
@@ -25,13 +24,13 @@ public class ShakeCameraAnim : MonoBehaviour
         playerBrain.OnTryMove -= AllowShake;
     }
 
-    void AllowShake(bool canMove)
+    private void AllowShake(bool canMove)
     {
-        if(!canMove)
+        if (!canMove)
+        {
             anim.SetTrigger("Shake");
+        }
     }
 
     // Update is called once per frame
-    
-
 }

@@ -8,6 +8,7 @@ namespace Settings
     {
         [SerializeField]
         private GameObject settingsPanel;
+
         [SerializeField]
         private AudioMixer audioMixer;
 
@@ -18,7 +19,7 @@ namespace Settings
 
         public void SetSoundValue(float value)
         {
-            audioMixer.SetFloat("Sound", Mathf.Log10(value) * 20);
+            _ = audioMixer.SetFloat("Sound", Mathf.Log10(value) * 20);
             PlayerPrefs.SetFloat("soundVolume", value);
         }
 
@@ -29,7 +30,7 @@ namespace Settings
 
         public void SetMusicValue(float value)
         {
-            audioMixer.SetFloat("Music", Mathf.Log10(value) * 20);
+            _ = audioMixer.SetFloat("Music", Mathf.Log10(value) * 20);
             PlayerPrefs.SetFloat("musicVolume", value);
         }
 
@@ -38,7 +39,6 @@ namespace Settings
             return PlayerPrefs.GetFloat("musicVolume");
         }
 
-      
         public void Open()
         {
             settingsPanel.SetActive(true);
