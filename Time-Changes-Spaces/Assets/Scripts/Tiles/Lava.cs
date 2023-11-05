@@ -1,26 +1,28 @@
-﻿using TimeSpeed;
-using TMPro;
+﻿using Common;
+using Player;
+using TimeSpeed;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.Lava")]
-    public class Lava : MonoBehaviour, IChangeableTile
+    internal class Lava : MonoBehaviour, IChangeableTile
     {
-        [SerializeField] private TextMeshPro stateText;
+        [SerializeField]
+        private GameObject defaultLava;
+
+        [SerializeField]
+        private GameObject obsidian;
+
         private bool wasActivatedSlowMode;
-        public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
-        private void Start() => SetState(TimeState.Normal);
-        
-        public PassableState GetFutureState(TimeState state)
+        [SerializeField]
+        [InspectorReadOnly]
+        private PassableState passableState = PassableState.NotPassable;
+
+        private void Start()
         {
-            if (wasActivatedSlowMode || state == TimeState.Slow)
-            {
-                return PassableState.Passable;
-            }
-
-            return PassableState.NotPassable;
+            SetState(TimeState.Normal);
         }
 
         public void SetState(TimeState state)
@@ -28,14 +30,21 @@ namespace Tiles
             if (wasActivatedSlowMode || state == TimeState.Slow)
             {
                 wasActivatedSlowMode = true;
-                PassableState = PassableState.Passable;
+                passableState = PassableState.Passable;
+                obsidian.SetActive(true);
+                defaultLava.SetActive(false);
             }
             else
             {
-                PassableState = PassableState.NotPassable;
+                passableState = PassableState.NotPassable;
             }
+        }
 
-            stateText.text = PassableState == PassableState.Passable ? "Lava is obsidian" : "Lava is lava";
+        public void ApplyStanding(Brain playerBrain) { }
+
+        public PassableState GetPassableState(Brain playerBrain)
+        {
+            return passableState;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace TMPro.Examples
 
         private TextMeshProUGUI m_TextMeshPro;
         private Canvas m_Canvas;
-        private Camera m_Camera;
+        private UnityEngine.Camera m_Camera;
 
         // Flags
         private bool isHoveringObject;

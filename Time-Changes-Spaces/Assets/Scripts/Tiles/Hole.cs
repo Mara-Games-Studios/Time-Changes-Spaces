@@ -1,27 +1,28 @@
-﻿using System;
+﻿using Common;
+using Player;
 using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.Hole")]
-    public class Hole : MonoBehaviour, IChangeableTile
+    internal class Hole : MonoBehaviour, IChangeableTile
     {
-        [SerializeField] private TextMeshPro stateText;
+        [SerializeField]
+        private GameObject openedHole;
+
+        [SerializeField]
+        private GameObject closedHole;
+
+        [SerializeField]
+        [InspectorReadOnly]
+        private PassableState passableState = PassableState.Passable;
+
         private bool wasActivatedFastMode;
-        public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
-        private void Start() => SetState(TimeState.Normal);
-
-        public PassableState GetFutureState(TimeState state)
+        private void Start()
         {
-            if (wasActivatedFastMode || state == TimeState.Fast)
-            {
-                return PassableState.NotPassable;
-            }
-
-            return PassableState.Passable;
+            SetState(TimeState.Normal);
         }
 
         public void SetState(TimeState state)
@@ -29,14 +30,21 @@ namespace Tiles
             if (wasActivatedFastMode || state == TimeState.Fast)
             {
                 wasActivatedFastMode = true;
-                PassableState = PassableState.NotPassable;
+                passableState = PassableState.NotPassable;
+                closedHole.SetActive(false);
+                openedHole.SetActive(true);
             }
             else
             {
-                PassableState = PassableState.Passable;
+                passableState = PassableState.Passable;
             }
+        }
 
-            stateText.text = PassableState == PassableState.Passable ? "Hole can be passed" : "Hole cannot be passed";
+        public void ApplyStanding(Brain playerBrain) { }
+
+        public PassableState GetPassableState(Brain playerBrain)
+        {
+            return passableState;
         }
     }
 }

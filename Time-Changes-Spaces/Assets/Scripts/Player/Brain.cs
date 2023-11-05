@@ -14,8 +14,31 @@ namespace Player
 
         [SerializeField]
         private Movement movement;
+        public Movement Movement => movement;
+
+        [SerializeField]
+        private Controller timeSpeedController;
+
+        [SerializeField]
+        private bool isWithKey;
+        public bool IsWithKey
+        {
+            get => isWithKey;
+            set => isWithKey = value;
+        }
 
         public event Action<bool> OnTryMove;
+        public event Action OnDieOnWrongCell;
+
+        private void OnEnable()
+        {
+            timeSpeedController.OnTimeStateChanged += IsOnCorrectCell;
+        }
+
+        private void OnDisable()
+        {
+            timeSpeedController.OnTimeStateChanged -= IsOnCorrectCell;
+        }
 
         public void TryMove(Direction direction)
         {
@@ -26,10 +49,11 @@ namespace Player
                 )
             )
             {
-                if (changeableTile.PassableState == PassableState.Passable)
+                if (changeableTile.GetPassableState(this) == PassableState.Passable)
                 {
                     movement.Move(direction);
                     OnTryMove?.Invoke(true);
+                    changeableTile.ApplyStanding(this);
                 }
                 else
                 {
@@ -38,15 +62,24 @@ namespace Player
             }
             else
             {
-                // TODO:
                 OnTryMove?.Invoke(false);
             }
         }
 
-        public bool IsPlacedOnCorrectState(TimeState futureTimeState)
+        private void IsOnCorrectCell(TimeState timeState)
         {
-            // TODO:
-            return false;
+            if (
+                tileMapController.Tiles.TryGetValue(
+                    movement.Position,
+                    out IChangeableTile changeableTile
+                )
+            )
+            {
+                if (changeableTile.GetPassableState(this) == PassableState.NotPassable)
+                {
+                    OnDieOnWrongCell?.Invoke();
+                }
+            }
         }
     }
 }

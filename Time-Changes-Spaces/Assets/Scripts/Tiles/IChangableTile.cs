@@ -1,4 +1,5 @@
-﻿using TimeSpeed;
+﻿using Player;
+using TimeSpeed;
 
 namespace Tiles
 {
@@ -10,8 +11,8 @@ namespace Tiles
 
     internal interface IChangeableTile
     {
-        public PassableState PassableState { get; }
-        public PassableState GetFutureState(TimeState state);
         public void SetState(TimeState state);
+        public PassableState GetPassableState(Brain playerBrain);
+        public void ApplyStanding(Brain playerBrain);
     }
 }

@@ -1,5 +1,4 @@
 ﻿using Common;
-using Player;
 using System;
 using System.Collections.Generic;
 using Tiles;
@@ -21,47 +20,26 @@ namespace TimeSpeed
         private TileMap.Controller tileMapController;
 
         [SerializeField]
-        private Brain playerBrain;
-
-        [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
         public TimeState CurrentTimeState => currentTimeState;
 
         public event Action<TimeState> OnTimeStateChanged;
 
-        [SerializeField] private PlayerDeathChecker _playerDeathChecker;
-
-        private void OnEnable()
+        private void Start()
         {
-            playerBrain.OnTryMove += _playerDeathChecker.OnPlayerMove;
-            OnTimeStateChanged += _playerDeathChecker.OnPlayerChangeTimeSpeed;
+            SetTimeState(TimeState.Normal);
         }
-
-        private void OnDisable()
-        {
-            playerBrain.OnTryMove -= _playerDeathChecker.OnPlayerMove;
-           OnTimeStateChanged -= _playerDeathChecker.OnPlayerChangeTimeSpeed;
-        }
-
-        private void Start() => SetTimeState(TimeState.Normal);
 
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
-            if (playerBrain.IsPlacedOnCorrectState(timeState))
+            foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
             {
-                // TODO: Lose game
+                tile.Value.SetState(timeState);
             }
-            else
-            {
-                foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
-                {
-                    tile.Value.SetState(timeState);
-                }
 
-                OnTimeStateChanged?.Invoke(CurrentTimeState);
-            }
+            OnTimeStateChanged?.Invoke(CurrentTimeState);
         }
     }
 }

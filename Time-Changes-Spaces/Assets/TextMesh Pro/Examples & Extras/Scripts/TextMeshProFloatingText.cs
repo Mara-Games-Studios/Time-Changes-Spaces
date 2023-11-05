@@ -56,7 +56,7 @@ namespace TMPro.Examples
             //m_floatingText_Transform = m_floatingText.transform;
             //m_floatingText_Transform.position = m_transform.position + new Vector3(0, 15f, 0);
 
-            m_cameraTransform = Camera.main.transform;
+            m_cameraTransform = UnityEngine.Camera.main.transform;
         }
 
         private void Start()

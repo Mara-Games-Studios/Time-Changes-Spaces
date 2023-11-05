@@ -867,7 +867,7 @@ namespace TMPro.Examples
             Color color
         )
         {
-            Camera cam = Camera.current;
+            UnityEngine.Camera cam = UnityEngine.Camera.current;
             float dotSpacing = (cam.WorldToScreenPoint(br).x - cam.WorldToScreenPoint(bl).x) / 75f;
             UnityEditor.Handles.color = color;
 

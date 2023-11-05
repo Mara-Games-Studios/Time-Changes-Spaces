@@ -1,14 +1,20 @@
-﻿using TimeSpeed;
+﻿using Player;
+using TimeSpeed;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.Finish")]
-    public class Finish : MonoBehaviour, IChangeableTile
+    internal class Finish : MonoBehaviour, IChangeableTile
     {
-        public PassableState PassableState => PassableState.Passable;
+        public void ApplyStanding(Brain playerBrain) { }
 
         public PassableState GetFutureState(TimeState state)
+        {
+            return PassableState.Passable;
+        }
+
+        public PassableState GetPassableState(Brain playerBrain)
         {
             return PassableState.Passable;
         }

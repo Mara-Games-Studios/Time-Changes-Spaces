@@ -22,12 +22,20 @@ namespace Player
         [SerializeField]
         private Brain brain;
 
-        private void Awake()
+        private void OnEnable()
         {
             buttonUp.onClick.AddListener(() => brain.TryMove(Direction.Up));
             buttonRight.onClick.AddListener(() => brain.TryMove(Direction.Right));
             buttonLeft.onClick.AddListener(() => brain.TryMove(Direction.Left));
             buttonDown.onClick.AddListener(() => brain.TryMove(Direction.Down));
+        }
+
+        private void OnDisable()
+        {
+            buttonUp.onClick.RemoveListener(() => brain.TryMove(Direction.Up));
+            buttonRight.onClick.RemoveListener(() => brain.TryMove(Direction.Right));
+            buttonLeft.onClick.RemoveListener(() => brain.TryMove(Direction.Left));
+            buttonDown.onClick.RemoveListener(() => brain.TryMove(Direction.Down));
         }
     }
 }

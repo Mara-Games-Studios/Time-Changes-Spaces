@@ -20,7 +20,7 @@ namespace TMPro.Examples
         private TextMeshPro m_TextMeshPro;
         private TextContainer m_textContainer;
         private Transform m_frameCounter_transform;
-        private Camera m_camera;
+        private UnityEngine.Camera m_camera;
 
         //private FpsCounterAnchorPositions last_AnchorPosition;
 
@@ -31,7 +31,7 @@ namespace TMPro.Examples
                 return;
             }
 
-            m_camera = Camera.main;
+            m_camera = UnityEngine.Camera.main;
 
             GameObject frameCounter = new("Frame Counter");
             m_frameCounter_transform = frameCounter.transform;

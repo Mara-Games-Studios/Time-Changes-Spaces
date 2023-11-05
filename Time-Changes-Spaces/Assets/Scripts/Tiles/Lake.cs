@@ -1,28 +1,50 @@
-﻿using TimeSpeed;
-using TMPro;
+﻿using Common;
+using Player;
+using TimeSpeed;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.Lake")]
-    public class Lake : MonoBehaviour, IChangeableTile
+    internal class Lake : MonoBehaviour, IChangeableTile
     {
-        [SerializeField] private TextMeshPro stateText;
-        public PassableState PassableState { get; private set; } = PassableState.NotPassable;
+        [SerializeField]
+        private GameObject waterFast;
 
-        private void Start() => SetState(TimeState.Normal);
-        
-        public PassableState GetFutureState(TimeState state)
+        [SerializeField]
+        private GameObject waterStandard;
+
+        [SerializeField]
+        [InspectorReadOnly]
+        private PassableState passableState = PassableState.NotPassable;
+
+        private void Start()
         {
-            return state == TimeState.Slow ? PassableState.Passable : PassableState.NotPassable;
+            SetState(TimeState.Normal);
         }
 
         public void SetState(TimeState state)
         {
-            PassableState =
-                state == TimeState.Slow ? PassableState.Passable : PassableState.NotPassable;
+            switch (state)
+            {
+                case TimeState.Fast:
+                    waterFast.SetActive(false);
+                    waterStandard.SetActive(true);
+                    passableState = PassableState.Passable;
+                    break;
+                default:
+                    waterFast.SetActive(true);
+                    waterStandard.SetActive(false);
+                    passableState = PassableState.NotPassable;
+                    break;
+            }
+        }
 
-            stateText.text = PassableState == PassableState.Passable ? "Lake is passed" : "Lake is not passed";
+        public void ApplyStanding(Brain playerBrain) { }
+
+        public PassableState GetPassableState(Brain playerBrain)
+        {
+            return passableState;
         }
     }
 }
