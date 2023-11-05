@@ -7,7 +7,7 @@ namespace TMPro.Examples
     {
         private TextMeshPro m_TextMeshPro;
 
-        private Camera m_Camera;
+        private UnityEngine.Camera m_Camera;
 
         private bool m_isHoveringObject;
         private int m_selectedLink = -1;
@@ -17,7 +17,7 @@ namespace TMPro.Examples
         private void Awake()
         {
             m_TextMeshPro = gameObject.GetComponent<TextMeshPro>();
-            m_Camera = Camera.main;
+            m_Camera = UnityEngine.Camera.main;
 
             // Force generation of the text object so we have valid data to work with. This is needed since LateUpdate() will be called before the text object has a chance to generated when entering play mode.
             m_TextMeshPro.ForceMeshUpdate();
@@ -31,7 +31,7 @@ namespace TMPro.Examples
                 TMP_TextUtilities.IsIntersectingRectTransform(
                     m_TextMeshPro.rectTransform,
                     Input.mousePosition,
-                    Camera.main
+                    UnityEngine.Camera.main
                 )
             )
             {
@@ -44,7 +44,7 @@ namespace TMPro.Examples
                 int charIndex = TMP_TextUtilities.FindIntersectingCharacter(
                     m_TextMeshPro,
                     Input.mousePosition,
-                    Camera.main,
+                    UnityEngine.Camera.main,
                     true
                 );
                 if (
@@ -138,7 +138,7 @@ namespace TMPro.Examples
                 int wordIndex = TMP_TextUtilities.FindIntersectingWord(
                     m_TextMeshPro,
                     Input.mousePosition,
-                    Camera.main
+                    UnityEngine.Camera.main
                 );
                 if (wordIndex != -1 && wordIndex != m_lastWordIndex)
                 {
@@ -149,7 +149,7 @@ namespace TMPro.Examples
                     Vector3 wordPOS = m_TextMeshPro.transform.TransformPoint(
                         m_TextMeshPro.textInfo.characterInfo[wInfo.firstCharacterIndex].bottomLeft
                     );
-                    _ = Camera.main.WorldToScreenPoint(wordPOS);
+                    _ = UnityEngine.Camera.main.WorldToScreenPoint(wordPOS);
 
                     //Debug.Log("Mouse Position: " + Input.mousePosition.ToString("f3") + "  Word Position: " + wordPOS.ToString("f3"));
 

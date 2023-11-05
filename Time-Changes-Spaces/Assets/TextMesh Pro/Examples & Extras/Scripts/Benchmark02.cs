@@ -71,7 +71,7 @@ namespace TMPro.Examples
                     // Canvas WorldSpace Camera
                     GameObject go = new();
                     Canvas canvas = go.AddComponent<Canvas>();
-                    canvas.worldCamera = Camera.main;
+                    canvas.worldCamera = UnityEngine.Camera.main;
 
                     go.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
                     go.transform.position = new Vector3(

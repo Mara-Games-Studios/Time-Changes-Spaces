@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Audio;
 
 namespace Settings
 {
@@ -7,7 +8,37 @@ namespace Settings
     {
         [SerializeField]
         private GameObject settingsPanel;
+        [SerializeField]
+        private AudioMixer audioMixer;
 
+        public void Start()
+        {
+            Close();
+        }
+
+        public void SetSoundValue(float value)
+        {
+            audioMixer.SetFloat("Sound", Mathf.Log10(value) * 20);
+            PlayerPrefs.SetFloat("soundVolume", value);
+        }
+
+        public float GetSoundValue()
+        {
+            return PlayerPrefs.GetFloat("soundVolume");
+        }
+
+        public void SetMusicValue(float value)
+        {
+            audioMixer.SetFloat("Music", Mathf.Log10(value) * 20);
+            PlayerPrefs.SetFloat("musicVolume", value);
+        }
+
+        public float GetMusicValue()
+        {
+            return PlayerPrefs.GetFloat("musicVolume");
+        }
+
+      
         public void Open()
         {
             settingsPanel.SetActive(true);
