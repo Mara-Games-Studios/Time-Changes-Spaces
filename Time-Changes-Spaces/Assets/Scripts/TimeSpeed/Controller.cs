@@ -34,7 +34,6 @@ namespace TimeSpeed
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
-
             foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
             {
                 tile.Value.SetState(timeState);
