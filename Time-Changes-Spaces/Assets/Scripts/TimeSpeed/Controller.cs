@@ -19,9 +19,6 @@ namespace TimeSpeed
         [SerializeField]
         private TileMap.Controller tileMapController;
 
-        // [SerializeField]
-        // private Brain playerBrain;
-
         [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
