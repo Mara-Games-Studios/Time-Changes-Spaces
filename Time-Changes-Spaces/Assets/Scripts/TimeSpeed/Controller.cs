@@ -20,6 +20,11 @@ namespace TimeSpeed
         private TileMap.Controller tileMapController;
 
         [SerializeField]
+        private List<AudioSource> timeSounds; //0 - Fast
+                                              //1 - Normal
+                                              //2 - Slow
+
+        [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
         public TimeState CurrentTimeState => currentTimeState;
@@ -33,8 +38,24 @@ namespace TimeSpeed
             {
                 tile.Value.SetState(timeState);
             }
-
+            PlaySoundOnTimeChange(timeState);
             OnTimeStateChanged?.Invoke(CurrentTimeState);
+        }
+
+        private void PlaySoundOnTimeChange(TimeState timeState)
+        {
+            switch (timeState)
+            {
+                case TimeState.Slow:
+                    timeSounds[0].Play();
+                    break;
+                case TimeState.Normal:
+                    timeSounds[1].Play();
+                    break;
+                case TimeState.Fast:
+                    timeSounds[2].Play();
+                    break;
+            }
         }
     }
 }

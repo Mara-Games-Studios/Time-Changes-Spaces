@@ -5,6 +5,9 @@ namespace Global
     [AddComponentMenu("Global.AudioManager")]
     public class AudioManager : MonoBehaviour
     {
+        [SerializeField]
+        private AudioSource music;
+
         public static AudioManager Instance = null;
 
         private void Awake()

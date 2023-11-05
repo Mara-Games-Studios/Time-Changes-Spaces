@@ -8,6 +8,7 @@ namespace Death
     [AddComponentMenu("Death/Death.DeathScreenController")]
     public class DeathScreenController : MonoBehaviour
     {
+
         [SerializeField]
         [Header("Death screen settings")]
         private Canvas deathCanvas;
@@ -21,6 +22,10 @@ namespace Death
 
         [SerializeField]
         private Brain playerBrain;
+
+        [SerializeField]
+        [Header("Sound settings")]
+        private AudioSource loseSound;
 
         private void OnEnable()
         {
@@ -37,6 +42,7 @@ namespace Death
         public void ShowDeathScreen()
         {
             deathCanvas.gameObject.SetActive(true);
+            loseSound.Play();
             restartLevelButton.onClick.AddListener(() => SceneManager.Instance.ReloadScene());
         }
     }

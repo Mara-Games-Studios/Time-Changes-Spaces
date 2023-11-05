@@ -906,7 +906,7 @@ PrefabInstance:
       objectReference: {fileID: 468852890}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: nextScene
-      value: Assets/Scenes/Levels/Level 2.unity
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: lighteningEffect

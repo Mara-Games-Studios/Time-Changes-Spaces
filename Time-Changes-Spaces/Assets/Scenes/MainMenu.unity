@@ -327,6 +327,7 @@ MonoBehaviour:
   controller: {fileID: 485581132}
   buttonPlay: {fileID: 1365564684}
   buttonSettings: {fileID: 1350182372}
+  buttonSound: {fileID: 0}
 --- !u!114 &485581132
 MonoBehaviour:
   m_ObjectHideFlags: 0

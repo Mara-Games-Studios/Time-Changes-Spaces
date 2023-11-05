@@ -18,6 +18,9 @@ namespace Settings
         [SerializeField]
         private Slider musicSlider;
 
+        [SerializeField]
+        private AudioSource buttonSound;
+
         private void Start()
         {
             SetSlidersFromPreferences();
@@ -53,6 +56,7 @@ namespace Settings
 
         private void ButtonClose_OnClick()
         {
+            buttonSound.Play();
             controller.Close();
         }
 

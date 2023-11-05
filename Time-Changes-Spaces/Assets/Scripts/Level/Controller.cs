@@ -43,6 +43,9 @@ namespace Level
         [SerializeField]
         private Effects.Lightening lighteningEffect;
 
+        [SerializeField]
+        private AudioSource scarySound;
+
         public event Action<uint> OnTimeTick;
 
         private void Awake()
@@ -86,6 +89,10 @@ namespace Level
         {
             stepsToLose--;
             OnTimeTick?.Invoke(stepsToLose);
+            if (stepsToLose == 25)
+            {
+                scarySound.Play();
+            }
             if (stepsToLose == 0)
             {
                 deathScreenController.ShowDeathScreen();
