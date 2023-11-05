@@ -6,16 +6,16 @@ namespace EducationalPanel
     internal class Controller : MonoBehaviour
     {
         [SerializeField]
-        private GameObject panel;
+        private GameObject educationalCanvas;
 
         public void Open()
         {
-            panel.SetActive(true);
+            educationalCanvas.SetActive(true);
         }
 
         public void Close()
         {
-            panel.SetActive(false);
+            educationalCanvas.SetActive(false);
         }
     }
 }
