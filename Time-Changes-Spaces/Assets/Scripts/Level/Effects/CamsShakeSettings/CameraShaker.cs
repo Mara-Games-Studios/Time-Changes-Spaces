@@ -10,13 +10,12 @@ namespace CameraShake
     {
         public static CameraShaker Instance;
         public static CameraShakePresets Presets;
-
-        readonly List<ICameraShake> activeShakes = new List<ICameraShake>();
+        private readonly List<ICameraShake> activeShakes = new();
 
         [Tooltip("Transform which will be affected by the shakes.\n\nCameraShaker will set this transform's local position and rotation.")]
         [SerializeField]
-        Transform cameraTransform;
-        
+        private Transform cameraTransform;
+
 
         [Tooltip("Scales the strength of all shakes.")]
         [Range(0, 1)]
@@ -25,13 +24,16 @@ namespace CameraShake
 
         public CameraShakePresets ShakePresets;
 
-
         /// <summary>
         /// Adds a shake to the list of active shakes.
         /// </summary>
         public static void Shake(ICameraShake shake)
         {
-            if (IsInstanceNull()) return;
+            if (IsInstanceNull())
+            {
+                return;
+            }
+
             Instance.RegisterShake(shake);
         }
 
@@ -61,12 +63,17 @@ namespace CameraShake
             ShakePresets = new CameraShakePresets(this);
             Presets = ShakePresets;
             if (cameraTransform == null)
+            {
                 cameraTransform = transform;
+            }
         }
 
         private void Update()
         {
-            if (cameraTransform == null) return;
+            if (cameraTransform == null)
+            {
+                return;
+            }
 
             Displacement cameraDisplacement = Displacement.Zero;
             for (int i = activeShakes.Count - 1; i >= 0; i--)

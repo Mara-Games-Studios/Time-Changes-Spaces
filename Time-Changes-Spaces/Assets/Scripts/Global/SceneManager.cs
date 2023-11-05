@@ -5,6 +5,9 @@ namespace Global
     [AddComponentMenu("Global.SceneManager")]
     internal class SceneManager : MonoBehaviour
     {
+        [SerializeField]
+        private Material screenMaterial;
+
         public static SceneManager Instance = null;
 
         private void Awake()
@@ -17,6 +20,7 @@ namespace Global
             {
                 Destroy(gameObject);
             }
+
             DontDestroyOnLoad(gameObject);
         }
 
