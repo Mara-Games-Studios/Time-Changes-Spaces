@@ -37,19 +37,6 @@ namespace TimeSpeed
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
-            // if (playerBrain.IsPlacedOnCorrectState(timeState))
-            // {
-            //     // TODO: Lose game
-            // }
-            // else
-            // {
-            //     foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
-            //     {
-            //         tile.Value.SetState(timeState);
-            //     }
-            //
-            //     OnTimeStateChanged?.Invoke(CurrentTimeState);
-            // }
             foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
             {
                 tile.Value.SetState(timeState);

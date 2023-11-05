@@ -76,7 +76,6 @@ namespace Player
                 if (changeableTile.PassableState == PassableState.NotPassable)
                 {
                     OnDieOnWrongCell?.Invoke();
-                    Debug.Log("Die");
                 }
             }
         }
