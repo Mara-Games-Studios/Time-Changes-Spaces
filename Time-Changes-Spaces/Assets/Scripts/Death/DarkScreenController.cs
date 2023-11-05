@@ -15,7 +15,7 @@ namespace Death
         [SerializeField] 
         private float dampingSpeed = 0.01f;
 
-        private bool wasHitActivated;
+        private bool wasHintActivated, wasDeatActivated;
         private Color imageColor;
 
         public event Action OnHintOccur;
@@ -31,13 +31,14 @@ namespace Death
             imageColor.a += dampingSpeed * Time.deltaTime;
             image.color = imageColor;
 
-            if (imageColor.a > deathValue)
+            if (imageColor.a > deathValue && !wasDeatActivated)
             {
+                wasDeatActivated = true;
                 OnDie?.Invoke();
             }
-            else if (!wasHitActivated && imageColor.a > hintValue)
+            else if (!wasHintActivated && imageColor.a > hintValue)
             {
-                wasHitActivated = true;
+                wasHintActivated = true;
                 OnHintOccur?.Invoke();
             }
         }

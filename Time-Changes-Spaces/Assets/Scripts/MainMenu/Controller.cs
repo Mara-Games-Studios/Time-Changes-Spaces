@@ -17,6 +17,7 @@ namespace MainMenu
         public void Settings()
         {
             settingsController.Open();
+            
         }
     }
 }
