@@ -48,4 +48,4 @@ MonoBehaviour:
   - InGameScene: 0
     Name: Assets/Scenes/MainMenu.unity
   - InGameScene: 1
-    Name: Assets/Scenes/SampleScene.unity
+    Name: Assets/Scenes/SampleSceneLevel.unity
