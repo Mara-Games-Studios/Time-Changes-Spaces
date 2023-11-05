@@ -1328,6 +1328,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+--- !u!223 &4284533741684194469 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 3720099604496357413, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 4284533741684194468}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6905010938685921121
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1380,6 +1385,10 @@ PrefabInstance:
       propertyPath: soundSlider
       value: 
       objectReference: {fileID: 7646783403690721403}
+    - target: {fileID: 4584388847619509932, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: lockCanvas
+      value: 
+      objectReference: {fileID: 4284533741684194469}
     - target: {fileID: 5327085118722509891, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: settingsPanel
       value: 
