@@ -922,6 +922,8 @@ GameObject:
   - component: {fileID: 1108027525663439110}
   - component: {fileID: 4557150257180547448}
   - component: {fileID: 1202789798066155499}
+  - component: {fileID: 3819025048078956755}
+  - component: {fileID: 6738673623891274719}
   m_Layer: 5
   m_Name: SettingsCanvas
   m_TagString: Untagged
@@ -1018,6 +1020,36 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &3819025048078956755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794775082308912383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98550eb544f0fa44c819ea611255085b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  settingsPanel: {fileID: 6794775082308912383}
+  audioMixer: {fileID: 24100000, guid: 7904ca82596019949bf44c3fa809096d, type: 2}
+--- !u!114 &6738673623891274719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6794775082308912383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 104df3d18a31e744390db307ab7166f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 3819025048078956755}
+  buttonClose: {fileID: 5914782831189003408}
+  soundSlider: {fileID: 890902793222496552}
+  musicSlider: {fileID: 2562089923649920052}
 --- !u!1 &7836750187209670115
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Global;
+using UnityEngine;
 using UnityEngine.Audio;
 
 namespace Settings
@@ -20,23 +21,24 @@ namespace Settings
         public void SetSoundValue(float value)
         {
             _ = audioMixer.SetFloat("Sound", Mathf.Log10(value) * 20);
-            PlayerPrefs.SetFloat("soundVolume", value);
+            AudioManager.Instance.SetSoundPlayerPref(value);
         }
 
         public float GetSoundValue()
         {
-            return PlayerPrefs.GetFloat("soundVolume");
+            return AudioManager.Instance.GetMusicPlayerPref();
         }
 
         public void SetMusicValue(float value)
         {
             _ = audioMixer.SetFloat("Music", Mathf.Log10(value) * 20);
-            PlayerPrefs.SetFloat("musicVolume", value);
+            AudioManager.Instance.SetMusicPlayerPref(value);
+
         }
 
         public float GetMusicValue()
         {
-            return PlayerPrefs.GetFloat("musicVolume");
+            return AudioManager.Instance.GetMusicPlayerPref();
         }
 
         public void Open()
