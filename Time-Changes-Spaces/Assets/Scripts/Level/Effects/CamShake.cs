@@ -2,27 +2,30 @@ using CameraShake;
 using Player;
 using UnityEngine;
 
-public class CamShake : MonoBehaviour
+namespace Level
 {
-    // Start is called before the first frame update
-    [SerializeField]
-    private Brain brain;
-
-    private void OnEnable()
+    public class CamShake : MonoBehaviour
     {
-        brain.OnTryMove += Small2DShake;
-    }
+        // Start is called before the first frame update
+        [SerializeField]
+        private Brain brain;
 
-    private void OnDisable()
-    {
-        brain.OnTryMove -= Small2DShake;
-    }
-
-    private void Small2DShake(bool canMove)
-    {
-        if (!canMove)
+        private void OnEnable()
         {
-            CameraShaker.Presets.Explosion2D();
+            brain.OnTryMove += Small2DShake;
+        }
+
+        private void OnDisable()
+        {
+            brain.OnTryMove -= Small2DShake;
+        }
+
+        private void Small2DShake(bool canMove)
+        {
+            if (!canMove)
+            {
+                CameraShaker.Presets.Explosion2D();
+            }
         }
     }
 }
