@@ -8,40 +8,36 @@ namespace Death
     [AddComponentMenu("Death/Death.DeathScreenController")]
     public class DeathScreenController : MonoBehaviour
     {
-        [SerializeField] [Header("Death screen settings")]
+        [SerializeField]
+        [Header("Death screen settings")]
         private Canvas deathCanvas;
 
-        [SerializeField] 
+        [SerializeField]
         private Button restartLevelButton;
-        
-        [SerializeField] [Header("Components")]
+
+        [SerializeField]
+        [Header("Components")]
         private DarkScreenController screenController;
 
-        [SerializeField] 
+        [SerializeField]
         private Brain playerBrain;
 
         private void OnEnable()
         {
-            screenController.OnLevelEnd += ShowDeathCanvas;
-            playerBrain.OnDieOnWrongCell += ShowDeathCanvas;
+            screenController.OnLevelEnd += ShowDeathScreen;
+            playerBrain.OnDieOnWrongCell += ShowDeathScreen;
         }
 
         private void OnDisable()
         {
-            screenController.OnLevelEnd -= ShowDeathCanvas;
-            playerBrain.OnDieOnWrongCell -= ShowDeathCanvas;
+            screenController.OnLevelEnd -= ShowDeathScreen;
+            playerBrain.OnDieOnWrongCell -= ShowDeathScreen;
         }
 
-        private void ShowDeathCanvas()
+        public void ShowDeathScreen()
         {
             deathCanvas.gameObject.SetActive(true);
-            restartLevelButton.onClick.AddListener(() => SceneManager.Instance.LoadScene(InGameScene.FirstLevel));
-        }
-
-        private void CloseDeathScreen()
-        {
-            restartLevelButton.onClick.RemoveListener(() => SceneManager.Instance.LoadScene(InGameScene.FirstLevel));
-            deathCanvas.gameObject.SetActive(false);
+            restartLevelButton.onClick.AddListener(() => SceneManager.Instance.ReloadScene());
         }
     }
 }

@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bc310460cb48dd448e396da932502a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  firstLevel: Assets/Scenes/Levels/Level 1.unity
   settingsController: {fileID: 1353302142}
 --- !u!1 &785929381 stripped
 GameObject:
@@ -466,6 +467,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1108027525663439110, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1192307756587422467, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -147.7196
@@ -489,6 +494,10 @@ PrefabInstance:
     - target: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8015931342903348052, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -838,6 +847,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2049364998116630530, guid: ec23a252c974e304eb810492065c3d08, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3658293960437931241, guid: ec23a252c974e304eb810492065c3d08, type: 3}
       propertyPath: m_Pivot.x
       value: 0

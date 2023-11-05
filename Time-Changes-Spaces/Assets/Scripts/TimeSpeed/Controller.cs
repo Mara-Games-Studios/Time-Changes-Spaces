@@ -26,11 +26,6 @@ namespace TimeSpeed
 
         public event Action<TimeState> OnTimeStateChanged;
 
-        private void Start()
-        {
-            SetTimeState(TimeState.Normal);
-        }
-
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;

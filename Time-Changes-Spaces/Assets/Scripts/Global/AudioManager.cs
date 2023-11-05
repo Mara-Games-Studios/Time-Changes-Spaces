@@ -7,11 +7,7 @@ namespace Global
     {
         public static AudioManager Instance = null;
 
-        //public static bool Music = true;
-        //public static bool Sounds = true;
-
-        private Settings.MainInput mainInput;
-        private void Start()
+        private void Awake()
         {
             if (Instance == null)
             {
@@ -22,12 +18,12 @@ namespace Global
                 Destroy(gameObject);
             }
             DontDestroyOnLoad(gameObject);
-            InitializeManager();
         }
 
         public void SetSoundPlayerPref(float value)
         {
             PlayerPrefs.SetFloat("soundVolume", value);
+            SaveSettings();
         }
 
         public float GetSoundPlayerPref()
@@ -38,6 +34,7 @@ namespace Global
         public void SetMusicPlayerPref(float value)
         {
             PlayerPrefs.SetFloat("musicVolume", value);
+            SaveSettings();
         }
 
         public float GetMusicPlayerPref()
@@ -45,16 +42,8 @@ namespace Global
             return PlayerPrefs.GetFloat("musicVolume");
         }
 
-        private void InitializeManager()
-        {
-            //Music = System.Convert.ToBoolean(PlayerPrefs.GetString("music", "true"));
-            //Sounds = System.Convert.ToBoolean(PlayerPrefs.GetString("sounds", "true"));
-        }
-
         public static void SaveSettings()
         {
-            //PlayerPrefs.SetString("music", Music.ToString());
-            //PlayerPrefs.SetString("sounds", Sounds.ToString());
             PlayerPrefs.Save();
         }
     }

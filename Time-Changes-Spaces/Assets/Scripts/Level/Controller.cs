@@ -1,4 +1,8 @@
-﻿using Player;
+﻿using Common;
+using Death;
+using Global;
+using Player;
+using System;
 using UnityEngine;
 
 namespace Level
@@ -6,6 +10,10 @@ namespace Level
     [AddComponentMenu("Level.Controller")]
     internal class Controller : MonoBehaviour
     {
+        [Scene]
+        [SerializeField]
+        private string nextScene;
+
         [SerializeField]
         private Movement movement;
 
@@ -20,6 +28,8 @@ namespace Level
 
         [SerializeField]
         private uint stepsToLose;
+        private uint maxStepsToLose;
+        public uint MaxStepsToLose => maxStepsToLose;
 
         [SerializeField]
         private Settings.Controller settingsController;
@@ -27,11 +37,29 @@ namespace Level
         [SerializeField]
         private EducationalPanel.Controller educationalPanelController;
 
+        [SerializeField]
+        private DeathScreenController deathScreenController;
+
+        [SerializeField]
+        private Effects.Lightening lighteningEffect;
+
+        public event Action<uint> OnTimeTick;
+
+        private void Awake()
+        {
+            maxStepsToLose = stepsToLose;
+        }
+
         private void OnEnable()
         {
             tileMapController.OnDictionaryFilled += TileMapController_OnDictionaryFilled;
             brain.OnTryMove += Brain_OnTryMove;
             timeSpeedController.OnTimeStateChanged += timeState => TickTime();
+        }
+
+        public void Win()
+        {
+            lighteningEffect.StartLightening(() => SceneManager.Instance.LoadScene(nextScene));
         }
 
         public void OpenSettings()
@@ -51,15 +79,17 @@ namespace Level
 
         private void Brain_OnTryMove(bool isAllowed)
         {
-            if (isAllowed)
-            {
-                TickTime();
-            }
+            TickTime();
         }
 
         private void TickTime()
         {
-            // TODO: implement
+            stepsToLose--;
+            OnTimeTick?.Invoke(stepsToLose);
+            if (stepsToLose == 0)
+            {
+                deathScreenController.ShowDeathScreen();
+            }
         }
 
         private void OnDisable()

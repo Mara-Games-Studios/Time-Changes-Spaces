@@ -7,7 +7,11 @@ namespace Tiles
     [AddComponentMenu("Scripts/Tiles/Tiles.Finish")]
     internal class Finish : MonoBehaviour, IChangeableTile
     {
-        public void ApplyStanding(Brain playerBrain) { }
+        public void ApplyStanding(Brain playerBrain)
+        {
+            Level.Controller levelController = FindAnyObjectByType<Level.Controller>();
+            levelController.Win();
+        }
 
         public PassableState GetFutureState(TimeState state)
         {
