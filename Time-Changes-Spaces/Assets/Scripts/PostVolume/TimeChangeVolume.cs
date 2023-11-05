@@ -26,19 +26,15 @@ namespace PostProcess
         private TimeState prevTimeState;
 
         [SerializeField]
-        [InspectorReadOnly]
         private Volume volume;
+
         [SerializeField]
         [InspectorReadOnly]
         private LensDistortion distortion;
 
-
-        private void Start()
+        private void Awake()
         {
-            volume = GetComponent<Volume>();
-            VolumeProfile profile = volume.sharedProfile;
-            LensDistortion ld;
-            if (profile.TryGet<LensDistortion>(out ld))
+            if (volume.sharedProfile.TryGet(out LensDistortion ld))
             {
                 distortion = ld;
             }

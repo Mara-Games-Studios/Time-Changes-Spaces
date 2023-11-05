@@ -20,12 +20,9 @@ namespace TimeSpeed
         [SerializeField]
         private TileMap.Controller tileMapController;
 
-<<<<<<< Updated upstream
-        [SerializeField]
-        private Brain playerBrain;
+        // [SerializeField]
+        // private Brain playerBrain;
 
-=======
->>>>>>> Stashed changes
         [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
@@ -33,28 +30,33 @@ namespace TimeSpeed
 
         public event Action<TimeState> OnTimeStateChanged;
 
-        private void Start() => SetTimeState(TimeState.Normal);
-        
+        private void Start()
+        {
+            SetTimeState(TimeState.Normal);
+        }
+
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
-<<<<<<< Updated upstream
-            if (playerBrain.IsPlacedOnCorrectState(timeState))
-=======
+            // if (playerBrain.IsPlacedOnCorrectState(timeState))
+            // {
+            //     // TODO: Lose game
+            // }
+            // else
+            // {
+            //     foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
+            //     {
+            //         tile.Value.SetState(timeState);
+            //     }
+            //
+            //     OnTimeStateChanged?.Invoke(CurrentTimeState);
+            // }
             foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
->>>>>>> Stashed changes
             {
-                // TODO: Lose game
+                tile.Value.SetState(timeState);
             }
-            else
-            {
-                foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
-                {
-                    tile.Value.SetState(timeState);
-                }
 
-                OnTimeStateChanged?.Invoke(CurrentTimeState);
-            }
+            OnTimeStateChanged?.Invoke(CurrentTimeState);
         }
     }
 }
