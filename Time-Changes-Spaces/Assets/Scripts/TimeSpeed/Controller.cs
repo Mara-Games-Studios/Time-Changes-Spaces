@@ -20,9 +20,12 @@ namespace TimeSpeed
         [SerializeField]
         private TileMap.Controller tileMapController;
 
+<<<<<<< Updated upstream
         [SerializeField]
         private Brain playerBrain;
 
+=======
+>>>>>>> Stashed changes
         [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
@@ -35,7 +38,11 @@ namespace TimeSpeed
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
+<<<<<<< Updated upstream
             if (playerBrain.IsPlacedOnCorrectState(timeState))
+=======
+            foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
+>>>>>>> Stashed changes
             {
                 // TODO: Lose game
             }
