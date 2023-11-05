@@ -1,5 +1,6 @@
 ﻿using Common;
 using System;
+using System.Collections.Generic;
 using Tiles;
 using TimeSpeed;
 using UnityEngine;
@@ -21,6 +22,10 @@ namespace Player
 
         [SerializeField]
         private bool isWithKey;
+
+        [SerializeField]
+        private List<AudioSource> moveSounds; //0 - SoundMove.wav - can move
+                                              //1 - SoundScary.wav - can't move
         public bool IsWithKey
         {
             get => isWithKey;
@@ -52,11 +57,13 @@ namespace Player
                 if (changeableTile.GetPassableState(this) == PassableState.Passable)
                 {
                     movement.Move(direction);
+                    moveSounds[0].Play();
                     OnTryMove?.Invoke(true);
                     changeableTile.ApplyStanding(this);
                 }
                 else
                 {
+                    moveSounds[1].Play();
                     OnTryMove?.Invoke(false);
                 }
             }

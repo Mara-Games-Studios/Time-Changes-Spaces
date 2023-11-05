@@ -1,12 +1,17 @@
-﻿using UnityEngine;
+﻿using Common;
+using UnityEngine;
 
 namespace Global
 {
     [AddComponentMenu("Global.SceneManager")]
     internal class SceneManager : MonoBehaviour
     {
+        [Scene]
         [SerializeField]
-        private Material screenMaterial;
+        private string level1String;
+
+        [SerializeField]
+        private AudioSource levelFinishSound;
 
         public static SceneManager Instance = null;
 
@@ -26,6 +31,11 @@ namespace Global
 
         public void LoadScene(string gameScene)
         {
+            if (!gameScene.Equals(level1String))
+            {
+                levelFinishSound.Play();
+            }
+
             UnityEngine.SceneManagement.SceneManager.LoadScene(gameScene);
         }
 
