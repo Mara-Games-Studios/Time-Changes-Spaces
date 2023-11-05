@@ -14,9 +14,18 @@ namespace Player
 
         [SerializeField]
         private Movement movement;
+        public Movement Movement => movement;
 
         [SerializeField]
         private Controller timeSpeedController;
+
+        [SerializeField]
+        private bool isWithKey;
+        public bool IsWithKey
+        {
+            get => isWithKey;
+            set => isWithKey = value;
+        }
 
         public event Action<bool> OnTryMove;
         public event Action OnDieOnWrongCell;
@@ -40,10 +49,11 @@ namespace Player
                 )
             )
             {
-                if (changeableTile.PassableState == PassableState.Passable)
+                if (changeableTile.GetPassableState(this) == PassableState.Passable)
                 {
                     movement.Move(direction);
                     OnTryMove?.Invoke(true);
+                    changeableTile.ApplyStanding(this);
                 }
                 else
                 {
@@ -52,16 +62,8 @@ namespace Player
             }
             else
             {
-                // TODO:
                 OnTryMove?.Invoke(false);
             }
-        }
-
-        public bool IsPlacedOnCorrectState(TimeState futureTimeState)
-        {
-            // TODO:A
-
-            return false;
         }
 
         private void IsOnCorrectCell(TimeState timeState)
@@ -73,7 +75,7 @@ namespace Player
                 )
             )
             {
-                if (changeableTile.PassableState == PassableState.NotPassable)
+                if (changeableTile.GetPassableState(this) == PassableState.NotPassable)
                 {
                     OnDieOnWrongCell?.Invoke();
                 }

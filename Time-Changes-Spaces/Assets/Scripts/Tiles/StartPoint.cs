@@ -1,4 +1,5 @@
-﻿using TimeSpeed;
+﻿using Player;
+using TimeSpeed;
 using UnityEngine;
 
 namespace Tiles
@@ -6,9 +7,9 @@ namespace Tiles
     [AddComponentMenu("Scripts/Tiles/Tiles.StartPoint")]
     internal class StartPoint : MonoBehaviour, IChangeableTile
     {
-        public PassableState PassableState => PassableState.Passable;
+        public void ApplyStanding(Brain playerBrain) { }
 
-        public PassableState GetFutureState(TimeState state)
+        public PassableState GetPassableState(Brain playerBrain)
         {
             return PassableState.Passable;
         }

@@ -33,7 +33,6 @@ namespace Settings
         {
             _ = audioMixer.SetFloat("Music", Mathf.Log10(value) * 20);
             AudioManager.Instance.SetMusicPlayerPref(value);
-
         }
 
         public float GetMusicValue()
@@ -45,7 +44,6 @@ namespace Settings
         {
             Debug.Log("Open from Settings.Controller");
             settingsPanel.SetActive(true);
-            
         }
 
         public void Close()

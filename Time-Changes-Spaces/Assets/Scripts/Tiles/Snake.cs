@@ -1,20 +1,16 @@
 ﻿using Common;
 using Player;
 using TimeSpeed;
+using TMPro;
 using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Scripts/Tiles/Tiles.Lava")]
-    internal class Lava : MonoBehaviour, IChangeableTile
+    [AddComponentMenu("Scripts/Tiles/Tiles.Snake")]
+    internal class Snake : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private GameObject defaultLava;
-
-        [SerializeField]
-        private GameObject obsidian;
-
-        private bool wasActivatedSlowMode;
+        private TMP_Text label;
 
         [SerializeField]
         [InspectorReadOnly]
@@ -27,16 +23,16 @@ namespace Tiles
 
         public void SetState(TimeState state)
         {
-            if (wasActivatedSlowMode || state == TimeState.Slow)
+            switch (state)
             {
-                wasActivatedSlowMode = true;
-                passableState = PassableState.Passable;
-                obsidian.SetActive(true);
-                defaultLava.SetActive(false);
-            }
-            else
-            {
-                passableState = PassableState.NotPassable;
+                case TimeState.Slow:
+                    label.text = "Passable Snake";
+                    passableState = PassableState.Passable;
+                    break;
+                default:
+                    label.text = "NOT Passable Snake";
+                    passableState = PassableState.NotPassable;
+                    break;
             }
         }
 

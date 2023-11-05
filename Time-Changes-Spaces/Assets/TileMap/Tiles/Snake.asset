@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: StartPosition
+  m_Name: Snake
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 2660195087753647290, guid: 198917102e5f9754b8f0df9d15ad766c, type: 3}
+  m_Sprite: {fileID: -7766637424382265647, guid: d03f63ccd780cfe43a792caa51b4cd06, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
@@ -31,6 +31,6 @@ MonoBehaviour:
     e31: 0
     e32: 0
     e33: 1
-  m_InstancedGameObject: {fileID: 3852994048328031394, guid: 0b317afd944f7b04e82fa4187e58e348, type: 3}
+  m_InstancedGameObject: {fileID: 3852994048328031394, guid: 0a081a0a94e5da2468aa0c2121f9d159, type: 3}
   m_Flags: 1
   m_ColliderType: 1

@@ -1,10 +1,12 @@
-﻿using TimeSpeed;
+﻿using Common;
+using Player;
+using TimeSpeed;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.Hole")]
-    public class Hole : MonoBehaviour, IChangeableTile
+    internal class Hole : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
         private GameObject openedHole;
@@ -12,21 +14,15 @@ namespace Tiles
         [SerializeField]
         private GameObject closedHole;
 
+        [SerializeField]
+        [InspectorReadOnly]
+        private PassableState passableState = PassableState.Passable;
+
         private bool wasActivatedFastMode;
-        public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
         private void Start()
         {
             SetState(TimeState.Normal);
-        }
-
-        public PassableState GetFutureState(TimeState state)
-        {
-            if (wasActivatedFastMode || state == TimeState.Fast)
-            {
-                return PassableState.NotPassable;
-            }
-            return PassableState.Passable;
         }
 
         public void SetState(TimeState state)
@@ -34,14 +30,21 @@ namespace Tiles
             if (wasActivatedFastMode || state == TimeState.Fast)
             {
                 wasActivatedFastMode = true;
-                PassableState = PassableState.NotPassable;
+                passableState = PassableState.NotPassable;
                 closedHole.SetActive(false);
                 openedHole.SetActive(true);
             }
             else
             {
-                PassableState = PassableState.Passable;
+                passableState = PassableState.Passable;
             }
+        }
+
+        public void ApplyStanding(Brain playerBrain) { }
+
+        public PassableState GetPassableState(Brain playerBrain)
+        {
+            return passableState;
         }
     }
 }

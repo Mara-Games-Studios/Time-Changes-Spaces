@@ -1,21 +1,23 @@
-﻿using TimeSpeed;
+﻿using Player;
+using TimeSpeed;
 using TMPro;
 using UnityEngine;
 
 namespace Tiles
 {
     [AddComponentMenu("Scripts/Tiles/Tiles.AlwaysNotPassable")]
-    public class AlwaysNotPassable : MonoBehaviour, IChangeableTile
+    internal class AlwaysNotPassable : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
         private TextMeshPro stateText;
-        public PassableState PassableState => PassableState.NotPassable;
 
-        public PassableState GetFutureState(TimeState state)
+        public void SetState(TimeState state) { }
+
+        public void ApplyStanding(Brain brain) { }
+
+        public PassableState GetPassableState(Brain playerBrain)
         {
             return PassableState.NotPassable;
         }
-
-        public void SetState(TimeState state) { }
     }
 }
