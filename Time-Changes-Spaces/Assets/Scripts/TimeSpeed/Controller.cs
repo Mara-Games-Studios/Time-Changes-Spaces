@@ -30,8 +30,22 @@ namespace TimeSpeed
 
         public event Action<TimeState> OnTimeStateChanged;
 
+        [SerializeField] private PlayerDeathChecker _playerDeathChecker;
+
+        private void OnEnable()
+        {
+            playerBrain.OnTryMove += _playerDeathChecker.OnPlayerMove;
+            OnTimeStateChanged += _playerDeathChecker.OnPlayerChangeTimeSpeed;
+        }
+
+        private void OnDisable()
+        {
+            playerBrain.OnTryMove -= _playerDeathChecker.OnPlayerMove;
+           OnTimeStateChanged -= _playerDeathChecker.OnPlayerChangeTimeSpeed;
+        }
+
         private void Start() => SetTimeState(TimeState.Normal);
-        
+
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
