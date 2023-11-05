@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ef2506bee32faee4e945fee373fd40a6
+guid: c49af675a2bf82441b4c76b543e64cbd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6950267809580012974
-    second: "\u043A\u043D\u043E\u043F\u043A\u0430 \u0440\u0435\u0434 \u0442_0"
+      213: -7147064728365590197
+    second: "\u043F\u043B\u0430\u0448\u043A\u0430 \u0441 \u043B\u0438\u0430\u043D\u043E\u0439_0"
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,17 +94,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043A\u043D\u043E\u043F\u043A\u0430 \u0440\u0435\u0434 \u0442_0"
+      name: "\u043F\u043B\u0430\u0448\u043A\u0430 \u0441 \u043B\u0438\u0430\u043D\u043E\u0439_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 224
-        height: 101
+        width: 1344
+        height: 700
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ea559dbafbf447060800000000000000
-      internalID: 6950267809580012974
+      spriteID: b499b0f0f7680dc90800000000000000
+      internalID: -7147064728365590197
       vertices: []
       indices: 
       edges: []
@@ -129,7 +153,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u043A\u043D\u043E\u043F\u043A\u0430 \u0440\u0435\u0434 \u0442_0": 6950267809580012974
+      "\u043F\u043B\u0430\u0448\u043A\u0430 \u0441 \u043B\u0438\u0430\u043D\u043E\u0439_0": -7147064728365590197
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

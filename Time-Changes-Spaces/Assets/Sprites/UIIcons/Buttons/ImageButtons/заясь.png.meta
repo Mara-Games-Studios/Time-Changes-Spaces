@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7e0b70def654be4e9ac45babba69856
+guid: 050b09a63aeebcf42b8a0d75e9ee06b6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -409132148697544598
-    second: Rectangle 4_0
+      213: 6181625079933045483
+    second: "\u0437\u0430\u044F\u0441\u044C_0"
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,17 +94,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Rectangle 4_0
+      name: "\u0437\u0430\u044F\u0441\u044C_0"
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 24
-        height: 49
+        width: 152
+        height: 140
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a68c0ba7a78725af0800000000000000
-      internalID: -409132148697544598
+      spriteID: bea0e00324b89c550800000000000000
+      internalID: 6181625079933045483
       vertices: []
       indices: 
       edges: []
@@ -128,8 +152,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Rectangle 4_0: -409132148697544598
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
