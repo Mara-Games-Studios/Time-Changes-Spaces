@@ -611,6 +611,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1265438394}
     - target: {fileID: 440293041005759170, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: darkImage
+      value: 
+      objectReference: {fileID: 1265438394}
+    - target: {fileID: 440293041005759170, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: playerBrain
       value: 
       objectReference: {fileID: 830739052}
@@ -1414,7 +1418,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 4789713275816335281, guid: fee46f83507a1a2419873da87526cc58, type: 3}
   - m_RefCount: 1
-    m_Data: {fileID: -2953436172587417070, guid: 0ece8860f6ff7b949bcc603e99fefe92, type: 3}
+    m_Data: {fileID: 2660195087753647290, guid: 198917102e5f9754b8f0df9d15ad766c, type: 3}
   - m_RefCount: 9
     m_Data: {fileID: 3631387822262880175, guid: f56de1cd350baa14496ed52deec08a88, type: 3}
   m_TileMatrixArray:
