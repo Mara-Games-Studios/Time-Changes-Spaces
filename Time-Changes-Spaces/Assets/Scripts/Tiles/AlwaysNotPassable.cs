@@ -4,8 +4,8 @@ using UnityEngine;
 
 namespace Tiles
 {
-    [AddComponentMenu("Scripts/Tiles/Tiles.Border")]
-    public class Border : MonoBehaviour, IChangeableTile
+    [AddComponentMenu("Scripts/Tiles/Tiles.AlwaysNotPassable")]
+    public class AlwaysNotPassable : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
         private TextMeshPro stateText;

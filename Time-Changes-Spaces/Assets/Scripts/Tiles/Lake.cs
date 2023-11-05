@@ -1,5 +1,4 @@
 ﻿using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Tiles
@@ -8,7 +7,11 @@ namespace Tiles
     public class Lake : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private TextMeshPro stateText;
+        private GameObject waterFast;
+
+        [SerializeField]
+        private GameObject waterStandard;
+
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
         private void Start()
@@ -23,11 +26,19 @@ namespace Tiles
 
         public void SetState(TimeState state)
         {
-            PassableState =
-                state == TimeState.Slow ? PassableState.Passable : PassableState.NotPassable;
-
-            stateText.text =
-                PassableState == PassableState.Passable ? "Lake is passed" : "Lake is not passed";
+            switch (state)
+            {
+                case TimeState.Fast:
+                    waterFast.SetActive(false);
+                    waterStandard.SetActive(true);
+                    PassableState = PassableState.Passable;
+                    break;
+                default:
+                    waterFast.SetActive(true);
+                    waterStandard.SetActive(false);
+                    PassableState = PassableState.NotPassable;
+                    break;
+            }
         }
     }
 }

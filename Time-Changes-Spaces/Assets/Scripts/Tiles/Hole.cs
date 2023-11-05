@@ -1,5 +1,4 @@
 ﻿using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Tiles
@@ -8,7 +7,11 @@ namespace Tiles
     public class Hole : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private TextMeshPro stateText;
+        private GameObject openedHole;
+
+        [SerializeField]
+        private GameObject closedHole;
+
         private bool wasActivatedFastMode;
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
@@ -23,7 +26,6 @@ namespace Tiles
             {
                 return PassableState.NotPassable;
             }
-
             return PassableState.Passable;
         }
 
@@ -33,16 +35,13 @@ namespace Tiles
             {
                 wasActivatedFastMode = true;
                 PassableState = PassableState.NotPassable;
+                closedHole.SetActive(false);
+                openedHole.SetActive(true);
             }
             else
             {
                 PassableState = PassableState.Passable;
             }
-
-            stateText.text =
-                PassableState == PassableState.Passable
-                    ? "Hole can be passed"
-                    : "Hole cannot be passed";
         }
     }
 }
