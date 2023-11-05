@@ -42,7 +42,6 @@ namespace Settings
 
         public void Open()
         {
-            Debug.Log("Open from Settings.Controller");
             settingsPanel.SetActive(true);
         }
 

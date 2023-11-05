@@ -20,7 +20,7 @@ namespace Settings
 
         private void Start()
         {
-            SetSlidersFromPrefs();
+            SetSlidersFromPreferences();
         }
 
         private void OnEnable()
@@ -29,6 +29,7 @@ namespace Settings
             soundSlider.onValueChanged.AddListener(SetSoundVolume);
             musicSlider.onValueChanged.AddListener(SetMusicVolume);
         }
+
         private void SetSoundVolume(float value)
         {
             controller.SetSoundValue(value);
@@ -39,7 +40,7 @@ namespace Settings
             controller.SetMusicValue(value);
         }
 
-        private void SetSlidersFromPrefs()
+        private void SetSlidersFromPreferences()
         {
             if (PlayerPrefs.HasKey("musicVolume"))
             {
@@ -49,6 +50,7 @@ namespace Settings
             SetSoundVolume(soundSlider.value);
             SetMusicVolume(musicSlider.value);
         }
+
         private void ButtonClose_OnClick()
         {
             controller.Close();

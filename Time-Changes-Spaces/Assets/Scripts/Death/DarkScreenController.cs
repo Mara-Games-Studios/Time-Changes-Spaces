@@ -9,24 +9,34 @@ namespace Death
     [AddComponentMenu("Death/Death.DarkScreenController")]
     public class DarkScreenController : MonoBehaviour
     {
-        [SerializeField] [Header("Damping settings")]
+        [SerializeField]
+        [Header("Damping settings")]
         private Image darkImage;
 
-        [SerializeField] [Range(0, 1)] 
-        private float hintValue, deathValue;
+        [SerializeField]
+        [Range(0, 1)]
+        private float hintValue;
 
-        [SerializeField] 
+        [SerializeField]
+        [Range(0, 1)]
+        private float deathValue;
+
+        [SerializeField]
         private float dampingSpeed = 0.01f;
 
-        [SerializeField] [Header("Components settings")]
+        [SerializeField]
+        [Header("Components settings")]
         private Brain playerBrain;
 
         private Color imageColor;
         private const float timeToBlackScreen = 1f;
-        private bool wasHintActivated, wasDeathActivated;
+        private bool wasHintActivated;
+        private bool wasDeathActivated;
 
-        public event Action OnHintOccur, OnLooseGame, OnLevelEnd;
-        
+        public event Action OnHintOccur;
+        public event Action OnLooseGame;
+        public event Action OnLevelEnd;
+
         private void Start()
         {
             imageColor = darkImage.color;
@@ -44,9 +54,11 @@ namespace Death
 
         private void Update()
         {
-            if(wasDeathActivated)
+            if (wasDeathActivated)
+            {
                 return;
-            
+            }
+
             imageColor.a += dampingSpeed * Time.deltaTime;
             darkImage.color = imageColor;
 
@@ -65,7 +77,7 @@ namespace Death
         {
             wasDeathActivated = true;
             OnLooseGame?.Invoke();
-            StartCoroutine(MakeScreenDark());
+            _ = StartCoroutine(MakeScreenDark());
         }
 
         private IEnumerator MakeScreenDark()
@@ -77,7 +89,7 @@ namespace Death
                 time += Time.deltaTime;
                 yield return null;
             }
-            OnLevelEnd?.Invoke();   
+            OnLevelEnd?.Invoke();
         }
     }
 }
