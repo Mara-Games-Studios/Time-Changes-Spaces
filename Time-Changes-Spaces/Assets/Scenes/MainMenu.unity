@@ -438,6 +438,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   settingsController: {fileID: 1353302142}
+--- !u!114 &639299587 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2562089923649920052, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+  m_PrefabInstance: {fileID: 7639709766552064747}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &669907253 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 890902793222496552, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+  m_PrefabInstance: {fileID: 7639709766552064747}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &706293302
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,6 +563,17 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &900411559 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5914782831189003408, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+  m_PrefabInstance: {fileID: 7639709766552064747}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &974974220
 GameObject:
   m_ObjectHideFlags: 0
@@ -786,6 +819,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneManagerPrefab: {fileID: 9139160786270555821, guid: 9885f8cbde3a492459b45863ec66d2eb, type: 3}
   audioManagerPrefab: {fileID: 4487381110144422877, guid: ed057d7189b5a6144800694d0c7f5725, type: 3}
+--- !u!1 &2107735488 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+  m_PrefabInstance: {fileID: 7639709766552064747}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6395887039354384873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,23 +875,23 @@ PrefabInstance:
     - target: {fileID: 4512696537450438168, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
       propertyPath: controller
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1353302142}
     - target: {fileID: 4512696537450438168, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
       propertyPath: buttonClose
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 900411559}
     - target: {fileID: 4512696537450438168, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
       propertyPath: musicSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 639299587}
     - target: {fileID: 4512696537450438168, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
       propertyPath: soundSlider
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 669907253}
     - target: {fileID: 5247208624375627792, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
       propertyPath: settingsPanel
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2107735488}
     - target: {fileID: 6584377158062491118, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
       propertyPath: m_Name
       value: UISettings
