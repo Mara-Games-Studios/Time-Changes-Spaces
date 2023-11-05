@@ -1,5 +1,6 @@
 
 using Common;
+using System;
 using TimeSpeed;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -34,16 +35,18 @@ namespace PostProcess
 
         private void Start()
         {
-            
-
             volume = GetComponent<Volume>();
-            timeController.OnTimeStateChanged += ChangeDistortion;
             VolumeProfile profile = volume.sharedProfile;
             LensDistortion ld;
             if (profile.TryGet<LensDistortion>(out ld))
             {
                 distortion = ld;
             }
+        }
+
+        private void OnEnable()
+        {
+            timeController.OnTimeStateChanged += ChangeDistortion;
         }
 
         private void OnDisable()
