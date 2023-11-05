@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: bc636c0fc05565c4588ce629d140324f
+guid: f321b919cf6e85b44b4e95ba8da6edf0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7396740788756924854
-    second: "\u043F\u043B\u0430\u0448\u043A\u0430 \u0434\u0430\u0440\u043A_0"
+      213: -4482152825953622976
+    second: you dead__0
+  - first:
+      213: -4366662117346056070
+    second: you dead__1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,26 +97,50 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043F\u043B\u0430\u0448\u043A\u0430 \u0434\u0430\u0440\u043A_0"
+      name: you dead__0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 889
-        height: 586
+        width: 360
+        height: 73
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a463086317f795990800000000000000
-      internalID: -7396740788756924854
+      spriteID: 044650490c13cc1c0800000000000000
+      internalID: -4482152825953622976
       vertices: []
       indices: 
       edges: []
@@ -121,7 +148,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 760f600356b7b8a4d89b24c7a98fd025
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +156,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      "\u043F\u043B\u0430\u0448\u043A\u0430 \u0434\u0430\u0440\u043A_0": -7396740788756924854
+      you dead__0: -4482152825953622976
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

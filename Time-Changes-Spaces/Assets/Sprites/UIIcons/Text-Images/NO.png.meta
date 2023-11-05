@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8cf4ef98980db754f8c394d116afd9a6
+guid: 98fd7f47a93b15c4a9a8525ced1ec552
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1087318289386419543
-    second: "\u043F\u043B\u0430\u0448\u043A\u0430 \u0441 \u043B\u0438\u0441\u0442\u0430\u043C\u0438_0"
+      213: 7960712277792059792
+    second: NO_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -94,17 +94,41 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u043F\u043B\u0430\u0448\u043A\u0430 \u0441 \u043B\u0438\u0441\u0442\u0430\u043C\u0438_0"
+      name: NO_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1130
-        height: 932
+        width: 107
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +136,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 755b9ac293ee61f00800000000000000
-      internalID: 1087318289386419543
+      spriteID: 091f2e493a12a7e60800000000000000
+      internalID: 7960712277792059792
       vertices: []
       indices: 
       edges: []
@@ -128,8 +152,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      "\u043F\u043B\u0430\u0448\u043A\u0430 \u0441 \u043B\u0438\u0441\u0442\u0430\u043C\u0438_0": 1087318289386419543
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
