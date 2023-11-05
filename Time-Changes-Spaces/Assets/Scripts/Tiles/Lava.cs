@@ -1,5 +1,4 @@
 ﻿using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Tiles
@@ -8,7 +7,11 @@ namespace Tiles
     public class Lava : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private TextMeshPro stateText;
+        private GameObject defaultLava;
+
+        [SerializeField]
+        private GameObject obsidian;
+
         private bool wasActivatedSlowMode;
         public PassableState PassableState { get; private set; } = PassableState.NotPassable;
 
@@ -23,7 +26,6 @@ namespace Tiles
             {
                 return PassableState.Passable;
             }
-
             return PassableState.NotPassable;
         }
 
@@ -33,14 +35,13 @@ namespace Tiles
             {
                 wasActivatedSlowMode = true;
                 PassableState = PassableState.Passable;
+                obsidian.SetActive(true);
+                defaultLava.SetActive(false);
             }
             else
             {
                 PassableState = PassableState.NotPassable;
             }
-
-            stateText.text =
-                PassableState == PassableState.Passable ? "Lava is obsidian" : "Lava is lava";
         }
     }
 }

@@ -19,9 +19,6 @@ namespace TimeSpeed
         [SerializeField]
         private TileMap.Controller tileMapController;
 
-        // [SerializeField]
-        // private Brain playerBrain;
-
         [SerializeField]
         [InspectorReadOnly]
         private TimeState currentTimeState = TimeState.Normal;
@@ -37,19 +34,7 @@ namespace TimeSpeed
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
-            // if (playerBrain.IsPlacedOnCorrectState(timeState))
-            // {
-            //     // TODO: Lose game
-            // }
-            // else
-            // {
-            //     foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
-            //     {
-            //         tile.Value.SetState(timeState);
-            //     }
-            //
-            //     OnTimeStateChanged?.Invoke(CurrentTimeState);
-            // }
+
             foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
             {
                 tile.Value.SetState(timeState);
