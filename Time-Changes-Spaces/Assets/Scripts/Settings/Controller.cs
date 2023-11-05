@@ -26,7 +26,7 @@ namespace Settings
 
         public float GetSoundValue()
         {
-            return AudioManager.Instance.GetMusicPlayerPref();
+            return AudioManager.Instance.GetSoundPlayerPref();
         }
 
         public void SetMusicValue(float value)
