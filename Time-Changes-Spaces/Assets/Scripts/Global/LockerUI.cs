@@ -7,8 +7,8 @@ namespace Global
         [SerializeField]
         private Canvas lockCanvas;
 
-        public static LockerUI Instance; 
-        
+        public static LockerUI Instance;
+
         private void Awake()
         {
             if (Instance == null)

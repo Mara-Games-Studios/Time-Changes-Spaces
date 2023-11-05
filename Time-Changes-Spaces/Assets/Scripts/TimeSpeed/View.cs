@@ -1,5 +1,4 @@
-﻿using TMPro;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TimeSpeed
 {
@@ -10,7 +9,13 @@ namespace TimeSpeed
         private Controller controller;
 
         [SerializeField]
-        private TMP_Text label;
+        private GameObject fastClock;
+
+        [SerializeField]
+        private GameObject normalClock;
+
+        [SerializeField]
+        private GameObject slowClock;
 
         private void OnEnable()
         {
@@ -24,7 +29,26 @@ namespace TimeSpeed
 
         private void ChangeState(TimeState timeState)
         {
-            label.text = timeState.ToString();
+            switch (timeState)
+            {
+                case TimeState.Fast:
+                    fastClock.SetActive(true);
+                    normalClock.SetActive(false);
+                    slowClock.SetActive(false);
+                    break;
+                case TimeState.Normal:
+                    fastClock.SetActive(false);
+                    normalClock.SetActive(true);
+                    slowClock.SetActive(false);
+                    break;
+                case TimeState.Slow:
+                    fastClock.SetActive(false);
+                    normalClock.SetActive(false);
+                    slowClock.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
         }
     }
 }

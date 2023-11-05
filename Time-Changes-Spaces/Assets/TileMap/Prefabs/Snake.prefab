@@ -28,8 +28,8 @@ RectTransform:
   m_GameObject: {fileID: 3852994048328031394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.4500002, y: 1.4500002, z: 1.4500002}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6275127170629075441}
   m_Father: {fileID: 0}
@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 2428731366619252306}
+  passableState: 1
 --- !u!1 &4304683379107238636
 GameObject:
   m_ObjectHideFlags: 0
