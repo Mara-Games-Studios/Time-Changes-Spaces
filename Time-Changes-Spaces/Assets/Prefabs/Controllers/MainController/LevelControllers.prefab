@@ -34,7 +34,6 @@ Transform:
   - {fileID: 3087800654751275055}
   - {fileID: 534005838614455321}
   - {fileID: 4238346837877962890}
-  - {fileID: 3605257494023484355}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5882648626716635430
@@ -96,51 +95,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 79852404409273106}
---- !u!1 &8994681555656975620
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3605257494023484355}
-  - component: {fileID: 4584388847619509932}
-  m_Layer: 0
-  m_Name: UILocker
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3605257494023484355
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994681555656975620}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6786800182780313333}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4584388847619509932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8994681555656975620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f2f2fd90fdcd41219c4f8645b114bb36, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lockCanvas: {fileID: 0}
 --- !u!1001 &89033785605033043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -566,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: lighteningEffect
       value: 
-      objectReference: {fileID: 8893650613165380252}
+      objectReference: {fileID: 788245625345487404}
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: settingsController
       value: 
@@ -593,6 +547,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 239751788860244609, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8893650613165380252}
+    - targetCorrespondingSourceObject: {fileID: 239751788860244609, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 788245625345487404}
   m_SourcePrefab: {fileID: 100100000, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
 --- !u!4 &534005838614455321 stripped
 Transform:
@@ -621,6 +578,24 @@ MonoBehaviour:
   maxInfectivity: 0.6
   minInfectivity: 0
 --- !u!114 &8893650613165380252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4435629974822899088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f869559a185b647a1bad17cb9de172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lighteningTime: 1
+  screenMaterial: {fileID: 2100000, guid: 3fbebfca2d9eed548b9af5719851b7c4, type: 2}
+  maxInfectivity: 0.8
+  minInfectivity: 0
+  maxAlfa: 1
+  minAlfa: 0
+--- !u!114 &788245625345487404
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
