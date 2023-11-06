@@ -69,6 +69,7 @@ namespace Player
             }
             else
             {
+                moveSounds[1].Play();
                 OnTryMove?.Invoke(false);
             }
         }

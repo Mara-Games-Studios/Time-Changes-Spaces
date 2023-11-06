@@ -29,12 +29,19 @@ namespace Assets.Scripts.Global
 
         private void SlowWhiteFade()
         {
-            t += Time.deltaTime * 0.05f;
-            intencity = Mathf.Lerp(intencity, 0.0f, t);
-            alfa = Mathf.Lerp(alfa, 0.0f, t);
+            if (intencity > 0.1f)
+            {
+                t += Time.deltaTime * 0.3f;
+                intencity = Mathf.Lerp(intencity, 0.0f, t);
+                alfa = Mathf.Lerp(alfa, 0.0f, t);
 
-            screenMaterial.SetFloat(infectivity_string, intencity);
-            screenMaterial.SetFloat(alfa_string, alfa);
+                screenMaterial.SetFloat(infectivity_string, intencity);
+                screenMaterial.SetFloat(alfa_string, alfa);
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
     }
 }
