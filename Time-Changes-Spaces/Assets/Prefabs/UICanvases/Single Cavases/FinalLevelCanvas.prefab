@@ -286,7 +286,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8152982249066135825
 RectTransform:
   m_ObjectHideFlags: 0
@@ -296,16 +296,16 @@ RectTransform:
   m_GameObject: {fileID: 2429536134950630474}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8612437187151914686}
-  m_Father: {fileID: 2261729965620132313}
+  m_Father: {fileID: 7846603492898808357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.3718694, y: 0.13817498}
   m_AnchorMax: {x: 0.6292516, y: 0.31611875}
-  m_AnchoredPosition: {x: -0.47000122, y: 0}
-  m_SizeDelta: {x: -3, y: -2}
+  m_AnchoredPosition: {x: -1, y: 8}
+  m_SizeDelta: {x: -268.34045, y: -89.88995}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2673926901658142164
 CanvasRenderer:
@@ -400,6 +400,7 @@ GameObject:
   - component: {fileID: 8488585121568986983}
   - component: {fileID: 5863637316381824714}
   - component: {fileID: 2297989359914076049}
+  - component: {fileID: 7005254517519830121}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -454,7 +455,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -8321142655242465330, guid: 81d4f16c3363bad45ac62979ea2fba23, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -464,6 +465,19 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7005254517519830121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2493984213902284365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a55706bf7e9d32a4f914ca86c570aa41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 0}
 --- !u!1 &7540955595762917233
 GameObject:
   m_ObjectHideFlags: 0
@@ -481,7 +495,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2261729965620132313
 RectTransform:
   m_ObjectHideFlags: 0
@@ -496,7 +510,6 @@ RectTransform:
   m_Children:
   - {fileID: 7318494114639119988}
   - {fileID: 7345719584716937174}
-  - {fileID: 8152982249066135825}
   m_Father: {fileID: 7846603492898808357}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.20052084, y: 0.1454815}
@@ -784,6 +797,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8488585121568986983}
+  - {fileID: 8152982249066135825}
   - {fileID: 2261729965620132313}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

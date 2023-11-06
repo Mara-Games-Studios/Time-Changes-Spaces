@@ -1,30 +1,17 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 namespace FinalLevel
 {
     [AddComponentMenu("FinalLevel.Input")]
-    internal class Input : MonoBehaviour
+    internal class Input : MonoBehaviour, IPointerClickHandler
     {
         [SerializeField]
         private Controller controller;
 
-        [SerializeField]
-        private Button buttonMainMenu;
-
-        private void OnEnable()
-        {
-            buttonMainMenu.onClick.AddListener(ButtonMainMenu_OnClick);
-        }
-
-        private void ButtonMainMenu_OnClick()
+        public void OnPointerClick(PointerEventData eventData)
         {
             controller.LoadMenu();
-        }
-
-        private void OnDisable()
-        {
-            buttonMainMenu.onClick.RemoveListener(ButtonMainMenu_OnClick);
         }
     }
 }

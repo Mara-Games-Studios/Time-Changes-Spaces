@@ -159,7 +159,7 @@ MonoBehaviour:
   position: {x: 0, y: 0}
   damp: {x: 0.75, y: 0.95, z: 0}
   stepLength: 1.5
-  oneStepTime: 1
+  oneStepTime: 0.5
   animator: {fileID: 3354095165378815723}
 --- !u!114 &91839552990472406
 MonoBehaviour:

@@ -4,7 +4,6 @@ namespace Assets.Scripts.Global
 {
     public class MaterialReset : MonoBehaviour
     {
-
         [SerializeField]
         private Material screenMaterial;
 
@@ -14,6 +13,7 @@ namespace Assets.Scripts.Global
         private float alfa = 1.0f;
 
         private float t = 0.0f;
+
         // Use this for initialization
         private void Awake()
         {
