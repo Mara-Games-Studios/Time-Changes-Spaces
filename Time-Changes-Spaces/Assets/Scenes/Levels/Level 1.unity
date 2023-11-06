@@ -375,6 +375,90 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1476570895695038589, guid: b91cfe6d63c7d7d4e9e13abaf7728684, type: 3}
   m_PrefabInstance: {fileID: 367256348}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &391956621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 391956622}
+  - component: {fileID: 391956623}
+  m_Layer: 0
+  m_Name: Background02_0 (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &391956622
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391956621}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.18, y: 1.18, z: 1.18}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 2429018175860919852}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &391956623
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 391956621}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b2b1d49a296dec54e94e0bc6553af3a1, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: -19
+  m_Sprite: {fileID: 720118652224413485, guid: 78979c0d243d4d6448d9eda321c7686f, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 19.2, y: 10.8}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!20 &401120960 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 5329547978027859882, guid: e0bc64f7a2fa8c4408379ffbfb4fdefc, type: 3}
@@ -853,6 +937,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2554327920291616453, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 497177194652179031, guid: 6af640f705fb8e145901572f4e8f61c5, type: 3}
     - target: {fileID: 2554327920291616453, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_SortingOrder
       value: -18
@@ -1989,11 +2077,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Grid
       objectReference: {fileID: 0}
+    - target: {fileID: 7495583964705674657, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 3858567392177581235, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      insertIndex: 1
+      addedObject: {fileID: 391956622}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+--- !u!4 &2429018175860919852 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3858567392177581235, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+  m_PrefabInstance: {fileID: 2429018175860919851}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &5954611771628990681 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5051341487966111701, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
