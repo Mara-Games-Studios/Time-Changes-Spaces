@@ -116,7 +116,7 @@ GameObject:
   m_Component:
   - component: {fileID: 767715328777050435}
   m_Layer: 5
-  m_Name: Fast
+  m_Name: FastClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -296,11 +296,11 @@ RectTransform:
   - {fileID: 6220712446102359500}
   m_Father: {fileID: 4858812137231116370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 863, y: 149}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -263, y: 149}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 1, y: 1}
 --- !u!1 &2064403015491473786
 GameObject:
   m_ObjectHideFlags: 0
@@ -466,10 +466,10 @@ RectTransform:
   - {fileID: 7797975588045211056}
   m_Father: {fileID: 4858812137231116370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.7851876, y: 0.07974075}
+  m_AnchorMax: {x: 0.9515625, y: 0.38051853}
+  m_AnchoredPosition: {x: 252.5, y: -248.50003}
+  m_SizeDelta: {x: -319, y: -325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2465700094298848235
 GameObject:
@@ -505,10 +505,10 @@ RectTransform:
   - {fileID: 3034933076725164067}
   m_Father: {fileID: 4858812137231116370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 232, y: 252}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.029145835, y: 0.07974075}
+  m_AnchorMax: {x: 0.21100001, y: 0.38051853}
+  m_AnchoredPosition: {x: 1.5, y: 3.5}
+  m_SizeDelta: {x: -349, y: -325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3056138212709019083
 GameObject:
@@ -543,8 +543,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4081316312871114815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -146.6399, y: 406.45996}
   m_SizeDelta: {x: 152, y: 140}
   m_Pivot: {x: 0.5, y: 1}
@@ -1255,7 +1255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5825070326864331822}
   m_Layer: 5
-  m_Name: Normal
+  m_Name: NormalClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1522,8 +1522,8 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 4081316312871114815}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: -357.6399, y: 88.45996}
   m_SizeDelta: {x: 152, y: 140}
   m_Pivot: {x: 0.5, y: 0}
@@ -1859,7 +1859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6220712446102359500}
   m_Layer: 5
-  m_Name: Slow
+  m_Name: SlowClock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
