@@ -1,7 +1,6 @@
 ﻿using Common;
 using Player;
 using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Tiles
@@ -10,7 +9,7 @@ namespace Tiles
     internal class Rope : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private TMP_Text label;
+        private GameObject rope;
 
         [SerializeField]
         [InspectorReadOnly]
@@ -26,11 +25,11 @@ namespace Tiles
             switch (state)
             {
                 case TimeState.Normal:
-                    label.text = "Rope is passable";
+                    rope.SetActive(true);
                     passableState = PassableState.Passable;
                     break;
                 default:
-                    label.text = "Rope is not passable";
+                    rope.SetActive(false);
                     passableState = PassableState.NotPassable;
                     break;
             }

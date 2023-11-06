@@ -9,6 +9,12 @@ namespace Tiles
     [AddComponentMenu("Scripts/Tiles/Tiles.Teleport")]
     internal class Teleport : MonoBehaviour, IChangeableTile
     {
+        [SerializeField]
+        private GameObject onTeleport;
+
+        [SerializeField]
+        private GameObject offTeleport;
+
         public void ApplyStanding(Brain playerBrain)
         {
             if (FindAnyObjectByType<Controller>().CurrentTimeState != TimeState.Normal)
@@ -30,6 +36,25 @@ namespace Tiles
             return PassableState.Passable;
         }
 
-        public void SetState(TimeState state) { }
+        public void SetState(TimeState state)
+        {
+            switch (state)
+            {
+                case TimeState.Fast:
+                    onTeleport.SetActive(false);
+                    offTeleport.SetActive(true);
+                    break;
+                case TimeState.Normal:
+                    onTeleport.SetActive(true);
+                    offTeleport.SetActive(false);
+                    break;
+                case TimeState.Slow:
+                    onTeleport.SetActive(false);
+                    offTeleport.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
+        }
     }
 }
