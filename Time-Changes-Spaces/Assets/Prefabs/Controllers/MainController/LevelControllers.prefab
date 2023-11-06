@@ -729,6 +729,10 @@ PrefabInstance:
       value: Assets/Scenes/Levels/Level 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
+      propertyPath: stepsToLose
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: lighteningEffect
       value: 
       objectReference: {fileID: 8893650613165380252}
@@ -736,6 +740,10 @@ PrefabInstance:
       propertyPath: settingsController
       value: 
       objectReference: {fileID: 5327085118722509891}
+    - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
+      propertyPath: stepsForScarySounds
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: timeSpeedController
       value: 
