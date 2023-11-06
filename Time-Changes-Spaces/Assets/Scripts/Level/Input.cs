@@ -15,6 +15,9 @@ namespace Level
         [SerializeField]
         private Button educationalButton;
 
+        [SerializeField]
+        private AudioSource tapSound;
+
         private void OnEnable()
         {
             settingsButton.onClick.AddListener(SettingsButton_OnClick);
@@ -23,11 +26,13 @@ namespace Level
 
         private void SettingsButton_OnClick()
         {
+            tapSound.Play();
             controller.OpenSettings();
         }
 
         private void EducationalButton_OnClick()
         {
+            tapSound.Play();
             controller.OpenEducationalPanel();
         }
 

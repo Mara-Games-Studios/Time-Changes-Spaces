@@ -120,6 +120,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &50091044 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6291994275927264403, guid: ec23a252c974e304eb810492065c3d08, type: 3}
+  m_PrefabInstance: {fileID: 405153076038449395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &182192076
 GameObject:
   m_ObjectHideFlags: 0
@@ -304,8 +315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 485581132}
-  buttonPlay: {fileID: 0}
-  buttonSettings: {fileID: 0}
+  buttonPlay: {fileID: 50091044}
+  buttonSettings: {fileID: 1424671739}
   audioSource: {fileID: 485581133}
 --- !u!114 &485581132
 MonoBehaviour:
@@ -712,6 +723,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98550eb544f0fa44c819ea611255085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1424671739 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4405527752616150193, guid: ec23a252c974e304eb810492065c3d08, type: 3}
+  m_PrefabInstance: {fileID: 405153076038449395}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1464245616
 GameObject:
   m_ObjectHideFlags: 0
@@ -901,6 +923,10 @@ PrefabInstance:
     - target: {fileID: 4088122903952056989, guid: ec23a252c974e304eb810492065c3d08, type: 3}
       propertyPath: m_Name
       value: MainMenuCanvas (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 6467795518521021948, guid: ec23a252c974e304eb810492065c3d08, type: 3}
+      propertyPath: m_RaycastTarget
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
