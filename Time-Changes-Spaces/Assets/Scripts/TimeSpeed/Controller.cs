@@ -54,7 +54,7 @@ namespace TimeSpeed
                     playerAnimator.speed = 1;
                     break;
                 case TimeState.Slow:
-                    playerAnimator.speed = 0.5f;
+                    playerAnimator.speed = 1f;
                     break;
                 default:
                     break;
