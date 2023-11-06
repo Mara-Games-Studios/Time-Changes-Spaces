@@ -5,10 +5,12 @@ namespace Global
     public class LockerUI : MonoBehaviour
     {
         [SerializeField]
-        private Canvas lockCanvas;
+        private Canvas lockScreenPrefab;
 
         public static LockerUI Instance;
 
+        private Canvas lockScreen;
+        
         private void Awake()
         {
             if (Instance == null)
@@ -20,17 +22,23 @@ namespace Global
                 Destroy(gameObject);
             }
             DontDestroyOnLoad(gameObject);
+        }
+
+        private void Start()
+        {
+            lockScreen = Instantiate(lockScreenPrefab);
+            DontDestroyOnLoad(lockScreen);
             UnLockScreen();
         }
 
         public void LockScreen()
         {
-            lockCanvas.gameObject.SetActive(true);
+            lockScreen.gameObject.SetActive(true);
         }
 
         public void UnLockScreen()
         {
-            lockCanvas.gameObject.SetActive(false);
+            lockScreen.gameObject.SetActive(false);
         }
     }
 }
