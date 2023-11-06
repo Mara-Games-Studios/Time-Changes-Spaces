@@ -796,6 +796,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2554327920291616453, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_SortingOrder
+      value: -18
+      objectReference: {fileID: 0}
     - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 36
@@ -1956,6 +1960,10 @@ PrefabInstance:
       propertyPath: educationalCanvas
       value: 
       objectReference: {fileID: 367256349}
+    - target: {fileID: 111860731655602398, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: buttonRestart
+      value: 
+      objectReference: {fileID: 7646783403690721406}
     - target: {fileID: 440293041005759170, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: darkImage
       value: 
@@ -2081,10 +2089,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 468852890}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
-      propertyPath: nextScene
-      value: Assets/Scenes/Levels/Level 2.unity
-      objectReference: {fileID: 0}
-    - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: tileMapController
       value: 
       objectReference: {fileID: 5954611771628990681}
@@ -2101,6 +2105,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1101741809006596240, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101741809006596240, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1101741809006596240, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
@@ -2185,6 +2201,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8829443197721405725, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829443197721405725, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829443197721405725, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2228,6 +2256,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
   m_PrefabInstance: {fileID: 7646783403690721401}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7646783403690721406 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7094357504382641013, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+  m_PrefabInstance: {fileID: 7646783403690721401}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8506884764843930117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2408,50 +2447,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3636324483780409142, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4004226058125279321, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4004226058125279321, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4004226058125279321, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 242
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4081316312871114815, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
-      propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4858812137231116370, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}

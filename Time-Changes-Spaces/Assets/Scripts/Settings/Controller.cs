@@ -18,6 +18,11 @@ namespace Settings
             Close();
         }
 
+        public void Restart()
+        {
+            SceneManager.Instance.ReloadScene();
+        }
+
         public void SetSoundValue(float value)
         {
             _ = audioMixer.SetFloat("Sound", Mathf.Log10(value) * 20);

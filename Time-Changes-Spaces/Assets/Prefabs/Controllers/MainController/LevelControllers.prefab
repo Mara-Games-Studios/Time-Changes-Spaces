@@ -154,7 +154,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6584377158062491118, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 111860731655602398}
   m_SourcePrefab: {fileID: 100100000, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
 --- !u!4 &736789609385951324 stripped
 Transform:
@@ -166,12 +169,31 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5247208624375627792, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
   m_PrefabInstance: {fileID: 89033785605033043}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 6511123014472288701}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98550eb544f0fa44c819ea611255085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6511123014472288701 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6584377158062491118, guid: 38e04a90e4292814a9327b451a9d0fb9, type: 3}
+  m_PrefabInstance: {fileID: 89033785605033043}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &111860731655602398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6511123014472288701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee728849957d3b94ea541dd823b3eb4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 5327085118722509891}
+  buttonRestart: {fileID: 0}
 --- !u!1001 &371292478363955671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -515,7 +537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: nextScene
-      value: 
+      value: Assets/Scenes/Levels/Level 2.unity
       objectReference: {fileID: 0}
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: lighteningEffect

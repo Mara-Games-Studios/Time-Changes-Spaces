@@ -11,6 +11,11 @@ namespace Tiles
     {
         public void ApplyStanding(Brain playerBrain)
         {
+            if (FindAnyObjectByType<Controller>().CurrentTimeState != TimeState.Normal)
+            {
+                return;
+            }
+
             TileMap.Controller tileMapController = FindAnyObjectByType<TileMap.Controller>();
             IEnumerable<KeyValuePair<Vector2Int, IChangeableTile>> teleports =
                 tileMapController.Tiles.Where(x => x.Value is Teleport);
