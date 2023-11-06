@@ -312,6 +312,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c7a628fb57287042a16717832d4b996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &468852891 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 3354095165378815723, guid: ad58329f12badf54a85199757806a545, type: 3}
+  m_PrefabInstance: {fileID: 468852889}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &604729473 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 79852404409273106, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
@@ -2033,6 +2038,10 @@ PrefabInstance:
       propertyPath: restartLevelButton
       value: 
       objectReference: {fileID: 1739841184}
+    - target: {fileID: 3608155248738216463, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: playerAnimator
+      value: 
+      objectReference: {fileID: 468852891}
     - target: {fileID: 3608155248738216463, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: tileMapController
       value: 

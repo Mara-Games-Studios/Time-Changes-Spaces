@@ -34,6 +34,7 @@ namespace Tiles
                 case TimeState.Slow:
                     waterObj.SetActive(true);
                     waterStormAnimator.speed = 3;
+                    passableState = PassableState.NotPassable;
                     break;
                 case TimeState.Normal:
                     waterObj.SetActive(true);

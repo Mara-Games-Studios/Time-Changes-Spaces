@@ -30,6 +30,7 @@ namespace Tiles
                     break;
                 case TimeState.Normal:
                     animator.speed = 1;
+                    passableState = PassableState.NotPassable;
                     break;
                 default:
                     animator.speed = 0.1f;

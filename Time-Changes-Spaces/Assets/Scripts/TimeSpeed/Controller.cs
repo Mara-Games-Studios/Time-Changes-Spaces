@@ -20,9 +20,13 @@ namespace TimeSpeed
         private TileMap.Controller tileMapController;
 
         [SerializeField]
+        private Animator playerAnimator;
+
+        [SerializeField]
         private List<AudioSource> timeSounds; //0 - Fast
-                                              //1 - Normal
-                                              //2 - Slow
+
+        //1 - Normal
+        //2 - Slow
 
         [SerializeField]
         [InspectorReadOnly]
@@ -40,6 +44,21 @@ namespace TimeSpeed
             }
             PlaySoundOnTimeChange(timeState);
             OnTimeStateChanged?.Invoke(CurrentTimeState);
+
+            switch (timeState)
+            {
+                case TimeState.Fast:
+                    playerAnimator.speed = 3f;
+                    break;
+                case TimeState.Normal:
+                    playerAnimator.speed = 1;
+                    break;
+                case TimeState.Slow:
+                    playerAnimator.speed = 0.5f;
+                    break;
+                default:
+                    break;
+            }
         }
 
         private void PlaySoundOnTimeChange(TimeState timeState)
