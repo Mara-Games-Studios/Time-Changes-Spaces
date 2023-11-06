@@ -52,10 +52,10 @@ namespace Level
         private void Update()
         {
             TriggerVolumeEffect();
-            if (fadeIn == true)
-            {
-                LockerUI.Instance.UnLockScreen();
-            }
+            // if (fadeIn == true)
+            // {
+            //     LockerUI.Instance.UnLockScreen();
+            // }
         }
 
         private void ChangeDistortion(TimeState timeState)
@@ -75,7 +75,7 @@ namespace Level
             }
             if (prevTimeState != timeState)
             {
-                LockerUI.Instance.LockScreen();
+                // LockerUI.Instance.LockScreen();
                 fadeIn = false;
                 prevTimeState = timeState;
             }

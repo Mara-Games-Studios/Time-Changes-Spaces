@@ -41,6 +41,7 @@ namespace Player
         public void Move(Direction direction, Action nextAction)
         {
             transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+            LockerUI.Instance.LockScreen();
             _ = StartCoroutine(
                 LerpWalk(
                     position,
