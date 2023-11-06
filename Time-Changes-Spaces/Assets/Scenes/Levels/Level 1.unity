@@ -652,6 +652,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5329547978027859882, guid: e0bc64f7a2fa8c4408379ffbfb4fdefc, type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 9154744301466376950, guid: e0bc64f7a2fa8c4408379ffbfb4fdefc, type: 3}
       propertyPath: brain
       value: 
@@ -759,6 +763,10 @@ PrefabInstance:
     - target: {fileID: 1844081615662690573, guid: 72139a9ea9b270b4cb4117ee4881e3af, type: 3}
       propertyPath: m_Name
       value: DarkLightCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1844081615662690573, guid: 72139a9ea9b270b4cb4117ee4881e3af, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3069291894933626078, guid: 72139a9ea9b270b4cb4117ee4881e3af, type: 3}
       propertyPath: m_Pivot.x
@@ -1117,6 +1125,10 @@ PrefabInstance:
       propertyPath: tileMapController
       value: 
       objectReference: {fileID: 5954611771628990681}
+    - target: {fileID: 8893650613165380252, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: maxInfectivity
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1142,9 +1154,17 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5181190465077540944, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3
+      objectReference: {fileID: 0}
     - target: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
       propertyPath: m_Name
       value: SettingsCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 6794775082308912383, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8761574439016288139, guid: af4d99d1f920df14892b75daf5ecabc0, type: 3}
       propertyPath: m_Pivot.x
@@ -1303,6 +1323,10 @@ PrefabInstance:
     - target: {fileID: 2140765734407047287, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
       propertyPath: m_Name
       value: DeathScreenCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 2140765734407047287, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6381978642836042382, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
       propertyPath: m_Pivot.x
