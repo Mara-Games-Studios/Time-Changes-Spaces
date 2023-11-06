@@ -14,16 +14,10 @@ namespace Level.Effects
         private Material screenMaterial;
 
         [SerializeField]
-        private float maxInfectivity;
+        private float targetIntencity;
 
         [SerializeField]
-        private float minInfectivity;
-
-        [SerializeField]
-        private float maxAlfa;
-
-        [SerializeField]
-        private float minAlfa;
+        private float targetAlfa;
 
         private const string infectivity_string = "_intencity";
         private const string alfa_string = "_alfa";
@@ -36,33 +30,21 @@ namespace Level.Effects
         private IEnumerator MakeScreenDark(Action nextAction)
         {
             float time = 0f;
+            float intencity = screenMaterial.GetFloat(infectivity_string);
+            float startIntencity = intencity;
+            float alfa = screenMaterial.GetFloat(alfa_string);
+            float startAlfa = alfa;
             while (time < lighteningTime)
             {
-                screenMaterial.SetFloat(
-                    infectivity_string,
-                    GetRightSum(0, time, lighteningTime, minInfectivity, maxInfectivity)
-                );
+                intencity = Mathf.Lerp(startIntencity, targetIntencity, time / lighteningTime);
+                alfa = Mathf.Lerp(startAlfa, targetAlfa, time / lighteningTime);
+                screenMaterial.SetFloat(infectivity_string, intencity);
 
-                screenMaterial.SetFloat(
-                    alfa_string,
-                    GetLeftSum(0, time, lighteningTime, minAlfa, maxAlfa)
-                );
+                screenMaterial.SetFloat(alfa_string, alfa);
                 yield return null;
                 time += Time.deltaTime;
             }
             nextAction?.Invoke();
-        }
-
-        private float GetRightSum(float min1, float cur1, float max1, float min2, float max2)
-        {
-            float cur2 = ((cur1 - min1) * (max2 - min2) / (max1 - min1)) + min2;
-            return max2 - cur2;
-        }
-
-        private float GetLeftSum(float min1, float cur1, float max1, float min2, float max2)
-        {
-            float cur2 = ((cur1 - min1) * (max2 - min2) / (max1 - min1)) + min2;
-            return cur2 - min1;
         }
     }
 }

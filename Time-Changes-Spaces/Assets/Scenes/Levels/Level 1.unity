@@ -1018,6 +1018,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 830739052}
     - target: {fileID: 3156989746727558646, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: refuseLevelButton
+      value: 
+      objectReference: {fileID: 8506884764843930118}
+    - target: {fileID: 3156989746727558646, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: restartLevelButton
       value: 
       objectReference: {fileID: 1348591090}
@@ -1328,6 +1332,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3349674911136846324, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6381978642836042382, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1413,6 +1421,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
+--- !u!114 &8506884764843930118 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8579802041108886126, guid: 315845aeafb4fa24e8c66d3803dc8d65, type: 3}
+  m_PrefabInstance: {fileID: 8506884764843930117}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8557819876916068519
 PrefabInstance:
   m_ObjectHideFlags: 0
