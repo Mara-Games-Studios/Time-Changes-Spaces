@@ -2034,6 +2034,10 @@ PrefabInstance:
       propertyPath: educationalButton
       value: 
       objectReference: {fileID: 1739841202}
+    - target: {fileID: 6713598442008445525, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: lockerUIPrefab
+      value: 
+      objectReference: {fileID: 8191242882922658314, guid: 5faa99c96316e524fa7bce0ff44c516e, type: 3}
     - target: {fileID: 6720061546082099453, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: fastButton
       value: 
