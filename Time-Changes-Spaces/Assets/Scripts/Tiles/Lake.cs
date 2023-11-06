@@ -9,10 +9,10 @@ namespace Tiles
     internal class Lake : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private GameObject waterFast;
+        private GameObject waterObj;
 
         [SerializeField]
-        private GameObject waterStandard;
+        private Animator waterStormAnimator;
 
         [SerializeField]
         [InspectorReadOnly]
@@ -28,13 +28,16 @@ namespace Tiles
             switch (state)
             {
                 case TimeState.Fast:
-                    waterFast.SetActive(false);
-                    waterStandard.SetActive(true);
+                    waterObj.SetActive(false);
                     passableState = PassableState.Passable;
                     break;
-                default:
-                    waterFast.SetActive(true);
-                    waterStandard.SetActive(false);
+                case TimeState.Slow:
+                    waterObj.SetActive(true);
+                    waterStormAnimator.speed = 3;
+                    break;
+                case TimeState.Normal:
+                    waterObj.SetActive(true);
+                    waterStormAnimator.speed = 1.0f;
                     passableState = PassableState.NotPassable;
                     break;
             }

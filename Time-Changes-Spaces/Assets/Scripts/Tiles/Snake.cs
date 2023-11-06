@@ -1,7 +1,6 @@
 ﻿using Common;
 using Player;
 using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Tiles
@@ -10,7 +9,7 @@ namespace Tiles
     internal class Snake : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private TMP_Text label;
+        private Animator animator;
 
         [SerializeField]
         [InspectorReadOnly]
@@ -26,11 +25,14 @@ namespace Tiles
             switch (state)
             {
                 case TimeState.Slow:
-                    label.text = "Passable Snake";
+                    animator.speed = 3;
                     passableState = PassableState.Passable;
                     break;
+                case TimeState.Normal:
+                    animator.speed = 1;
+                    break;
                 default:
-                    label.text = "NOT Passable Snake";
+                    animator.speed = 0.1f;
                     passableState = PassableState.NotPassable;
                     break;
             }

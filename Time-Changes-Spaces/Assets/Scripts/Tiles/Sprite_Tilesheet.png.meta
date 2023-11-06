@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 59e2c753b0e19ff4e921ec5a9e00aa96
+guid: d0544d71d66cc7c448ef2d69d533dc23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1320761110985423309
-    second: Teleport_0
+      213: 2827653609661503356
+    second: Sprite_Tilesheet_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 130
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -158,13 +158,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Teleport_0
+      name: Sprite_Tilesheet_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 130
-        height: 130
+        width: 1536
+        height: 1280
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc9bf659b39445210800000000000000
-      internalID: 1320761110985423309
+      spriteID: c7799b7f9f7dd3720800000000000000
+      internalID: 2827653609661503356
       vertices: []
       indices: 
       edges: []
@@ -181,15 +181,14 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Teleport_0: 1320761110985423309
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

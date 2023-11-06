@@ -1,7 +1,6 @@
 ﻿using Player;
 using Tiles;
 using TimeSpeed;
-using TMPro;
 using UnityEngine;
 
 namespace Assets.Scripts.Tiles
@@ -10,12 +9,12 @@ namespace Assets.Scripts.Tiles
     internal class Key : MonoBehaviour, IChangeableTile
     {
         [SerializeField]
-        private TMP_Text label;
+        private GameObject withStone;
 
         public void ApplyStanding(Brain playerBrain)
         {
             playerBrain.IsWithKey = true;
-            label.text = "Taken";
+            withStone.SetActive(false);
         }
 
         public PassableState GetPassableState(Brain playerBrain)
