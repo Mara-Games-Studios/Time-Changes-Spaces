@@ -1037,6 +1037,10 @@ PrefabInstance:
       propertyPath: soundSlider
       value: 
       objectReference: {fileID: 7646783403690721403}
+    - target: {fileID: 5020104596108460380, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: buttonMainMenu
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5327085118722509891, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: settingsPanel
       value: 
@@ -1122,15 +1126,24 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 468852890}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: finalLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: tileMapController
       value: 
       objectReference: {fileID: 5954611771628990681}
-    - target: {fileID: 8893650613165380252, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
-      propertyPath: maxInfectivity
-      value: 1
+    - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: finalLevelController
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8110339669472930745, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: finalLevelPanel
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 692750419255108732, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}

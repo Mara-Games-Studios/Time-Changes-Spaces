@@ -10,6 +10,12 @@ namespace Level
     [AddComponentMenu("Level.Controller")]
     internal class Controller : MonoBehaviour
     {
+        [SerializeField]
+        private FinalLevel.Controller finalLevelController;
+
+        [SerializeField]
+        private bool finalLevel = false;
+
         [Scene]
         [SerializeField]
         private string nextScene;
@@ -65,7 +71,14 @@ namespace Level
 
         public void Win()
         {
-            lighteningEffect.StartLightening(() => SceneManager.Instance.LoadScene(nextScene));
+            if (!finalLevel)
+            {
+                lighteningEffect.StartLightening(() => SceneManager.Instance.LoadScene(nextScene));
+            }
+            else
+            {
+                finalLevelController.Open();
+            }
         }
 
         public void OpenSettings()
