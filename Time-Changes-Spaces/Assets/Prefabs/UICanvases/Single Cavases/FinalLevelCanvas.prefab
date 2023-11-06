@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000010967, y: 5}
+  m_AnchoredPosition: {x: 0, y: 5}
   m_SizeDelta: {x: 167.2151, y: 46.6084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6493027729663916073
@@ -146,7 +146,7 @@ GameObject:
   - component: {fileID: 8999082784292111030}
   - component: {fileID: 1728656098443736765}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: YouCanGoOut
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,10 +166,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2261729965620132313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.05638, y: -25.00003}
-  m_SizeDelta: {x: 285.7057, y: 50}
+  m_AnchorMin: {x: 0.33925143, y: 0.414825}
+  m_AnchorMax: {x: 0.66075057, y: 0.5}
+  m_AnchoredPosition: {x: 0.056381226, y: -0.000030517578}
+  m_SizeDelta: {x: -0.29431152, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8999082784292111030
 CanvasRenderer:
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 47
+  m_fontSize: 46.9
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -281,7 +281,7 @@ GameObject:
   - component: {fileID: 4682957035507358235}
   - component: {fileID: 4586056136786775175}
   m_Layer: 5
-  m_Name: RestartButton
+  m_Name: MainMenuButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -302,10 +302,10 @@ RectTransform:
   - {fileID: 8612437187151914686}
   m_Father: {fileID: 2261729965620132313}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.20300001, y: 0.12782502}
-  m_AnchorMax: {x: 0.4606257, y: 0.31441253}
-  m_AnchoredPosition: {x: 149.53, y: 3.5}
-  m_SizeDelta: {x: -3, y: -7}
+  m_AnchorMin: {x: 0.3718694, y: 0.13817498}
+  m_AnchorMax: {x: 0.6292516, y: 0.31611875}
+  m_AnchoredPosition: {x: -0.47000122, y: 0}
+  m_SizeDelta: {x: -3, y: -2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2673926901658142164
 CanvasRenderer:
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.98039216}
+  m_Color: {r: 0.9029243, g: 1, b: 0.88113207, a: 0.8745098}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 3789875043574402359}
   - component: {fileID: 3357852991660172792}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Congratulations (text)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -576,7 +576,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.894, y: 9.0216}
+  m_AnchoredPosition: {x: 0, y: 5}
   m_SizeDelta: {x: 558.6106, y: 77.0649}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3789875043574402359
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 3688843540135486280}
   - component: {fileID: 2679718874312881417}
   m_Layer: 5
-  m_Name: DeadContainer
+  m_Name: CongratulationsContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -770,7 +770,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7846603492898808357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 500
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &3185367741491949372
 MonoBehaviour:
@@ -827,12 +827,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 0.5
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96

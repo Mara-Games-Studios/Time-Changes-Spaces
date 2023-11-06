@@ -628,6 +628,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0bc64f7a2fa8c4408379ffbfb4fdefc, type: 3}
+--- !u!114 &1831707613 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7659810205283050155, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 931542294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &1831707614 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2386303704364136306, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 931542294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2062186101 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5487204710545407912, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 931542294}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &2429018175860919851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1933,6 +1960,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 830739052}
     - target: {fileID: 3156989746727558646, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: refuseLevelButton
+      value: 
+      objectReference: {fileID: 2062186101}
+    - target: {fileID: 3156989746727558646, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: restartLevelButton
       value: 
       objectReference: {fileID: 931542296}
@@ -2028,6 +2059,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6855286233720827432, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: buttonMainMenu
+      value: 
+      objectReference: {fileID: 1831707613}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: brain
       value: 
@@ -2044,6 +2079,10 @@ PrefabInstance:
       propertyPath: tileMapController
       value: 
       objectReference: {fileID: 5954611771628990681}
+    - target: {fileID: 7639678365240558797, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: finalLevelPanel
+      value: 
+      objectReference: {fileID: 1831707614}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
