@@ -500,6 +500,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1105155262826591164, guid: 303986c52d6608d4eb62e6c657cb5026, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4712314493155230145, guid: 303986c52d6608d4eb62e6c657cb5026, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -583,6 +587,10 @@ PrefabInstance:
     - target: {fileID: 7874694985973340364, guid: 303986c52d6608d4eb62e6c657cb5026, type: 3}
       propertyPath: m_Name
       value: LockerCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7874694985973340364, guid: 303986c52d6608d4eb62e6c657cb5026, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
