@@ -2193,6 +2193,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 468852890}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: nextScene
+      value: Assets/Scenes/Levels/Level 5.unity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: tileMapController
       value: 
       objectReference: {fileID: 5954611771628990681}
