@@ -188,7 +188,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Chronograph02_0: -8574660437167765117
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

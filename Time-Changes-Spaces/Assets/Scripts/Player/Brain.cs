@@ -25,7 +25,8 @@ namespace Player
 
         [SerializeField]
         private List<AudioSource> moveSounds; //0 - SoundMove.wav - can move
-                                              //1 - SoundScary.wav - can't move
+
+        //1 - SoundScary.wav - can't move
         public bool IsWithKey
         {
             get => isWithKey;
@@ -56,10 +57,9 @@ namespace Player
             {
                 if (changeableTile.GetPassableState(this) == PassableState.Passable)
                 {
-                    movement.Move(direction);
+                    movement.Move(direction, () => changeableTile.ApplyStanding(this));
                     moveSounds[0].Play();
                     OnTryMove?.Invoke(true);
-                    changeableTile.ApplyStanding(this);
                 }
                 else
                 {

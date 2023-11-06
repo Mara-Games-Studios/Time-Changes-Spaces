@@ -4,16 +4,15 @@ namespace CameraShake
 {
     public class BounceShake : ICameraShake
     {
-        readonly Params pars;
-        readonly AnimationCurve moveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
-        readonly Vector3? sourcePosition = null;
-
-        float attenuation = 1;
-        Displacement direction;
-        Displacement previousWaypoint;
-        Displacement currentWaypoint;
-        int bounceIndex;
-        float t;
+        private readonly Params pars;
+        private readonly AnimationCurve moveCurve = AnimationCurve.EaseInOut(0, 0, 1, 1);
+        private readonly Vector3? sourcePosition = null;
+        private float attenuation = 1;
+        private Displacement direction;
+        private Displacement previousWaypoint;
+        private Displacement currentWaypoint;
+        private int bounceIndex;
+        private float t;
 
         /// <summary>
         /// Creates an instance of BounceShake.
@@ -34,7 +33,11 @@ namespace CameraShake
         /// <param name="parameters">Parameters of the shake.</param>
         /// <param name="initialDirection">Initial direction of the shake motion.</param>
         /// <param name="sourcePosition">World position of the source of the shake.</param>
-        public BounceShake(Params parameters, Displacement initialDirection, Vector3? sourcePosition = null)
+        public BounceShake(
+            Params parameters,
+            Displacement initialDirection,
+            Vector3? sourcePosition = null
+        )
         {
             this.sourcePosition = sourcePosition;
             pars = parameters;
@@ -43,23 +46,32 @@ namespace CameraShake
 
         public Displacement CurrentDisplacement { get; private set; }
         public bool IsFinished { get; private set; }
+
         public void Initialize(Vector3 cameraPosition, Quaternion cameraRotation)
         {
-            attenuation = sourcePosition == null ?
-                1 : Attenuator.Strength(pars.attenuation, sourcePosition.Value, cameraPosition);
-            currentWaypoint = attenuation * direction.ScaledBy(pars.positionStrength, pars.rotationStrength);
+            attenuation =
+                sourcePosition == null
+                    ? 1
+                    : Attenuator.Strength(pars.attenuation, sourcePosition.Value, cameraPosition);
+            currentWaypoint =
+                attenuation * direction.ScaledBy(pars.positionStrength, pars.rotationStrength);
         }
 
         public void Update(float deltaTime, Vector3 cameraPosition, Quaternion cameraRotation)
         {
             if (t < 1)
             {
-
                 t += deltaTime * pars.freq;
-                if (pars.freq == 0) t = 1;
+                if (pars.freq == 0)
+                {
+                    t = 1;
+                }
 
-                CurrentDisplacement = Displacement.Lerp(previousWaypoint, currentWaypoint,
-                    moveCurve.Evaluate(t));
+                CurrentDisplacement = Displacement.Lerp(
+                    previousWaypoint,
+                    currentWaypoint,
+                    moveCurve.Evaluate(t)
+                );
             }
             else
             {
@@ -74,11 +86,15 @@ namespace CameraShake
                 }
 
                 Displacement rnd = Displacement.InsideUnitSpheres();
-                direction = -direction
-                    + pars.randomness * Displacement.Scale(rnd, pars.axesMultiplier).Normalized;
+                direction =
+                    -direction
+                    + (pars.randomness * Displacement.Scale(rnd, pars.axesMultiplier).Normalized);
                 direction = direction.Normalized;
-                float decayValue = 1 - (float)bounceIndex / pars.numBounces;
-                currentWaypoint = decayValue * decayValue * attenuation
+                float decayValue = 1 - ((float)bounceIndex / pars.numBounces);
+                currentWaypoint =
+                    decayValue
+                    * decayValue
+                    * attenuation
                     * direction.ScaledBy(pars.positionStrength, pars.rotationStrength);
             }
         }
@@ -102,7 +118,7 @@ namespace CameraShake
             /// Preferred direction of shaking.
             /// </summary>
             [Tooltip("Preferred direction of shaking.")]
-            public Displacement axesMultiplier = new Displacement(Vector2.one, Vector3.forward);
+            public Displacement axesMultiplier = new(Vector2.one, Vector3.forward);
 
             /// <summary>
             /// Frequency of shaking.

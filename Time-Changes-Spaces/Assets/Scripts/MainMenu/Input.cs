@@ -15,6 +15,9 @@ namespace MainMenu
         [SerializeField]
         private Button buttonSettings;
 
+        [SerializeField]
+        private AudioSource audioSource;
+
         private void OnEnable()
         {
             buttonPlay.onClick.AddListener(ButtonPlay_OnClick);
@@ -23,11 +26,13 @@ namespace MainMenu
 
         private void ButtonPlay_OnClick()
         {
+            audioSource.Play();
             controller.Play();
         }
 
         private void ButtonSettings_OnClick()
         {
+            audioSource.Play();
             controller.Settings();
         }
 

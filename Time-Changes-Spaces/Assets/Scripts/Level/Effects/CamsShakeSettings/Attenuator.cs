@@ -10,11 +10,17 @@ namespace CameraShake
         /// <summary>
         /// Returns multiplier for the strength of a shake, based on source and camera positions.
         /// </summary>
-        public static float Strength(StrengthAttenuationParams pars, Vector3 sourcePosition, Vector3 cameraPosition)
+        public static float Strength(
+            StrengthAttenuationParams pars,
+            Vector3 sourcePosition,
+            Vector3 cameraPosition
+        )
         {
             Vector3 vec = cameraPosition - sourcePosition;
             float distance = Vector3.Scale(pars.axesMultiplier, vec).magnitude;
-            float strength = Mathf.Clamp01(1 - (distance - pars.clippingDistance) / pars.falloffScale);
+            float strength = Mathf.Clamp01(
+                1 - ((distance - pars.clippingDistance) / pars.falloffScale)
+            );
 
             return Power.Evaluate(strength, pars.falloffDegree);
         }
@@ -22,7 +28,11 @@ namespace CameraShake
         /// <summary>
         /// Returns displacement, opposite to the direction to the source in camera's local space.
         /// </summary>
-        public static Displacement Direction(Vector3 sourcePosition, Vector3 cameraPosition, Quaternion cameraRotation)
+        public static Displacement Direction(
+            Vector3 sourcePosition,
+            Vector3 cameraPosition,
+            Quaternion cameraRotation
+        )
         {
             Displacement direction = Displacement.Zero;
             direction.position = (cameraPosition - sourcePosition).normalized;
@@ -59,7 +69,9 @@ namespace CameraShake
             /// <summary>
             /// Contribution of each axis to distance. E. g. (1, 1, 0) for a 2D game in XY plane.
             /// </summary>
-            [Tooltip("Contribution of each axis to distance. E. g. (1, 1, 0) for a 2D game in XY plane.")]
+            [Tooltip(
+                "Contribution of each axis to distance. E. g. (1, 1, 0) for a 2D game in XY plane."
+            )]
             public Vector3 axesMultiplier = Vector3.one;
         }
     }

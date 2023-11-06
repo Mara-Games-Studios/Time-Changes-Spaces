@@ -20,6 +20,7 @@ namespace Global
                 Destroy(gameObject);
             }
             DontDestroyOnLoad(gameObject);
+            UnLockScreen();
         }
 
         public void LockScreen()

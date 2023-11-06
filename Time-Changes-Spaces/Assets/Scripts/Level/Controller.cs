@@ -28,6 +28,9 @@ namespace Level
 
         [SerializeField]
         private uint stepsToLose;
+
+        [SerializeField]
+        private uint stepsForScarySounds;
         private uint maxStepsToLose;
         public uint MaxStepsToLose => maxStepsToLose;
 
@@ -89,7 +92,7 @@ namespace Level
         {
             stepsToLose--;
             OnTimeTick?.Invoke(stepsToLose);
-            if (stepsToLose == 25)
+            if (stepsToLose == stepsForScarySounds)
             {
                 scarySound.Play();
             }

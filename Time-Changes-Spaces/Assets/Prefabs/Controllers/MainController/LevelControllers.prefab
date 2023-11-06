@@ -520,7 +520,7 @@ PrefabInstance:
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: lighteningEffect
       value: 
-      objectReference: {fileID: 788245625345487404}
+      objectReference: {fileID: 8893650613165380252}
     - target: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
       propertyPath: settingsController
       value: 

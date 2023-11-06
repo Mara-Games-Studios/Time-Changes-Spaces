@@ -3,7 +3,7 @@
 namespace CameraShake
 {
     /// <summary>
-    /// Representation of translation and rotation. 
+    /// Representation of translation and rotation.
     /// </summary>
     [System.Serializable]
     public struct Displacement
@@ -20,27 +20,19 @@ namespace CameraShake
         public Displacement(Vector3 position)
         {
             this.position = position;
-            this.eulerAngles = Vector3.zero;
+            eulerAngles = Vector3.zero;
         }
 
-        public static Displacement Zero
-        {
-            get
-            {
-                return new Displacement(Vector3.zero, Vector3.zero);
-            }
-        }
+        public static Displacement Zero => new(Vector3.zero, Vector3.zero);
 
         public static Displacement operator +(Displacement a, Displacement b)
         {
-            return new Displacement(a.position + b.position,
-                b.eulerAngles + a.eulerAngles);
+            return new Displacement(a.position + b.position, b.eulerAngles + a.eulerAngles);
         }
 
         public static Displacement operator -(Displacement a, Displacement b)
         {
-            return new Displacement(a.position - b.position,
-                b.eulerAngles - a.eulerAngles);
+            return new Displacement(a.position - b.position, b.eulerAngles - a.eulerAngles);
         }
 
         public static Displacement operator -(Displacement disp)
@@ -50,8 +42,7 @@ namespace CameraShake
 
         public static Displacement operator *(Displacement coords, float number)
         {
-            return new Displacement(coords.position * number,
-                coords.eulerAngles * number);
+            return new Displacement(coords.position * number, coords.eulerAngles * number);
         }
 
         public static Displacement operator *(float number, Displacement coords)
@@ -61,20 +52,23 @@ namespace CameraShake
 
         public static Displacement operator /(Displacement coords, float number)
         {
-            return new Displacement(coords.position / number,
-                coords.eulerAngles / number);
+            return new Displacement(coords.position / number, coords.eulerAngles / number);
         }
 
         public static Displacement Scale(Displacement a, Displacement b)
         {
-            return new Displacement(Vector3.Scale(a.position, b.position),
-                Vector3.Scale(b.eulerAngles, a.eulerAngles));
+            return new Displacement(
+                Vector3.Scale(a.position, b.position),
+                Vector3.Scale(b.eulerAngles, a.eulerAngles)
+            );
         }
 
         public static Displacement Lerp(Displacement a, Displacement b, float t)
         {
-            return new Displacement(Vector3.Lerp(a.position, b.position, t),
-                Vector3.Lerp(a.eulerAngles, b.eulerAngles, t));
+            return new Displacement(
+                Vector3.Lerp(a.position, b.position, t),
+                Vector3.Lerp(a.eulerAngles, b.eulerAngles, t)
+            );
         }
 
         public Displacement ScaledBy(float posScale, float rotScale)
@@ -82,13 +76,7 @@ namespace CameraShake
             return new Displacement(position * posScale, eulerAngles * rotScale);
         }
 
-        public Displacement Normalized
-        {
-            get
-            {
-                return new Displacement(position.normalized, eulerAngles.normalized);
-            }
-        }
+        public Displacement Normalized => new(position.normalized, eulerAngles.normalized);
 
         public static Displacement InsideUnitSpheres()
         {

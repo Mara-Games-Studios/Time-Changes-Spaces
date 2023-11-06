@@ -7,22 +7,25 @@ namespace CameraShake
     /// </summary>
     public class Envelope : IAmplitudeController
     {
-        readonly EnvelopeParams pars;
-        readonly EnvelopeControlMode controlMode;
-
-        float amplitude;
-        float targetAmplitude;
-        float sustainEndTime;
-        bool finishWhenAmplitudeZero;
-        bool finishImmediately;
-        EnvelopeState state;
+        private readonly EnvelopeParams pars;
+        private readonly EnvelopeControlMode controlMode;
+        private float amplitude;
+        private float targetAmplitude;
+        private float sustainEndTime;
+        private bool finishWhenAmplitudeZero;
+        private bool finishImmediately;
+        private EnvelopeState state;
 
         /// <summary>
         /// Creates an Envelope instance.
         /// </summary>
         /// <param name="pars">Envelope parameters.</param>
         /// <param name="controlMode">Pass Auto for a single shake, or Manual for controlling strength manually.</param>
-        public Envelope(EnvelopeParams pars, float initialTargetAmplitude, EnvelopeControlMode controlMode)
+        public Envelope(
+            EnvelopeParams pars,
+            float initialTargetAmplitude,
+            EnvelopeControlMode controlMode
+        )
         {
             this.pars = pars;
             this.controlMode = controlMode;
@@ -38,9 +41,14 @@ namespace CameraShake
         {
             get
             {
-                if (finishImmediately) return true;
+                if (finishImmediately)
+                {
+                    return true;
+                }
+
                 return (finishWhenAmplitudeZero || controlMode == EnvelopeControlMode.Auto)
-                    && amplitude <= 0 && targetAmplitude <= 0;
+                    && amplitude <= 0
+                    && targetAmplitude <= 0;
             }
         }
 
@@ -60,27 +68,37 @@ namespace CameraShake
         /// </summary>
         public void Update(float deltaTime)
         {
-            if (IsFinished) return;
+            if (IsFinished)
+            {
+                return;
+            }
 
             if (state == EnvelopeState.Increase)
             {
                 if (pars.attack > 0)
+                {
                     amplitude += deltaTime * pars.attack;
+                }
+
                 if (amplitude > targetAmplitude || pars.attack <= 0)
                 {
                     amplitude = targetAmplitude;
                     state = EnvelopeState.Sustain;
                     if (controlMode == EnvelopeControlMode.Auto)
+                    {
                         sustainEndTime = Time.time + pars.sustain;
+                    }
                 }
             }
             else
             {
                 if (state == EnvelopeState.Decrease)
                 {
-
                     if (pars.decay > 0)
+                    {
                         amplitude -= deltaTime * pars.decay;
+                    }
+
                     if (amplitude < targetAmplitude || pars.decay <= 0)
                     {
                         amplitude = targetAmplitude;
@@ -114,7 +132,6 @@ namespace CameraShake
             state = targetAmplitude > amplitude ? EnvelopeState.Increase : EnvelopeState.Decrease;
         }
 
-
         [System.Serializable]
         public class EnvelopeParams
         {
@@ -143,9 +160,18 @@ namespace CameraShake
             public Degree degree = Degree.Cubic;
         }
 
-        public enum EnvelopeControlMode { Auto, Manual }
+        public enum EnvelopeControlMode
+        {
+            Auto,
+            Manual
+        }
 
-        public enum EnvelopeState { Sustain, Increase, Decrease }
+        public enum EnvelopeState
+        {
+            Sustain,
+            Increase,
+            Decrease
+        }
     }
 
     public interface IAmplitudeController

@@ -4,15 +4,14 @@ namespace CameraShake
 {
     public class KickShake : ICameraShake
     {
-        readonly Params pars;
-        readonly Vector3? sourcePosition;
-        readonly bool attenuateStrength;
-
-        Displacement direction;
-        Displacement prevWaypoint;
-        Displacement currentWaypoint;
-        bool release;
-        float t;
+        private readonly Params pars;
+        private readonly Vector3? sourcePosition;
+        private readonly bool attenuateStrength;
+        private Displacement direction;
+        private Displacement prevWaypoint;
+        private Displacement currentWaypoint;
+        private bool release;
+        private float t;
 
         /// <summary>
         /// Creates an instance of KickShake in the direction from the source to the camera.
@@ -28,7 +27,7 @@ namespace CameraShake
         }
 
         /// <summary>
-        /// Creates an instance of KickShake. 
+        /// Creates an instance of KickShake.
         /// </summary>
         /// <param name="parameters">Parameters of the shake.</param>
         /// <param name="direction">Direction of the kick.</param>
@@ -41,14 +40,23 @@ namespace CameraShake
         public Displacement CurrentDisplacement { get; private set; }
         public bool IsFinished { get; private set; }
 
-
         public void Initialize(Vector3 cameraPosition, Quaternion cameraRotation)
         {
             if (sourcePosition != null)
             {
-                direction = Attenuator.Direction(sourcePosition.Value, cameraPosition, cameraRotation);
+                direction = Attenuator.Direction(
+                    sourcePosition.Value,
+                    cameraPosition,
+                    cameraRotation
+                );
                 if (attenuateStrength)
-                    direction *= Attenuator.Strength(pars.attenuation, sourcePosition.Value, cameraPosition);
+                {
+                    direction *= Attenuator.Strength(
+                        pars.attenuation,
+                        sourcePosition.Value,
+                        cameraPosition
+                    );
+                }
             }
             currentWaypoint = Displacement.Scale(direction, pars.strength);
         }
@@ -57,9 +65,11 @@ namespace CameraShake
         {
             if (t < 1)
             {
-                Move(deltaTime,
+                Move(
+                    deltaTime,
                     release ? pars.releaseTime : pars.attackTime,
-                    release ? pars.releaseCurve : pars.attackCurve);
+                    release ? pars.releaseCurve : pars.attackCurve
+                );
             }
             else
             {
@@ -82,10 +92,19 @@ namespace CameraShake
         private void Move(float deltaTime, float duration, AnimationCurve curve)
         {
             if (duration > 0)
+            {
                 t += deltaTime / duration;
+            }
             else
+            {
                 t = 1;
-            CurrentDisplacement = Displacement.Lerp(prevWaypoint, currentWaypoint, curve.Evaluate(t));
+            }
+
+            CurrentDisplacement = Displacement.Lerp(
+                prevWaypoint,
+                currentWaypoint,
+                curve.Evaluate(t)
+            );
         }
 
         [System.Serializable]
@@ -95,7 +114,7 @@ namespace CameraShake
             /// Strength of the shake for each axis.
             /// </summary>
             [Tooltip("Strength of the shake for each axis.")]
-            public Displacement strength = new Displacement(Vector3.zero, Vector3.one);
+            public Displacement strength = new(Vector3.zero, Vector3.one);
 
             /// <summary>
             /// How long it takes to move forward.

@@ -12,10 +12,11 @@ namespace CameraShake
         public static CameraShakePresets Presets;
         private readonly List<ICameraShake> activeShakes = new();
 
-        [Tooltip("Transform which will be affected by the shakes.\n\nCameraShaker will set this transform's local position and rotation.")]
+        [Tooltip(
+            "Transform which will be affected by the shakes.\n\nCameraShaker will set this transform's local position and rotation."
+        )]
         [SerializeField]
         private Transform cameraTransform;
-
 
         [Tooltip("Scales the strength of all shakes.")]
         [Range(0, 1)]
@@ -42,8 +43,7 @@ namespace CameraShake
         /// </summary>
         public void RegisterShake(ICameraShake shake)
         {
-            shake.Initialize(cameraTransform.position,
-                cameraTransform.rotation);
+            shake.Initialize(cameraTransform.position, cameraTransform.rotation);
             activeShakes.Add(shake);
         }
 
@@ -84,12 +84,18 @@ namespace CameraShake
                 }
                 else
                 {
-                    activeShakes[i].Update(Time.deltaTime, cameraTransform.position, cameraTransform.rotation);
+                    activeShakes[i].Update(
+                        Time.deltaTime,
+                        cameraTransform.position,
+                        cameraTransform.rotation
+                    );
                     cameraDisplacement += activeShakes[i].CurrentDisplacement;
                 }
             }
             cameraTransform.localPosition = StrengthMultiplier * cameraDisplacement.position;
-            cameraTransform.localRotation = Quaternion.Euler(StrengthMultiplier * cameraDisplacement.eulerAngles);
+            cameraTransform.localRotation = Quaternion.Euler(
+                StrengthMultiplier * cameraDisplacement.eulerAngles
+            );
         }
 
         private static bool IsInstanceNull()

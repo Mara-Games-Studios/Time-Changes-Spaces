@@ -34,7 +34,6 @@ namespace Death
         private bool wasDeathActivated;
 
         public event Action OnHintOccur;
-        public event Action OnLooseGame;
         public event Action OnLevelEnd;
 
         private void Start()
@@ -54,7 +53,7 @@ namespace Death
 
         private void Update()
         {
-            if (wasDeathActivated)
+            if (!wasDeathActivated)
             {
                 return;
             }
@@ -76,7 +75,6 @@ namespace Death
         private void Die()
         {
             wasDeathActivated = true;
-            OnLooseGame?.Invoke();
             _ = StartCoroutine(MakeScreenDark());
         }
 
