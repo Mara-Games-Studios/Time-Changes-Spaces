@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level1String: Assets/Scenes/Levels/Level 1.unity
+  mainMenu: Assets/Scenes/MainMenu.unity
   levelFinishSound: {fileID: -7206541806262588961}
 --- !u!82 &-7206541806262588961
 AudioSource:

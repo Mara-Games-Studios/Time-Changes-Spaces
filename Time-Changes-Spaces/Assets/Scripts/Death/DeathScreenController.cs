@@ -8,13 +8,15 @@ namespace Death
     [AddComponentMenu("Death/Death.DeathScreenController")]
     public class DeathScreenController : MonoBehaviour
     {
-
         [SerializeField]
         [Header("Death screen settings")]
         private Canvas deathCanvas;
 
         [SerializeField]
         private Button restartLevelButton;
+
+        [SerializeField]
+        private Button refuseLevelButton;
 
         [SerializeField]
         [Header("Components")]
@@ -44,6 +46,7 @@ namespace Death
             deathCanvas.gameObject.SetActive(true);
             loseSound.Play();
             restartLevelButton.onClick.AddListener(() => SceneManager.Instance.ReloadScene());
+            refuseLevelButton.onClick.AddListener(() => SceneManager.Instance.LoadMainMenu());
         }
     }
 }

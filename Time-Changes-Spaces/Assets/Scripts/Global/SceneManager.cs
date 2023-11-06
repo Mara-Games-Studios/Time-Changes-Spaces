@@ -10,6 +10,10 @@ namespace Global
         [SerializeField]
         private string level1String;
 
+        [Scene]
+        [SerializeField]
+        private string mainMenu;
+
         [SerializeField]
         private AudioSource levelFinishSound;
 
@@ -27,6 +31,11 @@ namespace Global
             }
 
             DontDestroyOnLoad(gameObject);
+        }
+
+        public void LoadMainMenu()
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenu);
         }
 
         public void LoadScene(string gameScene)
