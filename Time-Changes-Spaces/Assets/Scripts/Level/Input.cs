@@ -26,8 +26,8 @@ namespace Level
 
         private void SettingsButton_OnClick()
         {
-            tapSound.Play();
             controller.OpenSettings();
+            tapSound.Play();
         }
 
         private void EducationalButton_OnClick()
