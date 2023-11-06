@@ -11,6 +11,9 @@ namespace Global
         [SerializeField]
         private AudioManager audioManagerPrefab;
 
+        [SerializeField]
+        private LockerUI lockerUIPrefab;
+
         private void Awake()
         {
             if (SceneManager.Instance == null)
@@ -21,6 +24,11 @@ namespace Global
             if (AudioManager.Instance == null)
             {
                 _ = Instantiate(audioManagerPrefab);
+            }
+
+            if (LockerUI.Instance == null)
+            {
+                _ = Instantiate(lockerUIPrefab);
             }
         }
     }
