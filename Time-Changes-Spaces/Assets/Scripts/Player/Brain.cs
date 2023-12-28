@@ -1,6 +1,6 @@
-﻿using Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Common;
 using Tiles;
 using TimeSpeed;
 using UnityEngine;
@@ -49,13 +49,19 @@ namespace Player
         public void TryMove(Direction direction)
         {
             if (
-                tileMapController.Tiles.TryGetValue(
-                    movement.Position + direction.ToVector2Int(),
-                    out IChangeableTile changeableTile
-                )
+                tileMapController
+                    .Tiles
+                    .TryGetValue(
+                        movement.Position + direction.ToVector2Int(),
+                        out IChangeableTile changeableTile
+                    )
             )
             {
-                if (changeableTile.GetPassableState(this) == PassableState.Passable)
+                if (
+                    changeableTile.GetPassableState(this) == PassableState.Passable
+                    || changeableTile.GetPassableState(this) == PassableState.Teleportable
+                    || changeableTile.GetPassableState(this) == PassableState.NotTeleportable
+                )
                 {
                     movement.Move(direction, () => changeableTile.ApplyStanding(this));
                     moveSounds[0].Play();
@@ -77,15 +83,19 @@ namespace Player
         private void IsOnCorrectCell(TimeState timeState)
         {
             if (
-                tileMapController.Tiles.TryGetValue(
-                    movement.Position,
-                    out IChangeableTile changeableTile
-                )
+                tileMapController
+                    .Tiles
+                    .TryGetValue(movement.Position, out IChangeableTile changeableTile)
             )
             {
                 if (changeableTile.GetPassableState(this) == PassableState.NotPassable)
                 {
                     OnDieOnWrongCell?.Invoke();
+                }
+
+                if (changeableTile.GetPassableState(this) == PassableState.Teleportable)
+                {
+                    changeableTile.ApplyStanding(this);
                 }
             }
         }

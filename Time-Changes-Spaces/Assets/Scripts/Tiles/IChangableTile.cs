@@ -6,7 +6,9 @@ namespace Tiles
     public enum PassableState
     {
         Passable,
-        NotPassable
+        NotPassable,
+        Teleportable,
+        NotTeleportable
     }
 
     internal interface IChangeableTile

@@ -1,29 +1,54 @@
 ﻿using UnityEngine;
-using UnityEngine.UI;
 
 namespace TimeSpeed
 {
     [AddComponentMenu("TimeSpeed.Input")]
     internal class Input : MonoBehaviour
     {
+        [Header("KB")]
+        [SerializeField]
+        private KeyCode slowKB;
+
+        [SerializeField]
+        private KeyCode normalKB;
+
+        [SerializeField]
+        private KeyCode fastKB;
+
         [SerializeField]
         private Controller controller;
 
-        [SerializeField]
-        private Button slowButton;
+        //[SerializeField]
+        //private Button slowButton;
 
-        [SerializeField]
-        private Button normalButton;
+        //[SerializeField]
+        //private Button normalButton;
 
-        [SerializeField]
-        private Button fastButton;
+        //[SerializeField]
+        //private Button fastButton;
 
-        private void OnEnable()
+        private void Update()
         {
-            slowButton.onClick.AddListener(OnSlowButtonClick);
-            normalButton.onClick.AddListener(OnNormalButtonClick);
-            fastButton.onClick.AddListener(OnFastButtonClick);
+            if (UnityEngine.Input.GetKeyDown(slowKB))
+            {
+                OnSlowButtonClick();
+            }
+            if (UnityEngine.Input.GetKeyDown(normalKB))
+            {
+                controller.SetTimeState(TimeState.Normal);
+            }
+            if (UnityEngine.Input.GetKeyDown(fastKB))
+            {
+                OnFastButtonClick();
+            }
         }
+
+        //private void OnEnable()
+        //{
+        //    slowButton.onClick.AddListener(OnSlowButtonClick);
+        //    normalButton.onClick.AddListener(OnNormalButtonClick);
+        //    fastButton.onClick.AddListener(OnFastButtonClick);
+        //}
 
         private void OnSlowButtonClick()
         {
@@ -40,11 +65,11 @@ namespace TimeSpeed
             controller.SetTimeState(TimeState.Fast);
         }
 
-        private void OnDisable()
-        {
-            slowButton.onClick.RemoveListener(OnSlowButtonClick);
-            normalButton.onClick.RemoveListener(OnNormalButtonClick);
-            fastButton.onClick.RemoveListener(OnFastButtonClick);
-        }
+        //private void OnDisable()
+        //{
+        //    slowButton.onClick.RemoveListener(OnSlowButtonClick);
+        //    normalButton.onClick.RemoveListener(OnNormalButtonClick);
+        //    fastButton.onClick.RemoveListener(OnFastButtonClick);
+        //}
     }
 }

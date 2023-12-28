@@ -458,6 +458,22 @@ PrefabInstance:
       propertyPath: m_ChunkCullingBounds.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[0].m_Data
+      value: 
+      objectReference: {fileID: -966650121, guid: 850926f0ffca81b46a72c23eb9d3e9eb, type: 3}
+    - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[1].m_Data
+      value: 
+      objectReference: {fileID: -863872642, guid: 850926f0ffca81b46a72c23eb9d3e9eb, type: 3}
+    - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[5].m_Data
+      value: 
+      objectReference: {fileID: -142300525, guid: 850926f0ffca81b46a72c23eb9d3e9eb, type: 3}
+    - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[6].m_Data
+      value: 
+      objectReference: {fileID: 1867053257, guid: 850926f0ffca81b46a72c23eb9d3e9eb, type: 3}
     - target: {fileID: 3858567392177581235, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -771,6 +787,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 401120960}
+    - target: {fileID: 3213727944299068205, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6827138869301613545, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
       propertyPath: m_IsActive
       value: 1

@@ -1,6 +1,6 @@
-﻿using Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Common;
 using Tiles;
 using UnityEngine;
 
@@ -37,6 +37,8 @@ namespace TimeSpeed
 
         public void SetTimeState(TimeState timeState)
         {
+            if (currentTimeState == timeState)
+                return;
             currentTimeState = timeState;
             foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
             {

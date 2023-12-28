@@ -1,41 +1,77 @@
 ﻿using Common;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Player
 {
     [AddComponentMenu("Player.Input")]
     internal class Input : MonoBehaviour
     {
+        [Header("KB")]
         [SerializeField]
-        private Button buttonUp;
+        private KeyCode upKB;
 
         [SerializeField]
-        private Button buttonRight;
+        private KeyCode rightKB;
 
         [SerializeField]
-        private Button buttonLeft;
+        private KeyCode leftKB;
 
         [SerializeField]
-        private Button buttonDown;
+        private KeyCode downKB;
+
+        //[Header("On Screen UI")]
+        //[SerializeField]
+        //private Button buttonUp;
+
+        //[SerializeField]
+        //private Button buttonRight;
+
+        //[SerializeField]
+        //private Button buttonLeft;
+
+        //[SerializeField]
+        //private Button buttonDown;
 
         [SerializeField]
         private Brain brain;
 
-        private void OnEnable()
+        private void Update()
         {
-            buttonUp.onClick.AddListener(() => brain.TryMove(Direction.Up));
-            buttonRight.onClick.AddListener(() => brain.TryMove(Direction.Right));
-            buttonLeft.onClick.AddListener(() => brain.TryMove(Direction.Left));
-            buttonDown.onClick.AddListener(() => brain.TryMove(Direction.Down));
+            if (UnityEngine.Input.GetKeyDown(upKB))
+            {
+                brain.TryMove(Direction.Up);
+            }
+
+            if (UnityEngine.Input.GetKeyDown(downKB))
+            {
+                brain.TryMove(Direction.Down);
+            }
+
+            if (UnityEngine.Input.GetKeyDown(leftKB))
+            {
+                brain.TryMove(Direction.Left);
+            }
+
+            if (UnityEngine.Input.GetKeyDown(rightKB))
+            {
+                brain.TryMove(Direction.Right);
+            }
         }
 
-        private void OnDisable()
-        {
-            buttonUp.onClick.RemoveListener(() => brain.TryMove(Direction.Up));
-            buttonRight.onClick.RemoveListener(() => brain.TryMove(Direction.Right));
-            buttonLeft.onClick.RemoveListener(() => brain.TryMove(Direction.Left));
-            buttonDown.onClick.RemoveListener(() => brain.TryMove(Direction.Down));
-        }
+        //private void OnEnable()
+        //{
+        //    buttonUp.onClick.AddListener(() => brain.TryMove(Direction.Up));
+        //    buttonRight.onClick.AddListener(() => brain.TryMove(Direction.Right));
+        //    buttonLeft.onClick.AddListener(() => brain.TryMove(Direction.Left));
+        //    buttonDown.onClick.AddListener(() => brain.TryMove(Direction.Down));
+        //}
+
+        //private void OnDisable()
+        //{
+        //    buttonUp.onClick.RemoveListener(() => brain.TryMove(Direction.Up));
+        //    buttonRight.onClick.RemoveListener(() => brain.TryMove(Direction.Right));
+        //    buttonLeft.onClick.RemoveListener(() => brain.TryMove(Direction.Left));
+        //    buttonDown.onClick.RemoveListener(() => brain.TryMove(Direction.Down));
+        //}
     }
 }

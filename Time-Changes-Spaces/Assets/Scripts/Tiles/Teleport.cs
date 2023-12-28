@@ -1,6 +1,7 @@
-﻿using Player;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
+using Common;
+using Player;
 using TimeSpeed;
 using UnityEngine;
 
@@ -15,6 +16,13 @@ namespace Tiles
         [SerializeField]
         private GameObject offTeleport;
 
+        [SerializeField]
+        private bool canTP = true;
+
+        [SerializeField]
+        [InspectorReadOnly]
+        private PassableState passableState = PassableState.Teleportable;
+
         public void ApplyStanding(Brain playerBrain)
         {
             if (FindAnyObjectByType<Controller>().CurrentTimeState != TimeState.Normal)
@@ -23,8 +31,9 @@ namespace Tiles
             }
 
             TileMap.Controller tileMapController = FindAnyObjectByType<TileMap.Controller>();
-            IEnumerable<KeyValuePair<Vector2Int, IChangeableTile>> teleports =
-                tileMapController.Tiles.Where(x => x.Value is Teleport);
+            IEnumerable<KeyValuePair<Vector2Int, IChangeableTile>> teleports = tileMapController
+                .Tiles
+                .Where(x => x.Value is Teleport);
             KeyValuePair<Vector2Int, IChangeableTile> other = teleports.First(
                 x => (x.Value as Teleport) != this
             );
@@ -33,7 +42,7 @@ namespace Tiles
 
         public PassableState GetPassableState(Brain playerBrain)
         {
-            return PassableState.Passable;
+            return passableState;
         }
 
         public void SetState(TimeState state)
@@ -42,19 +51,30 @@ namespace Tiles
             {
                 case TimeState.Fast:
                     onTeleport.SetActive(false);
+                    canTP = false;
+                    passableState = PassableState.NotTeleportable;
                     offTeleport.SetActive(true);
                     break;
                 case TimeState.Normal:
                     onTeleport.SetActive(true);
+                    canTP = true;
+                    passableState = PassableState.Teleportable;
                     offTeleport.SetActive(false);
                     break;
                 case TimeState.Slow:
                     onTeleport.SetActive(false);
+                    canTP = false;
+                    passableState = PassableState.NotTeleportable;
                     offTeleport.SetActive(true);
                     break;
                 default:
                     break;
             }
+        }
+
+        public bool GetCanTP()
+        {
+            return canTP;
         }
     }
 }

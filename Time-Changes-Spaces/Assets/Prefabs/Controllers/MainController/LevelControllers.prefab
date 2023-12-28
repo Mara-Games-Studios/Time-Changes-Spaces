@@ -570,6 +570,18 @@ PrefabInstance:
       propertyPath: 'timeSounds.Array.data[2]'
       value: 
       objectReference: {fileID: 7524422306822503490}
+    - target: {fileID: 8927190756972576729, guid: 3fdf98813443bb64690cfa4b69bd752a, type: 3}
+      propertyPath: fastKB
+      value: 121
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927190756972576729, guid: 3fdf98813443bb64690cfa4b69bd752a, type: 3}
+      propertyPath: slowKB
+      value: 114
+      objectReference: {fileID: 0}
+    - target: {fileID: 8927190756972576729, guid: 3fdf98813443bb64690cfa4b69bd752a, type: 3}
+      propertyPath: normalKB
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 9163626388028376155, guid: 3fdf98813443bb64690cfa4b69bd752a, type: 3}
       propertyPath: m_Name
       value: TimeSpeed

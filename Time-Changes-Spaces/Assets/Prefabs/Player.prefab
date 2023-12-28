@@ -173,10 +173,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f557a22c7411c74ea96cc3c27cea69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonUp: {fileID: 0}
-  buttonRight: {fileID: 0}
-  buttonLeft: {fileID: 0}
-  buttonDown: {fileID: 0}
+  upKB: 119
+  rightKB: 100
+  leftKB: 97
+  downKB: 115
   brain: {fileID: 672121081874017670}
 --- !u!114 &672121081874017670
 MonoBehaviour:
