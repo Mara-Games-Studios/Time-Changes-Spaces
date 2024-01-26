@@ -1,4 +1,5 @@
-﻿using Player;
+﻿using Assets.Scripts.Tiles;
+using Player;
 using TimeSpeed;
 using UnityEngine;
 
@@ -21,6 +22,7 @@ namespace Tiles
             }
             else
             {
+                FindAnyObjectByType<Key>().LightUp();
                 return PassableState.NotPassable;
             }
         }

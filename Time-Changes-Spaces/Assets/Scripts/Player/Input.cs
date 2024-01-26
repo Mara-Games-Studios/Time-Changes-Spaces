@@ -1,6 +1,6 @@
 ﻿using Common;
+using Global;
 using UnityEngine;
-using UnityEngine.UI;
 
 namespace Player
 {
@@ -8,34 +8,31 @@ namespace Player
     internal class Input : MonoBehaviour
     {
         [SerializeField]
-        private Button buttonUp;
-
-        [SerializeField]
-        private Button buttonRight;
-
-        [SerializeField]
-        private Button buttonLeft;
-
-        [SerializeField]
-        private Button buttonDown;
-
-        [SerializeField]
         private Brain brain;
 
-        private void OnEnable()
+        private void Update()
         {
-            buttonUp.onClick.AddListener(() => brain.TryMove(Direction.Up));
-            buttonRight.onClick.AddListener(() => brain.TryMove(Direction.Right));
-            buttonLeft.onClick.AddListener(() => brain.TryMove(Direction.Left));
-            buttonDown.onClick.AddListener(() => brain.TryMove(Direction.Down));
-        }
+            if (LockerUI.Instance.IsLocked)
+            {
+                return;
+            }
 
-        private void OnDisable()
-        {
-            buttonUp.onClick.RemoveListener(() => brain.TryMove(Direction.Up));
-            buttonRight.onClick.RemoveListener(() => brain.TryMove(Direction.Right));
-            buttonLeft.onClick.RemoveListener(() => brain.TryMove(Direction.Left));
-            buttonDown.onClick.RemoveListener(() => brain.TryMove(Direction.Down));
+            if (UnityEngine.Input.GetKeyDown(KeyCode.W))
+            {
+                brain.TryMove(Direction.Up);
+            }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.A))
+            {
+                brain.TryMove(Direction.Left);
+            }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.S))
+            {
+                brain.TryMove(Direction.Down);
+            }
+            if (UnityEngine.Input.GetKeyDown(KeyCode.D))
+            {
+                brain.TryMove(Direction.Right);
+            }
         }
     }
 }

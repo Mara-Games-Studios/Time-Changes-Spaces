@@ -97,7 +97,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 114c9e633ecda434e95115b10d15ec1e, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
@@ -173,10 +173,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f557a22c7411c74ea96cc3c27cea69d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonUp: {fileID: 0}
-  buttonRight: {fileID: 0}
-  buttonLeft: {fileID: 0}
-  buttonDown: {fileID: 0}
   brain: {fileID: 672121081874017670}
 --- !u!114 &672121081874017670
 MonoBehaviour:

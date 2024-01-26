@@ -1,6 +1,6 @@
-﻿using Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Common;
 using Tiles;
 using TimeSpeed;
 using UnityEngine;
@@ -71,6 +71,20 @@ namespace Player
             {
                 moveSounds[1].Play();
                 OnTryMove?.Invoke(false);
+            }
+        }
+
+        public void ActivatePortal()
+        {
+            if (
+                tileMapController.Tiles.TryGetValue(
+                    movement.Position,
+                    out IChangeableTile changeableTile
+                )
+                && changeableTile is Teleport
+            )
+            {
+                changeableTile.ApplyStanding(this);
             }
         }
 

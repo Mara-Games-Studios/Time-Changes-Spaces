@@ -1,6 +1,6 @@
-﻿using Common;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using Common;
 using Tiles;
 using UnityEngine;
 
@@ -22,6 +22,8 @@ namespace TimeSpeed
         [SerializeField]
         private Animator playerAnimator;
 
+        private Player.Brain player;
+
         [SerializeField]
         private List<AudioSource> timeSounds; //0 - Fast
 
@@ -35,6 +37,11 @@ namespace TimeSpeed
 
         public event Action<TimeState> OnTimeStateChanged;
 
+        private void Start()
+        {
+            player = FindAnyObjectByType<Player.Brain>();
+        }
+
         public void SetTimeState(TimeState timeState)
         {
             currentTimeState = timeState;
@@ -44,14 +51,14 @@ namespace TimeSpeed
             }
             PlaySoundOnTimeChange(timeState);
             OnTimeStateChanged?.Invoke(CurrentTimeState);
-
+            player.ActivatePortal();
             switch (timeState)
             {
                 case TimeState.Fast:
-                    playerAnimator.speed = 3f;
+                    playerAnimator.speed = 1f;
                     break;
                 case TimeState.Normal:
-                    playerAnimator.speed = 1;
+                    playerAnimator.speed = 1f;
                     break;
                 case TimeState.Slow:
                     playerAnimator.speed = 1f;

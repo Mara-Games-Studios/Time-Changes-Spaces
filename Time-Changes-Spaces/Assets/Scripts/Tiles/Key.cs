@@ -11,10 +11,24 @@ namespace Assets.Scripts.Tiles
         [SerializeField]
         private GameObject withStone;
 
+        [SerializeField]
+        private Animator animator;
+
+        [SerializeField]
+        private string stateName;
+
         public void ApplyStanding(Brain playerBrain)
         {
             playerBrain.IsWithKey = true;
             withStone.SetActive(false);
+        }
+
+        public void LightUp()
+        {
+            if (withStone.activeSelf != false)
+            {
+                animator.Play(stateName);
+            }
         }
 
         public PassableState GetPassableState(Brain playerBrain)

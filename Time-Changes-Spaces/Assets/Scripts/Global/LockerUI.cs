@@ -10,7 +10,7 @@ namespace Global
         public static LockerUI Instance;
 
         private Canvas lockScreen;
-        
+
         private void Awake()
         {
             if (Instance == null)
@@ -40,5 +40,7 @@ namespace Global
         {
             lockScreen.gameObject.SetActive(false);
         }
+
+        public bool IsLocked => lockScreen.gameObject.activeSelf;
     }
 }

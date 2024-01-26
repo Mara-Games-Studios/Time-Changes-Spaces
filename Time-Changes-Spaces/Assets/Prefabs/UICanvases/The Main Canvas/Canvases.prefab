@@ -160,6 +160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level
       objectReference: {fileID: 0}
+    - target: {fileID: 3056138212709019083, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
+      propertyPath: m_Name
+      value: FastModeButton
+      objectReference: {fileID: 0}
     - target: {fileID: 3636324483780409142, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -264,8 +268,17 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8075008463752934778, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
+      propertyPath: m_Name
+      value: SlowModeButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 8657727994581547286, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
+      propertyPath: m_Name
+      value: NormalModeButton
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2465700094298848235, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ddbcf88918800fa48843e2b6116a176c, type: 3}

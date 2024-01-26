@@ -135,6 +135,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   withStone: {fileID: 5383436516024213318}
+  animator: {fileID: 3550259017815585088}
+  stateName: Light
 --- !u!1 &5383436516024213318
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,6 +147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3956115740571298041}
   - component: {fileID: 6607778737880983711}
+  - component: {fileID: 3550259017815585088}
   m_Layer: 0
   m_Name: Sprite_Tilesheet (1)_10
   m_TagString: Untagged
@@ -219,3 +222,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &3550259017815585088
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5383436516024213318}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8d1646bee8cde2e44ace61dc88815557, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
