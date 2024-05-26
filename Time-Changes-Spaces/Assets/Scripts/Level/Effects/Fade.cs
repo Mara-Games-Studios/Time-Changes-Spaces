@@ -17,7 +17,7 @@ namespace Level.Effects
         [SerializeField]
         private float minInfectivity;
 
-        private const string infectivity_string = "_intencity";
+        private const string infectivity_string = "_intensity";
 
         private void OnEnable()
         {

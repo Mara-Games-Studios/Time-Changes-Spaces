@@ -508,6 +508,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BackgroundCanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 1476570895695038589, guid: 8ebc6bfa1e3a5d5488d322d524b3a466, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6237612468191346535, guid: 8ebc6bfa1e3a5d5488d322d524b3a466, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -807,7 +811,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4088122903952056989, guid: ec23a252c974e304eb810492065c3d08, type: 3}
       propertyPath: m_Name
-      value: MainMenuCanvas (1)
+      value: MainMenuCanvas
       objectReference: {fileID: 0}
     - target: {fileID: 6467795518521021948, guid: ec23a252c974e304eb810492065c3d08, type: 3}
       propertyPath: m_RaycastTarget

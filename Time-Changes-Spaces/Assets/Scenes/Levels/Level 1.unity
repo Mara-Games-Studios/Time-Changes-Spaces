@@ -452,11 +452,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3197516172871778322, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3197516172871778322, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_TileSpriteArray.Array.data[0].m_Data

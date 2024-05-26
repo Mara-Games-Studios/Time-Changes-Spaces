@@ -19,7 +19,7 @@ namespace Level.Effects
         [SerializeField]
         private float targetAlfa;
 
-        private const string infectivity_string = "_intencity";
+        private const string infectivity_string = "_intensity";
         private const string alfa_string = "_alfa";
 
         public void StartLightening(Action nextAction)
@@ -30,15 +30,15 @@ namespace Level.Effects
         private IEnumerator MakeScreenDark(Action nextAction)
         {
             float time = 0f;
-            float intencity = screenMaterial.GetFloat(infectivity_string);
-            float startIntencity = intencity;
+            float intensity = screenMaterial.GetFloat(infectivity_string);
+            float startIntensity = intensity;
             float alfa = screenMaterial.GetFloat(alfa_string);
             float startAlfa = alfa;
             while (time < lighteningTime)
             {
-                intencity = Mathf.Lerp(startIntencity, targetIntencity, time / lighteningTime);
+                intensity = Mathf.Lerp(startIntensity, targetIntencity, time / lighteningTime);
                 alfa = Mathf.Lerp(startAlfa, targetAlfa, time / lighteningTime);
-                screenMaterial.SetFloat(infectivity_string, intencity);
+                screenMaterial.SetFloat(infectivity_string, intensity);
 
                 screenMaterial.SetFloat(alfa_string, alfa);
                 yield return null;

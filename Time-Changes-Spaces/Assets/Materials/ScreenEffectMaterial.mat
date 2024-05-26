@@ -45,14 +45,14 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _EffectPower: 5
-    - _alfa: 0.090802945
-    - _intencity: 0.28500003
-    - _intensity: 0.090802945
+    - _EffectPower: 4
+    - _alfa: 0
+    - _intencity: 0
+    - _intensity: 0
     - _size: 0.9
     - _voronovPower: 7
     - _voronovScale: 22
     - _voronovSpeed: 3
     m_Colors:
-    - _Color: {r: 0.7830189, g: 0.09898539, b: 0.09898539, a: 1}
+    - _Color: {r: 0.7830188, g: 0.09898534, b: 0.09898534, a: 1}
   m_BuildTextureStacks: []
