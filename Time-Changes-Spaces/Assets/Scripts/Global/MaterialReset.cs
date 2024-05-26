@@ -16,7 +16,6 @@ namespace Assets.Scripts.Global
         {
             screenMaterial.SetFloat(infectivity_string, intensity);
             screenMaterial.SetFloat(alfa_string, alfa);
-            Destroy(gameObject);
         }
     }
 }

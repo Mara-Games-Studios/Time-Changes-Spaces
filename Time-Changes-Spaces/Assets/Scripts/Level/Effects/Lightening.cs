@@ -14,10 +14,10 @@ namespace Level.Effects
         private Material screenMaterial;
 
         [SerializeField]
-        private float targetIntencity;
+        private float targetIntensity = 1.0f;
 
         [SerializeField]
-        private float targetAlfa;
+        private float targetAlfa = 1.0f;
 
         private const string infectivity_string = "_intensity";
         private const string alfa_string = "_alfa";
@@ -34,13 +34,14 @@ namespace Level.Effects
             float startIntensity = intensity;
             float alfa = screenMaterial.GetFloat(alfa_string);
             float startAlfa = alfa;
-            while (time < lighteningTime)
+            while (time <= lighteningTime)
             {
-                intensity = Mathf.Lerp(startIntensity, targetIntencity, time / lighteningTime);
+                intensity = Mathf.Lerp(startIntensity, targetIntensity, time / lighteningTime);
                 alfa = Mathf.Lerp(startAlfa, targetAlfa, time / lighteningTime);
-                screenMaterial.SetFloat(infectivity_string, intensity);
 
+                screenMaterial.SetFloat(infectivity_string, intensity);
                 screenMaterial.SetFloat(alfa_string, alfa);
+
                 yield return null;
                 time += Time.deltaTime;
             }

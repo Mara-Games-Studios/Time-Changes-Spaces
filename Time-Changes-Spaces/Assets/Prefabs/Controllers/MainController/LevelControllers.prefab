@@ -805,10 +805,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89f869559a185b647a1bad17cb9de172, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lighteningTime: 1
+  lighteningTime: 1.5
   screenMaterial: {fileID: 2100000, guid: 3fbebfca2d9eed548b9af5719851b7c4, type: 2}
-  targetIntencity: 0
-  targetAlfa: 0
+  targetIntensity: 1
+  targetAlfa: 0.8
 --- !u!114 &6957510113398539848 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6796859381849622873, guid: 6477361bf7ea2e54e9b524948113097a, type: 3}
