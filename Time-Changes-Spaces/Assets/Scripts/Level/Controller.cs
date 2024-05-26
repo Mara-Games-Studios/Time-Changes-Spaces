@@ -1,8 +1,8 @@
-﻿using Common;
+﻿using System;
+using Common;
 using Death;
 using Global;
 using Player;
-using System;
 using UnityEngine;
 
 namespace Level

@@ -30,6 +30,7 @@ namespace Player
                 brain.TryMove(Direction.Down);
             }
             if (UnityEngine.Input.GetKeyDown(KeyCode.D))
+
             {
                 brain.TryMove(Direction.Right);
             }

@@ -38,9 +38,9 @@ namespace Global
             UnityEngine.SceneManagement.SceneManager.LoadScene(mainMenu);
         }
 
-        public void LoadScene(string gameScene)
+        public void LoadScene(string gameScene, bool playSound = true)
         {
-            if (!gameScene.Equals(level1String))
+            if (!gameScene.Equals(level1String) && playSound)
             {
                 levelFinishSound.Play();
             }

@@ -1,5 +1,4 @@
 using Common;
-using Global;
 using TimeSpeed;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -52,15 +51,10 @@ namespace Level
         private void Update()
         {
             TriggerVolumeEffect();
-            // if (fadeIn == true)
-            // {
-            //     LockerUI.Instance.UnLockScreen();
-            // }
         }
 
         private void ChangeDistortion(TimeState timeState)
         {
-
             switch (timeState)
             {
                 case TimeState.Slow:
@@ -75,7 +69,6 @@ namespace Level
             }
             if (prevTimeState != timeState)
             {
-                // LockerUI.Instance.LockScreen();
                 fadeIn = false;
                 prevTimeState = timeState;
             }
@@ -86,26 +79,21 @@ namespace Level
             if (!fadeIn)
             {
                 VolumeWeightPlus();
-
             }
 
             if (fadeIn)
             {
-
                 VolumeWeightMinus();
             }
         }
 
         private void VolumeWeightMinus()
         {
-
             if (volume != null && volume.weight > 0.05f)
             {
-
                 volume.weight -= Time.deltaTime * countSpeed;
                 if (volume.weight <= 0.1f)
                 {
-
                     return;
                 }
             }
@@ -118,16 +106,9 @@ namespace Level
                 volume.weight += Time.deltaTime * countSpeed;
                 if (volume.weight >= 0.9f)
                 {
-
                     fadeIn = !fadeIn;
-
                 }
             }
         }
-
-        //private IEnumerator WaitForFunction()
-        //{
-        //    yield return new WaitForSeconds(3);
-        //}
     }
 }

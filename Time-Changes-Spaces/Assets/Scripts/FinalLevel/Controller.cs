@@ -14,6 +14,9 @@ namespace FinalLevel
         [SerializeField]
         private GameObject finalLevelPanel;
 
+        [SerializeField]
+        private AudioSource finalMusic;
+
         public void Start()
         {
             Close();
@@ -21,12 +24,13 @@ namespace FinalLevel
 
         public void LoadMenu()
         {
-            SceneManager.Instance.LoadScene(mainMenuScene);
+            SceneManager.Instance.LoadScene(mainMenuScene, false);
         }
 
         public void Open()
         {
             finalLevelPanel.SetActive(true);
+            finalMusic.Play();
         }
 
         public void Close()
