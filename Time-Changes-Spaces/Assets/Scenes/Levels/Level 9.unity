@@ -654,6 +654,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2550596234811212255, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3197516172871778322, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_ChunkCullingBounds.x
       value: 0.5
@@ -1933,6 +1937,10 @@ PrefabInstance:
     - target: {fileID: 6732571017556362605, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_Name
       value: Grid
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732571017556362605, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

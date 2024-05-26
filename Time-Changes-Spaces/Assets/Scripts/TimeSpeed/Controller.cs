@@ -44,6 +44,10 @@ namespace TimeSpeed
 
         public void SetTimeState(TimeState timeState)
         {
+            if (timeState == currentTimeState)
+            {
+                return;
+            }
             currentTimeState = timeState;
             foreach (KeyValuePair<Vector2Int, IChangeableTile> tile in tileMapController.Tiles)
             {

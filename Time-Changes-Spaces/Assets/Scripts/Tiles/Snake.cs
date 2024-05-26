@@ -12,6 +12,12 @@ namespace Tiles
         private Animator animator;
 
         [SerializeField]
+        private string idleAnimation;
+
+        [SerializeField]
+        private string sleepAnimation;
+
+        [SerializeField]
         [InspectorReadOnly]
         private PassableState passableState = PassableState.NotPassable;
 
@@ -26,14 +32,17 @@ namespace Tiles
             {
                 case TimeState.Slow:
                     animator.speed = 3;
+                    animator.Play(sleepAnimation);
                     passableState = PassableState.Passable;
                     break;
                 case TimeState.Normal:
                     animator.speed = 1;
+                    animator.Play(idleAnimation);
                     passableState = PassableState.NotPassable;
                     break;
                 default:
                     animator.speed = 0.1f;
+                    animator.Play(idleAnimation);
                     passableState = PassableState.NotPassable;
                     break;
             }
