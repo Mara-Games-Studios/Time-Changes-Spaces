@@ -339,6 +339,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bfb687319889394e9189ea37deb9bc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &959395890 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7312806411405844693, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 1739841182}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625675fd5eb3ec0428f14cb238e63df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1119862474 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 5487204710545407912, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
@@ -435,6 +446,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1743410457}
+    - target: {fileID: 7312806411405844693, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 604729473}
     - target: {fileID: 7724578938308415872, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -646,6 +661,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac712b46a9bb9424fbb08848551854ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &2144057188 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8817626757152971265, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 1739841182}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2429018175860919851
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -660,11 +680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3197516172871778322, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_ChunkCullingBounds.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3197516172871778322, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_ChunkCullingBounds.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478255282740625646, guid: 58451490ae5c518469f37e49a51c0655, type: 3}
       propertyPath: m_Tiles.Array.size
@@ -2038,9 +2058,13 @@ PrefabInstance:
       propertyPath: educationalButton
       value: 
       objectReference: {fileID: 1739841202}
+    - target: {fileID: 5737389044767781132, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: educationalButtonClose
+      value: 
+      objectReference: {fileID: 959395890}
     - target: {fileID: 6680914935147348053, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6713598442008445525, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: lockerUIPrefab
@@ -2130,6 +2154,10 @@ PrefabInstance:
       propertyPath: finalLevel
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: controlsCanvas
+      value: 
+      objectReference: {fileID: 2144057188}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: tileMapController
       value: 

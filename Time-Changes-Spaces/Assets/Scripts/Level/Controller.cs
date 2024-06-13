@@ -55,6 +55,9 @@ namespace Level
         [SerializeField]
         private AudioSource scarySound;
 
+        [SerializeField]
+        private Canvas controlsCanvas;
+
         public event Action<uint> OnTimeTick;
 
         private void Awake()
@@ -73,6 +76,7 @@ namespace Level
         {
             if (!finalLevel)
             {
+                controlsCanvas.gameObject.SetActive(false);
                 lighteningEffect.StartLightening(() => SceneManager.Instance.LoadScene(nextScene));
             }
             else

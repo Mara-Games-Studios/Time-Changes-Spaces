@@ -426,6 +426,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!223 &1720200694 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8817626757152971265, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 9200561377406862717}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1859225276 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7312806411405844693, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
+  m_PrefabInstance: {fileID: 9200561377406862717}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 625675fd5eb3ec0428f14cb238e63df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2038215848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2798822480728065383, guid: f74945ad32bc254488d3203a38759d0f, type: 3}
@@ -694,6 +710,10 @@ PrefabInstance:
       propertyPath: educationalButton
       value: 
       objectReference: {fileID: 662269740}
+    - target: {fileID: 5737389044767781132, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: educationalButtonClose
+      value: 
+      objectReference: {fileID: 1859225276}
     - target: {fileID: 6720061546082099453, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: fastButton
       value: 
@@ -770,6 +790,10 @@ PrefabInstance:
       propertyPath: movement
       value: 
       objectReference: {fileID: 468852890}
+    - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
+      propertyPath: controlsCanvas
+      value: 
+      objectReference: {fileID: 1720200694}
     - target: {fileID: 6957510113398539848, guid: 91bcc43ba422a7a4ba7ffeeac81fc271, type: 3}
       propertyPath: tileMapController
       value: 

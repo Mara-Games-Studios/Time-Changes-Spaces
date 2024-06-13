@@ -31,7 +31,7 @@ namespace Tiles
             switch (state)
             {
                 case TimeState.Slow:
-                    animator.speed = 3;
+                    animator.speed = 5;
                     animator.Play(sleepAnimation);
                     passableState = PassableState.Passable;
                     break;

@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace EducationalPanel
@@ -8,10 +9,12 @@ namespace EducationalPanel
     {
         [SerializeField]
         private Controller controller;
+        public event Action OnClick;
 
         public void OnPointerClick(PointerEventData eventData)
         {
             controller.Close();
+            OnClick?.Invoke();
         }
     }
 }

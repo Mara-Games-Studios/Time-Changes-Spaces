@@ -19,9 +19,7 @@ namespace Level
         [InspectorReadOnly]
         private bool fadeIn = true;
 
-        [SerializeField]
-        [InspectorReadOnly]
-        private TimeState prevTimeState;
+        private TimeState prevTimeState = TimeState.Normal;
 
         [SerializeField]
         private Volume volume;
