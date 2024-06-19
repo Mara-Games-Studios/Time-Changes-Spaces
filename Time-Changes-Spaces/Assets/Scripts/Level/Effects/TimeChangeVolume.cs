@@ -53,6 +53,7 @@ namespace Level
 
         private void ChangeDistortion(TimeState timeState)
         {
+            return;
             switch (timeState)
             {
                 case TimeState.Slow:

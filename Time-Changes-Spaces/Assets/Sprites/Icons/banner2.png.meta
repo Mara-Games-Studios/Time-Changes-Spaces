@@ -1,10 +1,19 @@
 fileFormatVersion: 2
-guid: 82021b8ae608a244b850c8986b328379
+guid: d53a0c2e83a572044b9387f4cfda9787
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5067576142094950164
-    second: Tt_0
+      213: -595353952390168928
+    second: banner2_0
+  - first:
+      213: 7793881640419904047
+    second: banner2_1
+  - first:
+      213: -9036267910780003998
+    second: banner2_2
+  - first:
+      213: 4871462268954338836
+    second: banner2_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -158,13 +167,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tt_0
+      name: banner2_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 103
+        y: 52
+        width: 1790
+        height: 1063
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,8 +181,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce0af22195a5ca9b0800000000000000
-      internalID: -5067576142094950164
+      spriteID: 0aeb8201cb0ecb7f0800000000000000
+      internalID: -595353952390168928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banner2_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 612
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2acaa6ee0e692c60800000000000000
+      internalID: 7793881640419904047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banner2_2
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 578
+        width: 20
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26952ba163ab89280800000000000000
+      internalID: -9036267910780003998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: banner2_3
+      rect:
+        serializedVersion: 2
+        x: 1879
+        y: 587
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 416edbd9f19ea9340800000000000000
+      internalID: 4871462268954338836
       vertices: []
       indices: 
       edges: []
@@ -189,7 +261,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Tt_0: -5067576142094950164
+      banner2_0: -595353952390168928
+      banner2_1: 7793881640419904047
+      banner2_2: -9036267910780003998
+      banner2_3: 4871462268954338836
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

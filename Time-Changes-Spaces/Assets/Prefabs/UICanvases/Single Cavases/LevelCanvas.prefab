@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 6447511262728641699}
   - component: {fileID: 7546723530232097452}
   - component: {fileID: 984137443389652632}
+  - component: {fileID: 7631010457449496255}
   m_Layer: 5
   m_Name: LevelCanvas
   m_TagString: Untagged
@@ -106,6 +107,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &7631010457449496255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 243917199495029781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76185aad5dbfc1d4cb4f0df05e6db7cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toActivate: {fileID: 2465700094298848235}
 --- !u!1 &428901566108189637
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,7 +500,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &551834278946944350
 RectTransform:
   m_ObjectHideFlags: 0
